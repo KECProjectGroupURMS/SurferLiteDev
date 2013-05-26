@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>N5110-PC</Machine>
+    <WindowsUser>Uddhab</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>C3557C7B5ADA75028932A08D3D7BFFF6763FE058EABC1147063F2EBD4342A1E9</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>b4d1d222-03ed-42cd-bdcf-1be03657ca81_1.0.0.0_neutral__e20rmwe176y7e</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>b4d1d222-03ed-42cd-bdcf-1be03657ca81_e20rmwe176y7e!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>b4d1d222-03ed-42cd-bdcf-1be03657ca81</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Uddhab</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-05-26T07:36:52.007</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\bin\Debug\SurferLite.exe">
+      <PackagePath>SurferLite.exe</PackagePath>
+      <Modified>2013-05-26T07:36:50.358</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\bin\Debug\SurferLite.pdb">
+      <PackagePath>SurferLite.pdb</PackagePath>
+      <Modified>2013-05-26T07:36:50.327</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-15T14:57:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-15T14:57:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-15T14:57:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-15T14:57:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2013-05-26T07:35:14.965</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2012-06-26T10:34:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+      <Modified>2013-05-26T07:35:15.034</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-05-26T07:36:51.156</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
