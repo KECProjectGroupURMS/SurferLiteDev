@@ -8,6 +8,27 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid HorizontalAlignment="Left" Height="176" Margin="548,261,0,0" VerticalAlignment="Top" Width="390">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="128*"/>
+                <ColumnDefinition Width="143*"/>
+                <ColumnDefinition Width="119*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="34*"/>
+                <RowDefinition Height="51*"/>
+                <RowDefinition Height="43*"/>
+                <RowDefinition Height="48*"/>
+            </Grid.RowDefinitions>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Sign in" VerticalAlignment="Top" Margin="31,21,0,0" Height="13" Width="38"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="username or email" VerticalAlignment="Top" Margin="31,19,0,0" Grid.Row="1" Height="13" Width="90"/>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="252" Margin="10,9,0,0" Grid.Row="1" Height="32" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="username or email" VerticalAlignment="Top" Margin="31,20,0,0" Grid.Row="2" Height="13" Width="90"/>
+            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="252" Margin="10,10,0,0" Grid.Row="2" Height="32" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <Button Content="Start" HorizontalAlignment="Left" Margin="13,4,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.Column="2" Height="38" Width="96"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="OR" VerticalAlignment="Top" Margin="51,21,0,0" Height="13" Width="38" Grid.Column="1"/>
+            <HyperlinkButton Content="Register" HorizontalAlignment="Left" Margin="0,-5,0,0" VerticalAlignment="Top" Grid.Column="2" Height="39" Width="88"/>
+        </Grid>
 
     </Grid>
 </Page>
