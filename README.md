@@ -1,10 +1,10 @@
 SurferLite
 ==========
 
-A final major project
+This azure solution is to be modified later after success of wcf service.
 
-Project Members:
-	Ronish Shakya
-	Milan Kunwar
-	Sajendra Manandhar
-	Uddhab K Shrestha
+###Project Members###
+- Ronish Shakya
+- Sajendra Manandhar
+- Milan Kunwar
+- Uddhab K Shrestha
