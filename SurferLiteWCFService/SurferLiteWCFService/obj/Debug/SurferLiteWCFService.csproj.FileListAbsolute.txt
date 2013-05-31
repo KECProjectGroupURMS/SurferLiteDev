@@ -4,3 +4,6 @@ C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLiteWCFService\SurferLiteWC
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLiteWCFService\SurferLiteWCFService\obj\Debug\SurferLiteWCFService.csprojResolveAssemblyReference.cache
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLiteWCFService\SurferLiteWCFService\obj\Debug\SurferLiteWCFService.dll
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLiteWCFService\SurferLiteWCFService\obj\Debug\SurferLiteWCFService.pdb
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLiteWCFService\SurferLiteWCFService\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLiteWCFService\SurferLiteWCFService\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLiteWCFService\SurferLiteWCFService\bin\Debug\HtmlAgilityPack.xml

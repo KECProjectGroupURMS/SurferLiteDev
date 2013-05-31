@@ -12,7 +12,7 @@ namespace SurferLiteWCFService
     public interface IService1
     {
         [OperationContract]
-        string GetData(int value);
+        string GetData();
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

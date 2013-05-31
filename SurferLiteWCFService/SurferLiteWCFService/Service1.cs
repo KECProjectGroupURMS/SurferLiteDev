@@ -5,14 +5,39 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 
+//Added for remote webpage manipulation
+using HtmlAgilityPack;
+
 namespace SurferLiteWCFService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        public string GetData()
         {
-            return string.Format("You entered: {0}", value);
+            // Get a page from remote server
+            var webGet = new HtmlWeb();
+            var document = webGet.Load("http://www.microsoft.com");
+            
+            var metaTags = document.DocumentNode.SelectNodes("//meta");
+            
+            var output = new StringBuilder();
+
+            if (metaTags != null)
+            {
+               foreach (var tag in metaTags)
+               {
+                  if (tag.Attributes["name"] != null && tag.Attributes["content"] != null)
+                  {
+                     output.Append(tag.Attributes["name"].Value);
+                     output.Append(tag.Attributes["content"].Value);
+                     output.Append("<<<BREAK>>>");
+                  }
+               }
+            }
+            
+            // return answer
+            return string.Format("{0}", output);
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)

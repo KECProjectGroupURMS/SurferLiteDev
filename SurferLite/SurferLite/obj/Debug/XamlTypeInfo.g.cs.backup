@@ -112,7 +112,21 @@ namespace SurferLite.SurferLite_XamlTypeInfo
             }
         }
 
-        private object Activate_0_MainPage() { return new global::SurferLite.MainPage(); }
+        private object Activate_0_AboutPage() { return new global::SurferLite.AboutPage(); }
+
+        private object Activate_1_BrowserStart() { return new global::SurferLite.BrowserStart(); }
+
+        private object Activate_2_CompressionStatistics() { return new global::SurferLite.CompressionStatistics(); }
+
+        private object Activate_3_HistoryAndBookmarks() { return new global::SurferLite.HistoryAndBookmarks(); }
+
+        private object Activate_4_MainPage() { return new global::SurferLite.MainPage(); }
+
+        private object Activate_5_Offline_Saved_Pages() { return new global::SurferLite.Offline_Saved_Pages(); }
+
+        private object Activate_6_PageToTestServiceOperations() { return new global::SurferLite.PageToTestServiceOperations(); }
+
+        private object Activate_7_Settings() { return new global::SurferLite.Settings(); }
 
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(string typeName)
@@ -130,9 +144,51 @@ namespace SurferLite.SurferLite_XamlTypeInfo
                 xamlType = new global::SurferLite.SurferLite_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.UserControl));
                 break;
 
+            case "SurferLite.AboutPage":
+                userType = new global::SurferLite.SurferLite_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::SurferLite.AboutPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_0_AboutPage;
+                xamlType = userType;
+                break;
+
+            case "SurferLite.BrowserStart":
+                userType = new global::SurferLite.SurferLite_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::SurferLite.BrowserStart), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_1_BrowserStart;
+                xamlType = userType;
+                break;
+
+            case "SurferLite.CompressionStatistics":
+                userType = new global::SurferLite.SurferLite_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::SurferLite.CompressionStatistics), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_2_CompressionStatistics;
+                xamlType = userType;
+                break;
+
+            case "SurferLite.HistoryAndBookmarks":
+                userType = new global::SurferLite.SurferLite_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::SurferLite.HistoryAndBookmarks), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_3_HistoryAndBookmarks;
+                xamlType = userType;
+                break;
+
             case "SurferLite.MainPage":
                 userType = new global::SurferLite.SurferLite_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::SurferLite.MainPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_4_MainPage;
+                xamlType = userType;
+                break;
+
+            case "SurferLite.Offline_Saved_Pages":
+                userType = new global::SurferLite.SurferLite_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::SurferLite.Offline_Saved_Pages), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_Offline_Saved_Pages;
+                xamlType = userType;
+                break;
+
+            case "SurferLite.PageToTestServiceOperations":
+                userType = new global::SurferLite.SurferLite_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::SurferLite.PageToTestServiceOperations), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_PageToTestServiceOperations;
+                xamlType = userType;
+                break;
+
+            case "SurferLite.Settings":
+                userType = new global::SurferLite.SurferLite_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::SurferLite.Settings), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_Settings;
                 xamlType = userType;
                 break;
 
