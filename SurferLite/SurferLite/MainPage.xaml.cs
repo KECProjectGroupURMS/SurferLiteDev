@@ -34,5 +34,10 @@ namespace SurferLite
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
+
+        private void StartClicked(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BrowserStart));
+        }
     }
 }
