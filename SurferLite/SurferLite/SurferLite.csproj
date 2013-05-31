@@ -161,6 +161,9 @@
     <None Include="Service References\ServiceReferenceForFinal\SurferLiteWCFService.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ServiceReferenceForTest\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ServiceReferenceForTest\service.wsdl" />
     <None Include="Service References\ServiceReferenceForTest\service.xsd">
       <SubType>Designer</SubType>

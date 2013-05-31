@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-05-31T01:44:31.145</Modified>
+      <Modified>2013-05-31T02:54:03.098</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.exe">
       <PackagePath>SurferLite.exe</PackagePath>
-      <Modified>2013-05-31T02:10:38.895</Modified>
+      <Modified>2013-05-31T03:03:46.854</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.pdb">
       <PackagePath>SurferLite.pdb</PackagePath>
-      <Modified>2013-05-31T02:10:38.877</Modified>
+      <Modified>2013-05-31T03:03:46.802</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -82,7 +82,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\PageToTestServiceOperations.xaml">
       <PackagePath>PageToTestServiceOperations.xaml</PackagePath>
-      <Modified>2013-05-31T02:10:35.884</Modified>
+      <Modified>2013-05-31T03:03:15.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\Settings.xaml">
       <PackagePath>Settings.xaml</PackagePath>

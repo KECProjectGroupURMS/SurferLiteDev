@@ -27,6 +27,7 @@
     <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="ed3590e5-4a93-475c-91b1-6706de6a2459" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfServiceLibraryServerForQuickTest/Service1/mex" />
     <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f0410245-9e41-460a-98a3-e1484eba03fb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfServiceLibraryServerForQuickTest/Service1/mex" />
     <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="c6a69b71-5f29-42a4-8189-0a3e99a6a550" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfServiceLibraryServerForQuickTest/Service1/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="da81d8bc-ec1a-41bf-9671-03bba8d49da0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfServiceLibraryServerForQuickTest/Service1/mex" />
     <MetadataFile FileName="WcfServiceLibraryServerForQuickTest.xsd" MetadataType="Schema" ID="47cf7af9-e898-4111-888f-0229e4a2502a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfServiceLibraryServerForQuickTest/Service1/mex" />
   </Metadata>
   <Extensions>

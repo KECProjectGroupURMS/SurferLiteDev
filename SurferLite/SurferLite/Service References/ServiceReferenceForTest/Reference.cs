@@ -65,7 +65,7 @@ namespace SurferLite.ServiceReferenceForTest {
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync();
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetDataAsync(string url);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<SurferLite.ServiceReferenceForTest.CompositeType> GetDataUsingDataContractAsync(SurferLite.ServiceReferenceForTest.CompositeType composite);
@@ -114,8 +114,8 @@ namespace SurferLite.ServiceReferenceForTest {
                 base(binding, remoteAddress) {
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync() {
-            return base.Channel.GetDataAsync();
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetDataAsync(string url) {
+            return base.Channel.GetDataAsync(url);
         }
         
         public System.Threading.Tasks.Task<SurferLite.ServiceReferenceForTest.CompositeType> GetDataUsingDataContractAsync(SurferLite.ServiceReferenceForTest.CompositeType composite) {

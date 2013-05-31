@@ -31,8 +31,22 @@ namespace SurferLite
         /// </summary>
         /// <param name="e">Event data that describes how this page was reached.  The Parameter
         /// property is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
+            ProgressRing1.IsActive = true;
+            ServiceReferenceForTest.Service1Client client = new ServiceReferenceForTest.Service1Client();
+            ListBoxMeta.ItemsSource = await client.GetDataAsync(TextBoxUrl.Text);
+            ProgressRing1.IsActive = false;
+        }
+
+        private async void ButtonGetData(object sender, RoutedEventArgs e)
+        {
+            ProgressRing1.IsActive = true;
+            ServiceReferenceForTest.Service1Client client = new ServiceReferenceForTest.Service1Client();
+            //ListBoxMeta.Items.Add(await client.GetDataAsync());
+            ListBoxMeta.ItemsSource = await client.GetDataAsync(TextBoxUrl.Text);
+            //TextBlockOutput.Text = await client.GetDataAsync();
+            ProgressRing1.IsActive = false;
         }
     }
 }

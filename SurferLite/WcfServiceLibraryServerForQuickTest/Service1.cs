@@ -13,15 +13,21 @@ namespace WcfServiceLibraryServerForQuickTest
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class ServiceOnAzure : IService1
     {
-        public string GetData()
+        public List<string> GetData(string url)
         {
+            if (url == "http://")
+            {
+                url = "http://www.microsoft.com";
+            }
             // Get a page from remote server
             var webGet = new HtmlWeb();
-            var document = webGet.Load("http://www.microsoft.com");
+            var document = webGet.Load(url);
 
             var metaTags = document.DocumentNode.SelectNodes("//meta");
 
-            var output = new StringBuilder();
+            List<string> output = new List<string>();
+
+            
 
             if (metaTags != null)
             {
@@ -29,15 +35,15 @@ namespace WcfServiceLibraryServerForQuickTest
                 {
                     if (tag.Attributes["name"] != null && tag.Attributes["content"] != null)
                     {
-                        output.Append(tag.Attributes["name"].Value);
-                        output.Append(tag.Attributes["content"].Value);
-                        output.Append("<<<BREAK>>>");
+                        output.Add("Name="+tag.Attributes["name"].Value);
+                        output.Add("Content="+tag.Attributes["content"].Value);
                     }
+                
                 }
             }
 
             // return answer
-            return string.Format("{0}", output);
+            return output;
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)

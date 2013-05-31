@@ -12,7 +12,7 @@ namespace WcfServiceLibraryServerForQuickTest
     public interface IService1
     {
         [OperationContract]
-        string GetData();
+        List<string> GetData(string url);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
