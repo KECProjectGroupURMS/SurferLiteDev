@@ -1,0 +1,9 @@
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\WindowsAzureSurferLite\WCFServiceWebRoleSurferLite\bin\WCFServiceWebRoleSurferLite.dll
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\WindowsAzureSurferLite\WCFServiceWebRoleSurferLite\bin\WCFServiceWebRoleSurferLite.pdb
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\WindowsAzureSurferLite\WCFServiceWebRoleSurferLite\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\WindowsAzureSurferLite\WCFServiceWebRoleSurferLite\bin\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\WindowsAzureSurferLite\WCFServiceWebRoleSurferLite\bin\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\WindowsAzureSurferLite\WCFServiceWebRoleSurferLite\bin\Microsoft.WindowsAzure.Diagnostics.xml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\WindowsAzureSurferLite\WCFServiceWebRoleSurferLite\obj\Debug\WCFServiceWebRoleSurferLite.csprojResolveAssemblyReference.cache
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\WindowsAzureSurferLite\WCFServiceWebRoleSurferLite\obj\Debug\WCFServiceWebRoleSurferLite.dll
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\WindowsAzureSurferLite\WCFServiceWebRoleSurferLite\obj\Debug\WCFServiceWebRoleSurferLite.pdb
