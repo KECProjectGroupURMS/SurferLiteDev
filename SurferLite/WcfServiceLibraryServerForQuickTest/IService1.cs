@@ -15,6 +15,9 @@ namespace WcfServiceLibraryServerForQuickTest
         List<string> GetData(string url);
 
         [OperationContract]
+        void ServiceDownloadTest();
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here

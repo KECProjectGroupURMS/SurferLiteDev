@@ -1,0 +1,68 @@
+--> Create HTML file
+
+	1. path => path of the saved page.
+	2. Function to download is "SavePageComplete(fileloaction, url)"
+
+	|
+	|-> SavePageComplete(){
+		--> take URL
+		--> if URL!=null, DownloadHtmlFile(URL);
+		}
+			|
+			|
+			|--> DownloadHtmlFile(URL){
+				--> take the URL
+				--> _HtmlFile.Storage = FileStorage.Memory;
+					_HtmlFile.WasAppended = false;
+					
+					//_HtmlFile is a WebFile
+
+				--> _HtmlFile.Download()
+						|
+						|
+						-> Debug.Write("downloading....);
+						->DownloadBytes();
+						-> if html-->
+							if css-->
+							if ..
+							.
+							.
+
+							|
+							|
+							|-> DownloadBytes(){
+								_DownloadedBytes = _Builder.WebClient.DownloadBytes(_url);
+							}
+
+								|
+								|-> DownloadBytes(_url){
+										DownloadBytes(Url, DateTime.MinValue);
+									}
+										|
+										|
+										|-> public byte[] DownloadBytes(string Url, DateTime ifModifiedSince){
+												GetUrlData(Url, ifModidifiedSince);
+												return _ResponnseBytes;
+											}
+
+											|
+											|
+											|-> GetUrlData(Url, ifModifiedSince){
+													1. If not modiefied do nothing
+													2. HttpWebRequest wreq = (HttpWebRequest)WebRequest.Create(Url);
+													
+													wreq.Method = "GET";
+													wreq.Timeout = _RequestTimeoutMilliseconds;
+													wreq.UserAgent = _HttpUserAgent;
+													wreq.Headers.Add("Accept-Encoding", _AcceptedEncodings); 
+													
+													HttpWebResponse wresp = (HttpWebResponse)wreq.GetResponse();
+
+													ExtendedBinaryReader ebr = new ExtendedBinaryReader(wresp.GetResponseStream());
+												      _ResponseBytes = ebr.ReadToEnd();
+												
+												--> decompress content if compressed then save to _ResponseBytes.
+												
+
+												??? Change fileLocation to something that windows 8 store app client can use and it should be able to be run on server computer. ???
+				
