@@ -45,6 +45,7 @@ namespace SurferLite
             ServiceReferenceForTest.Service1Client client = new ServiceReferenceForTest.Service1Client();
             //ListBoxMeta.Items.Add(await client.GetDataAsync());
             ListBoxMeta.ItemsSource = await client.GetDataAsync(TextBoxUrl.Text);
+            
             //TextBlockOutput.Text = await client.GetDataAsync();
             ProgressRing1.IsActive = false;
         }
