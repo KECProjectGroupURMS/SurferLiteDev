@@ -1,4 +1,4 @@
-﻿###Product Roadmap (SurferLite)###
+###Product Roadmap (SurferLite)###
 
 > Product Roadmap with Releated backlogs
 
@@ -45,7 +45,8 @@ Summary:
 			2.	But to know exact compression. The actual Total image size and Total compressed size should be calculated and be shown.
 **Release 03**
 1.	Show statistics and progress
-	a.	As a use, I want to be able to go to statistics and see all the overview of data usage in the page, so that I can get all information at any time just by going to that page.
+
+	a.	As a user, I want to be able to go to statistics and see all the overview of data usage in the page, so that I can get all information at any time just by going to that page.
 
 		i.	Acceptance criteria:
 			1.	The page should show Total Data usage, Actual data usage
@@ -62,6 +63,7 @@ Summary:
 **Release 05**
 
 1.	Downloading of files
-Release 06
+
+**Release 06**
 1.	Save browser data after registering users. (BLOB & Storage on Database)
 
