@@ -30,6 +30,7 @@
             <HyperlinkButton Content="Register" HorizontalAlignment="Left" Margin="0,-5,0,0" VerticalAlignment="Top" Grid.Column="2" Height="39" Width="88"/>
             <CheckBox Content="Keep Logged in" HorizontalAlignment="Left" Margin="10,11,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.Column="1"/>
         </Grid>
+        <Grid HorizontalAlignment="Left" Height="150" Margin="110,565,0,0" VerticalAlignment="Top" Width="1177"/>
 
     </Grid>
 </Page>

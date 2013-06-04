@@ -4,7 +4,10 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+
+using System.Net;
 using MHTMLBuilder;
+using System.IO;
 
 //Added for remote webpage manipulation
 using HtmlAgilityPack;
@@ -14,6 +17,7 @@ namespace WcfServiceLibraryServerForQuickTest
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class ServiceOnAzure : IService1
     {
+
         public List<string> GetData(string url)
         {
             if (url == "http://")
@@ -47,6 +51,26 @@ namespace WcfServiceLibraryServerForQuickTest
             
             // return answer
             return output;
+        }
+
+        /// <summary>
+        /// Added method to download file from server to store app
+        /// </summary>
+        public Stream GetHtml()
+        {
+            
+            //HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create("http://www.contoso.com");
+
+            //HttpWebResponse HttpWResp = (HttpWebResponse)HttpWReq.GetResponse();
+            WebRequest wrGetUrl;
+  wrGetUrl = WebRequest.Create("http://www.contoso.com");
+            Stream objStream;
+            
+            objStream = wrGetUrl.GetResponse().GetResponseStream();
+  
+            
+
+            return objStream;
         }
 
         /// <summary>

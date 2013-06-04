@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using System.Net;
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SurferLite
@@ -31,8 +33,16 @@ namespace SurferLite
         /// </summary>
         /// <param name="e">Event data that describes how this page was reached.  The Parameter
         /// property is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
+            ProgressRingLoad.IsActive = true;
+            ServiceReferenceForTest.Service1Client client = new ServiceReferenceForTest.Service1Client();
+          
+            byte[] pullStream= await client.GetHtmlAsync();
+            StreamReader objReader = new StreamReader(pullStream);
+            //StreamReader pullStreamReader = new StreamReader(pullStream);
+            ProgressRingLoad.IsActive = true;
+
         }
     }
 }

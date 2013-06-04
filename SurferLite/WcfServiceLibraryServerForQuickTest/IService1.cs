@@ -5,6 +5,8 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 
+using System.IO;
+
 namespace WcfServiceLibraryServerForQuickTest
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
@@ -16,6 +18,9 @@ namespace WcfServiceLibraryServerForQuickTest
 
         [OperationContract]
         void ServiceDownloadTest();
+
+        [OperationContract]
+        Stream GetHtml();
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
