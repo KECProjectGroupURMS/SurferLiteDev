@@ -59,17 +59,12 @@ namespace WcfServiceLibraryServerForQuickTest
         public Stream GetHtml()
         {
             
-            //HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create("http://www.contoso.com");
+            HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create("http://www.contoso.com");
+            HttpWebResponse HttpWResp = (HttpWebResponse)HttpWReq.GetResponse();
 
-            //HttpWebResponse HttpWResp = (HttpWebResponse)HttpWReq.GetResponse();
-            WebRequest wrGetUrl;
-  wrGetUrl = WebRequest.Create("http://www.contoso.com");
             Stream objStream;
-            
-            objStream = wrGetUrl.GetResponse().GetResponseStream();
+            objStream = HttpWResp.GetResponseStream();
   
-            
-
             return objStream;
         }
 

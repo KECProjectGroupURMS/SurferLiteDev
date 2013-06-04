@@ -39,10 +39,12 @@ namespace SurferLite
             ServiceReferenceForTest.Service1Client client = new ServiceReferenceForTest.Service1Client();
           
             byte[] pullStream= await client.GetHtmlAsync();
-            StreamReader objReader = new StreamReader(pullStream);
-            //StreamReader pullStreamReader = new StreamReader(pullStream);
-            ProgressRingLoad.IsActive = true;
+            
+            MemoryStream theMemStream = new MemoryStream();
 
+            theMemStream.Write(pullStream, 0, pullStream.Length);
+            //StreamReader pullStreamReader = new StreamReader(pullStream);
+            ProgressRingLoad.IsActive = false;
         }
     }
 }
