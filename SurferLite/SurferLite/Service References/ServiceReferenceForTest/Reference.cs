@@ -71,7 +71,7 @@ namespace SurferLite.ServiceReferenceForTest {
         System.Threading.Tasks.Task ServiceDownloadTestAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetHtml", ReplyAction="http://tempuri.org/IService1/GetHtmlResponse")]
-        System.Threading.Tasks.Task<byte[]> GetHtmlAsync();
+        System.Threading.Tasks.Task<byte[]> GetHtmlAsync(System.Uri URL);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<SurferLite.ServiceReferenceForTest.CompositeType> GetDataUsingDataContractAsync(SurferLite.ServiceReferenceForTest.CompositeType composite);
@@ -128,8 +128,8 @@ namespace SurferLite.ServiceReferenceForTest {
             return base.Channel.ServiceDownloadTestAsync();
         }
         
-        public System.Threading.Tasks.Task<byte[]> GetHtmlAsync() {
-            return base.Channel.GetHtmlAsync();
+        public System.Threading.Tasks.Task<byte[]> GetHtmlAsync(System.Uri URL) {
+            return base.Channel.GetHtmlAsync(URL);
         }
         
         public System.Threading.Tasks.Task<SurferLite.ServiceReferenceForTest.CompositeType> GetDataUsingDataContractAsync(SurferLite.ServiceReferenceForTest.CompositeType composite) {

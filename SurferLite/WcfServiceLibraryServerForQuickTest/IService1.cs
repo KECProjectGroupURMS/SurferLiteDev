@@ -20,7 +20,7 @@ namespace WcfServiceLibraryServerForQuickTest
         void ServiceDownloadTest();
 
         [OperationContract]
-        Stream GetHtml();
+        Stream GetHtml(Uri URL);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

@@ -56,10 +56,10 @@ namespace WcfServiceLibraryServerForQuickTest
         /// <summary>
         /// Added method to download file from server to store app
         /// </summary>
-        public Stream GetHtml()
+        public Stream GetHtml(Uri URL)
         {
             
-            HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create("http://www.contoso.com");
+            HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create(URL);
             HttpWebResponse HttpWResp = (HttpWebResponse)HttpWReq.GetResponse();
 
             Stream objStream;

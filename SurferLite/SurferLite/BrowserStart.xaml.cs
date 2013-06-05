@@ -23,6 +23,8 @@ namespace SurferLite
     /// </summary>
     public sealed partial class BrowserStart : Page
     {
+        ServiceReferenceForTest.Service1Client client = new ServiceReferenceForTest.Service1Client();
+
         public BrowserStart()
         {
             this.InitializeComponent();
@@ -33,18 +35,41 @@ namespace SurferLite
         /// </summary>
         /// <param name="e">Event data that describes how this page was reached.  The Parameter
         /// property is typically used to configure the page.</param>
-        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            NavigateThroughSurferLite("https://www.google.com/");            
+        }
+
+        private async void NavigateThroughSurferLite(string URLString)
         {
             ProgressRingLoad.IsActive = true;
-            ServiceReferenceForTest.Service1Client client = new ServiceReferenceForTest.Service1Client();
-          
-            byte[] pullStream= await client.GetHtmlAsync();
-            
+
+            Uri URL = new Uri(URLString);
+            byte[] pullStream = await client.GetHtmlAsync(URL);
+
             MemoryStream theMemStream = new MemoryStream();
 
             theMemStream.Write(pullStream, 0, pullStream.Length);
-            //StreamReader pullStreamReader = new StreamReader(pullStream);
+            //converting to string to show to webview
+            StreamWriter writer = new StreamWriter(theMemStream);
+            writer.Write(pullStream);
+            writer.Flush();
+
+            theMemStream.Position = 0;
+            StreamReader reader = new StreamReader(theMemStream);
+            string result = reader.ReadToEnd();
+
+            WebViewBrowse.NavigateToString(result);
             ProgressRingLoad.IsActive = false;
+
+        }
+
+        private void KeyUpEnter(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                NavigateThroughSurferLite(TextBoxUrl.Text);
+            }
         }
     }
 }

@@ -8,8 +8,10 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock HorizontalAlignment="Left" Margin="100,160,0,0" TextWrapping="Wrap" Text="Modify this with most used bookmarks in view which can be clicked to got o specific sites" VerticalAlignment="Top" FontSize="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="88,26,0,0" TextWrapping="Wrap" Text="Modify this with most used bookmarks in view which can be clicked to got o specific sites" VerticalAlignment="Top" FontSize="22"/>
         <ProgressRing x:Name="ProgressRingLoad" HorizontalAlignment="Left" Margin="438,52,0,0" VerticalAlignment="Top" Height="78" Width="150"/>
+        <WebView x:Name="WebViewBrowse" HorizontalAlignment="Left" Height="617" Margin="128,130,0,0" VerticalAlignment="Top" Width="718"/>
+        <TextBox x:ConnectionId='1' x:Name="TextBoxUrl" HorizontalAlignment="Left" Margin="128,95,0,0" TextWrapping="Wrap" Text="https://www.google.com/" VerticalAlignment="Top" Width="718"                   />
 
     </Grid>
 </Page>
