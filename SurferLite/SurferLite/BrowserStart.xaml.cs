@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Navigation;
 
 using System.Net;
 using System.IO.Compression;
+using System.IO;
+using System.Text;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -47,6 +49,56 @@ namespace SurferLite
         {
             NavigateThroughSurferLite("https://www.google.com/");            
         }
+        private string DecompressBytes(byte[] compressedByte)
+        {
+            string result;
+            
+            //Ready
+            //Prepare for decompress
+            MemoryStream ms = new MemoryStream(compressedByte);
+            GZipStream compressor = new GZipStream(ms, CompressionMode.Decompress);
+
+            //Reset variable to collect uncompressed result
+            compressedByte = new byte[9999999];
+
+            //Decompress
+            int rByte = compressor.Read(compressedByte, 0, compressedByte.Length);
+
+            MemoryStream decompressedStream = new MemoryStream(compressedByte);
+
+            //converting to string to return
+            StreamWriter writer = new StreamWriter(decompressedStream);
+            writer.Write(compressedByte);
+            writer.Flush();
+
+            decompressedStream.Position = 0;
+            StreamReader reader = new StreamReader(decompressedStream);
+            result = reader.ReadToEnd();
+            //TextBlockAnsSize.Text = result.Length.ToString()+" B";
+            TextBlockAnsSize.Text = rByte.ToString()+" B";
+            
+
+            compressor.Dispose();
+            ms.Dispose();
+            return result;
+            
+            //These works remove //s
+            //////////Transform byte[] unzip data to string
+            ////////System.Text.StringBuilder sB = new System.Text.StringBuilder(rByte);
+            //////////Read the number of bytes GZipStream red and do not a for each bytes in
+            //////////resultByteArray;
+            ////////for (int i = 0; i < rByte; i++)
+            ////////{
+            ////////    sB.Append((char)compressedByte[i]);
+            ////////}
+
+            ////////compressor.Dispose();
+            ////////ms.Dispose();
+            ////////TextBlockAnsSize.Text = sB.Length.ToString()+" B";
+
+            ////////return sB.ToString();
+
+        }
 
         private async void NavigateThroughSurferLite(string URLString)
         {
@@ -61,52 +113,8 @@ namespace SurferLite
                 
                 TextBlockSize.Text = pullStream.Length.ToString()+" B";
 
-                //CopiedFromNet: System.IO.MemoryStream ms = new System.IO.MemoryStream(byteArray);
-                MemoryStream theMemStream = new MemoryStream(pullStream);
-                //NOTNEEDED: theMemStream.Write(pullStream, 0, pullStream.Length);
-
-                //Decompress the stream
-                MemoryStream decompressedStream = new MemoryStream();
-                ////getting ready for source
-                //var sourceStream = new MemoryStream();
-                //theMemStream.CopyTo(sourceStream);
-                //sourceStream.Close();
-
-
-                ////converting to byte[]
-                //byte[] newByteArray = sourceStream.ToArray();
-                
-                //make new compressor "zip"
-                GZipStream zip = new GZipStream(theMemStream, CompressionMode.Decompress, true);
-                
-                //    zip.Read(pullStream, 0, pullStream.Length);
-                
-
-                pullStream = new byte[pullStream.Length];
-                int rByte = zip.Read(pullStream, 0, pullStream.Length);
-                
-                //zip.Close();
-                ////////////////////////////////////
-                //var theMemStream = new MemoryStream();
-                //zip.CopyTo(theMemStream);
-                //theMemStream.Close();
-                //////////////////////////////////////
-                //long a = compressedStream.Length;
-                /////////////////////////////////////
-
-                //////////////////////////////////////
-                
-            
-                ////////////////////////
-
-                //converting to string to show to webview
-                StreamWriter writer = new StreamWriter(decompressedStream);
-                writer.Write(pullStream);
-                writer.Flush();
-                
-                decompressedStream.Position = 0;
-                StreamReader reader = new StreamReader(decompressedStream);
-                string result = reader.ReadToEnd();
+               
+                string result=DecompressBytes(pullStream);
                 WebViewBrowse.NavigateToString(result);
             }
             catch(Exception e)
