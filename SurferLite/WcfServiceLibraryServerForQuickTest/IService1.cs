@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.Text;
 
 using System.IO;
+using System.IO.Compression;
 
 namespace WcfServiceLibraryServerForQuickTest
 {
@@ -20,7 +21,9 @@ namespace WcfServiceLibraryServerForQuickTest
         void ServiceDownloadTest();
 
         [OperationContract]
+        //GZipStream GetHtml(Uri URL);
         Stream GetHtml(Uri URL);
+        //int GetHtml(Uri URL);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 using System.Net;
+using System.IO.Compression;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -23,11 +24,18 @@ namespace SurferLite
     /// </summary>
     public sealed partial class BrowserStart : Page
     {
-        ServiceReferenceForTest.Service1Client client = new ServiceReferenceForTest.Service1Client();
+
+        ServiceReferenceForTest.Service1Client client;
 
         public BrowserStart()
         {
             this.InitializeComponent();
+            try{
+                client = new ServiceReferenceForTest.Service1Client();
+            }
+            catch{
+                WebViewBrowse.NavigateToString("Can't connect to the SurferLite server");
+            }
         }
 
         /// <summary>
@@ -42,24 +50,34 @@ namespace SurferLite
 
         private async void NavigateThroughSurferLite(string URLString)
         {
-            ProgressRingLoad.IsActive = true;
+            try
+            {
+                Uri URL = new Uri(URLString);
+                ProgressRingLoad.IsActive = true;
 
-            Uri URL = new Uri(URLString);
-            byte[] pullStream = await client.GetHtmlAsync(URL);
+                byte[] pullStream = await client.GetHtmlAsync(URL);
+                //GZipStream pullStream = await client.GetHtmlAsync(URL);
+                
+                
+                TextBlockSize.Text = (pullStream.Length/1024).ToString()+" KB";
+                MemoryStream theMemStream = new MemoryStream();
 
-            MemoryStream theMemStream = new MemoryStream();
+                theMemStream.Write(pullStream, 0, pullStream.Length);
+                //converting to string to show to webview
+                StreamWriter writer = new StreamWriter(theMemStream);
+                writer.Write(pullStream);
+                writer.Flush();
 
-            theMemStream.Write(pullStream, 0, pullStream.Length);
-            //converting to string to show to webview
-            StreamWriter writer = new StreamWriter(theMemStream);
-            writer.Write(pullStream);
-            writer.Flush();
+                theMemStream.Position = 0;
+                StreamReader reader = new StreamReader(theMemStream);
+                string result = reader.ReadToEnd();
+                WebViewBrowse.NavigateToString(result);
+            }
+            catch
+            {
+                WebViewBrowse.NavigateToString("Error");
+            }
 
-            theMemStream.Position = 0;
-            StreamReader reader = new StreamReader(theMemStream);
-            string result = reader.ReadToEnd();
-
-            WebViewBrowse.NavigateToString(result);
             ProgressRingLoad.IsActive = false;
 
         }

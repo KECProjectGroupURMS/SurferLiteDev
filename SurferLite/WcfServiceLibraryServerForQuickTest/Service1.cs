@@ -11,6 +11,7 @@ using System.IO;
 
 //Added for remote webpage manipulation
 using HtmlAgilityPack;
+using System.IO.Compression;
 
 namespace WcfServiceLibraryServerForQuickTest
 {
@@ -56,7 +57,9 @@ namespace WcfServiceLibraryServerForQuickTest
         /// <summary>
         /// Added method to download file from server to store app
         /// </summary>
+        //public GZipStream GetHtml(Uri URL)
         public Stream GetHtml(Uri URL)
+        //public int GetHtml(Uri URL)
         {
             
             HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create(URL);
@@ -64,8 +67,15 @@ namespace WcfServiceLibraryServerForQuickTest
 
             Stream objStream;
             objStream = HttpWResp.GetResponseStream();
-  
+
+            //MemoryStream newStream = new MemoryStream();
+            //GZipStream compressor = new GZipStream(newStream, CompressionLevel.Optimal);
+            
+            //objStream.CopyTo(compressor);
+            
             return objStream;
+            //return compressor;
+            //return 1;
         }
 
         /// <summary>
