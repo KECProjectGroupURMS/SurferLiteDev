@@ -21,7 +21,7 @@ namespace WcfServiceLibraryServerForQuickTest
         void ServiceDownloadTest();
 
         [OperationContract]
-        //GZipStream GetHtml(Uri URL);
+        //GZipStream GetHtml(Uri URL);<-- not supported
         Stream GetHtml(Uri URL);
         //int GetHtml(Uri URL);
 

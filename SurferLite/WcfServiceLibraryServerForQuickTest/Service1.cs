@@ -57,7 +57,7 @@ namespace WcfServiceLibraryServerForQuickTest
         /// <summary>
         /// Added method to download file from server to store app
         /// </summary>
-        //public GZipStream GetHtml(Uri URL)
+        //XXXXXXXXXXXXpublic GZipStream GetHtml(Uri URL)
         public Stream GetHtml(Uri URL)
         //public int GetHtml(Uri URL)
         {
@@ -65,16 +65,36 @@ namespace WcfServiceLibraryServerForQuickTest
             HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create(URL);
             HttpWebResponse HttpWResp = (HttpWebResponse)HttpWReq.GetResponse();
 
-            Stream objStream;
-            objStream = HttpWResp.GetResponseStream();
+            Stream gotStream;
+            gotStream = HttpWResp.GetResponseStream();
 
-            //MemoryStream newStream = new MemoryStream();
-            //GZipStream compressor = new GZipStream(newStream, CompressionLevel.Optimal);
+            //destination stream
+            MemoryStream compressedStream = new MemoryStream();
+            //getting ready for source
+            var sourceStream = new MemoryStream();
+            gotStream.CopyTo(sourceStream);
+            sourceStream.Close();
+                        
+            //converting to byte[]
+            byte[] newByteArray = sourceStream.ToArray();
             
-            //objStream.CopyTo(compressor);
-            
-            return objStream;
-            //return compressor;
+            //make new compressor "zip"
+            GZipStream zip = new GZipStream(compressedStream,CompressionLevel.Optimal,true);
+            zip.Write(newByteArray, 0, newByteArray.Length);
+            zip.Close();
+            ////////////////////////////////////
+            //var theMemStream = new MemoryStream();
+            //zip.CopyTo(theMemStream);
+            //theMemStream.Close();
+            //////////////////////////////////////
+            //long a = compressedStream.Length;
+            /////////////////////////////////////
+
+            //////////////////////////////////////
+            compressedStream.Position = 0;
+            return compressedStream;
+            //return newStream;
+            //XXXXreturn zip;
             //return 1;
         }
 

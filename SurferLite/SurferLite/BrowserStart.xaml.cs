@@ -56,26 +56,63 @@ namespace SurferLite
                 ProgressRingLoad.IsActive = true;
 
                 byte[] pullStream = await client.GetHtmlAsync(URL);
-                //GZipStream pullStream = await client.GetHtmlAsync(URL);
+                //Stream pullStream = await client.GetHtmlAsync(URL);
                 
                 
-                TextBlockSize.Text = (pullStream.Length/1024).ToString()+" KB";
-                MemoryStream theMemStream = new MemoryStream();
+                TextBlockSize.Text = pullStream.Length.ToString()+" B";
 
-                theMemStream.Write(pullStream, 0, pullStream.Length);
+                //CopiedFromNet: System.IO.MemoryStream ms = new System.IO.MemoryStream(byteArray);
+                MemoryStream theMemStream = new MemoryStream(pullStream);
+                //NOTNEEDED: theMemStream.Write(pullStream, 0, pullStream.Length);
+
+                //Decompress the stream
+                MemoryStream decompressedStream = new MemoryStream();
+                ////getting ready for source
+                //var sourceStream = new MemoryStream();
+                //theMemStream.CopyTo(sourceStream);
+                //sourceStream.Close();
+
+
+                ////converting to byte[]
+                //byte[] newByteArray = sourceStream.ToArray();
+                
+                //make new compressor "zip"
+                GZipStream zip = new GZipStream(theMemStream, CompressionMode.Decompress, true);
+                
+                //    zip.Read(pullStream, 0, pullStream.Length);
+                
+
+                pullStream = new byte[pullStream.Length];
+                int rByte = zip.Read(pullStream, 0, pullStream.Length);
+                
+                //zip.Close();
+                ////////////////////////////////////
+                //var theMemStream = new MemoryStream();
+                //zip.CopyTo(theMemStream);
+                //theMemStream.Close();
+                //////////////////////////////////////
+                //long a = compressedStream.Length;
+                /////////////////////////////////////
+
+                //////////////////////////////////////
+                
+            
+                ////////////////////////
+
                 //converting to string to show to webview
-                StreamWriter writer = new StreamWriter(theMemStream);
+                StreamWriter writer = new StreamWriter(decompressedStream);
                 writer.Write(pullStream);
                 writer.Flush();
-
-                theMemStream.Position = 0;
-                StreamReader reader = new StreamReader(theMemStream);
+                
+                decompressedStream.Position = 0;
+                StreamReader reader = new StreamReader(decompressedStream);
                 string result = reader.ReadToEnd();
                 WebViewBrowse.NavigateToString(result);
             }
-            catch
+            catch(Exception e)
             {
-                WebViewBrowse.NavigateToString("Error");
+                
+                WebViewBrowse.NavigateToString(e.ToString());
             }
 
             ProgressRingLoad.IsActive = false;
