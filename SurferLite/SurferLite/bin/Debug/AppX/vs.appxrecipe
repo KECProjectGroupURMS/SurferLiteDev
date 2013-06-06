@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-06-05T04:39:11.289</Modified>
+      <Modified>2013-06-06T14:45:50.948</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.exe">
       <PackagePath>SurferLite.exe</PackagePath>
-      <Modified>2013-06-05T12:03:12.372</Modified>
+      <Modified>2013-06-06T17:25:37.100</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.pdb">
       <PackagePath>SurferLite.pdb</PackagePath>
-      <Modified>2013-06-05T12:03:12.363</Modified>
+      <Modified>2013-06-06T17:25:37.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -58,7 +58,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\BrowserStart.xaml">
       <PackagePath>BrowserStart.xaml</PackagePath>
-      <Modified>2013-06-05T12:03:10.544</Modified>
+      <Modified>2013-06-06T17:25:35.742</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
@@ -90,7 +90,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-06-05T04:39:11.180</Modified>
+      <Modified>2013-06-06T14:45:50.166</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

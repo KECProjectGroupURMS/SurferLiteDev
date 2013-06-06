@@ -28,6 +28,7 @@ namespace SurferLite
     {
 
         ServiceReferenceForTest.Service1Client client;
+        string currentRootUrl;
 
         public BrowserStart()
         {
@@ -47,7 +48,7 @@ namespace SurferLite
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            NavigateThroughSurferLite("https://www.google.com/");            
+            //NavigateThroughSurferLite("http://www.bing.com/");            
         }
         private string DecompressBytes(byte[] compressedByte)
         {
@@ -127,12 +128,45 @@ namespace SurferLite
 
         }
 
-        private void KeyUpEnter(object sender, KeyRoutedEventArgs e)
+        private async void KeyUpEnter(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == Windows.System.VirtualKey.Enter)
             {
                 NavigateThroughSurferLite(TextBoxUrl.Text);
+                ListBoxUrls.ItemsSource = await client.GetHrefLinksAsync(TextBoxUrl.Text);
+
+                //Save original Text
+                currentRootUrl = TextBoxUrl.Text;
             }
+        }
+
+        private async void SelectedListItem(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedItems = ListBoxUrls.SelectedItems;
+            if (selectedItems.Count > 0)
+            {
+                // Display text of first item selected.
+                //WebViewBrowse.NavigateToString(selectedItems[0].ToString());
+                if (!selectedItems[0].ToString().Contains("http"))
+                {
+                    TextBoxUrl.Text = currentRootUrl + selectedItems[0].ToString();
+                }
+                else
+                {
+                    TextBoxUrl.Text = selectedItems[0].ToString();
+                    currentRootUrl = TextBoxUrl.Text;
+                    ListBoxUrls.ItemsSource = await client.GetHrefLinksAsync(TextBoxUrl.Text);
+
+                }
+                
+                NavigateThroughSurferLite(TextBoxUrl.Text);
+
+            }
+            else
+            {
+                // Display default string.
+                WebViewBrowse.NavigateToString("Empty");
+            } 
         }
     }
 }

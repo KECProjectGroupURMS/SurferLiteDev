@@ -18,7 +18,36 @@ namespace WcfServiceLibraryServerForQuickTest
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class ServiceOnAzure : IService1
     {
+        public List<string> GetHrefLinks(string url)
+        {
+            //var webDocument = new HtmlDocument();
+            //webDocument.Load(GetHtml(url));
+            
+            // Get a page from remote server
+            var webGet = new HtmlWeb();
+            var webDocument = webGet.Load(url);
+            
+            var linksOnPage = from lnks in webDocument.DocumentNode.Descendants()
+                              where lnks.Name == "a" &&
+                                    lnks.Attributes["href"] != null &&
+                                    lnks.InnerText.Trim().Length > 0
+                              select new
+                              {
+                                  Url = lnks.Attributes["href"].Value,
+                                  Text = lnks.InnerText
+                              };
+            
+            List<string> newList=new List<string>();
+            foreach (var item in linksOnPage)
+            {
 
+                //newList.Add(item.Url+" [[[[["+item.Text+"]]]]]");
+                //For now let's just pick Url
+                newList.Add(item.Url);
+            }
+            
+            return newList;
+        }
         public List<string> GetData(string url)
         {
             if (url == "http://")
@@ -104,11 +133,13 @@ namespace WcfServiceLibraryServerForQuickTest
 
     public void getdatafromPack()
     {
-        var webGet = new HtmlWeb();
-        var document = webGet.Load("http://www.google.com");
+        string text = "<html><a href='thisis.jpg' >Test</a></html>";
+
+        var webDocument = new HtmlDocument();
+        webDocument.LoadHtml(text);
 
         // Get <a> tags that have a href attribute and non-whitespace inner text
-        var linksOnPage = from lnks in document.DocumentNode.Descendants()
+        var linksOnPage = from lnks in webDocument.DocumentNode.Descendants()
                           where lnks.Name == "a" &&
                                 lnks.Attributes["href"] != null &&
                                 lnks.InnerText.Trim().Length > 0
@@ -118,8 +149,6 @@ namespace WcfServiceLibraryServerForQuickTest
                               Text = lnks.InnerText
                           };
 
-        string summary = string.Format("URL {0} loaded in {1:N0} milliseconds. {2:N0} links discovered...",
-                                        webGet.ResponseUri.ToString(), webGet.RequestDuration, linksOnPage.Count());
     }
 
         /// <summary>

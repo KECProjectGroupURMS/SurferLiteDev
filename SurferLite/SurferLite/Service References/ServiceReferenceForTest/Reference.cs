@@ -64,6 +64,9 @@ namespace SurferLite.ServiceReferenceForTest {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReferenceForTest.IService1")]
     public interface IService1 {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetHrefLinks", ReplyAction="http://tempuri.org/IService1/GetHrefLinksResponse")]
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetHrefLinksAsync(string url);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetDataAsync(string url);
         
@@ -72,6 +75,9 @@ namespace SurferLite.ServiceReferenceForTest {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetHtml", ReplyAction="http://tempuri.org/IService1/GetHtmlResponse")]
         System.Threading.Tasks.Task<byte[]> GetHtmlAsync(System.Uri URL);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getdatafromPack", ReplyAction="http://tempuri.org/IService1/getdatafromPackResponse")]
+        System.Threading.Tasks.Task getdatafromPackAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<SurferLite.ServiceReferenceForTest.CompositeType> GetDataUsingDataContractAsync(SurferLite.ServiceReferenceForTest.CompositeType composite);
@@ -120,6 +126,10 @@ namespace SurferLite.ServiceReferenceForTest {
                 base(binding, remoteAddress) {
         }
         
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetHrefLinksAsync(string url) {
+            return base.Channel.GetHrefLinksAsync(url);
+        }
+        
         public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetDataAsync(string url) {
             return base.Channel.GetDataAsync(url);
         }
@@ -130,6 +140,10 @@ namespace SurferLite.ServiceReferenceForTest {
         
         public System.Threading.Tasks.Task<byte[]> GetHtmlAsync(System.Uri URL) {
             return base.Channel.GetHtmlAsync(URL);
+        }
+        
+        public System.Threading.Tasks.Task getdatafromPackAsync() {
+            return base.Channel.getdatafromPackAsync();
         }
         
         public System.Threading.Tasks.Task<SurferLite.ServiceReferenceForTest.CompositeType> GetDataUsingDataContractAsync(SurferLite.ServiceReferenceForTest.CompositeType composite) {

@@ -15,6 +15,9 @@ namespace WcfServiceLibraryServerForQuickTest
     public interface IService1
     {
         [OperationContract]
+        List<string> GetHrefLinks(string url);
+
+        [OperationContract]
         List<string> GetData(string url);
 
         [OperationContract]

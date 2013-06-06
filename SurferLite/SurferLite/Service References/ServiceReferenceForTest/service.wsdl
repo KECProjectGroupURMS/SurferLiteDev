@@ -9,6 +9,12 @@
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfServiceLibraryServerForQuickTest" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IService1_GetHrefLinks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHrefLinks" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetHrefLinks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHrefLinksResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetData_InputMessage">
     <wsdl:part name="parameters" element="tns:GetData" />
   </wsdl:message>
@@ -27,6 +33,12 @@
   <wsdl:message name="IService1_GetHtml_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetHtmlResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_getdatafromPack_InputMessage">
+    <wsdl:part name="parameters" element="tns:getdatafromPack" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getdatafromPack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getdatafromPackResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
@@ -34,6 +46,10 @@
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
+    <wsdl:operation name="GetHrefLinks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetHrefLinks" message="tns:IService1_GetHrefLinks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetHrefLinksResponse" message="tns:IService1_GetHrefLinks_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
@@ -46,6 +62,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetHtml" message="tns:IService1_GetHtml_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetHtmlResponse" message="tns:IService1_GetHtml_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="getdatafromPack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getdatafromPack" message="tns:IService1_getdatafromPack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getdatafromPackResponse" message="tns:IService1_getdatafromPack_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
@@ -53,6 +73,15 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHrefLinks">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetHrefLinks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
       <wsdl:input>
@@ -73,6 +102,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetHtml">
       <soap:operation soapAction="http://tempuri.org/IService1/GetHtml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getdatafromPack">
+      <soap:operation soapAction="http://tempuri.org/IService1/getdatafromPack" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -10,10 +10,11 @@
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock HorizontalAlignment="Left" Margin="88,26,0,0" TextWrapping="Wrap" Text="Modify this with most used bookmarks in view which can be clicked to got o specific sites" VerticalAlignment="Top" FontSize="22"/>
         <ProgressRing x:Name="ProgressRingLoad" HorizontalAlignment="Left" Margin="438,52,0,0" VerticalAlignment="Top" Height="78" Width="150"/>
-        <WebView x:Name="WebViewBrowse" HorizontalAlignment="Left" Height="617" Margin="128,130,0,0" VerticalAlignment="Top" Width="718" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False"/>
-        <TextBox x:ConnectionId='1' x:Name="TextBoxUrl" HorizontalAlignment="Left" Margin="128,95,0,0" TextWrapping="Wrap" Text="https://www.google.com/" VerticalAlignment="Top" Width="718"                   />
+        <WebView x:Name="WebViewBrowse" HorizontalAlignment="Left" Height="617" Margin="128,130,0,0" VerticalAlignment="Top" Width="718"/>
+        <TextBox x:ConnectionId='1' x:Name="TextBoxUrl" HorizontalAlignment="Left" Margin="128,95,0,0" TextWrapping="Wrap" Text="http://www.bing.com" VerticalAlignment="Top" Width="718"                   />
         <TextBlock x:Name="TextBlockSize" HorizontalAlignment="Left" Margin="862,130,0,0" TextWrapping="Wrap" Text="Size" VerticalAlignment="Top"/>
         <TextBlock x:Name="TextBlockAnsSize" HorizontalAlignment="Left" Margin="862,150,0,0" TextWrapping="Wrap" Text="AnsSize" VerticalAlignment="Top"/>
+        <ListBox x:ConnectionId='2' x:Name="ListBoxUrls" HorizontalAlignment="Left" Height="617" Margin="930,130,0,0" VerticalAlignment="Top" Width="392"                                    />
 
     </Grid>
 </Page>
