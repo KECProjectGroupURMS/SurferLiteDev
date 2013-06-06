@@ -96,7 +96,31 @@ namespace WcfServiceLibraryServerForQuickTest
             //return newStream;
             //XXXXreturn zip;
             //return 1;
+            // Get the URL specified
+            
+            
+    
         }
+
+    public void getdatafromPack()
+    {
+        var webGet = new HtmlWeb();
+        var document = webGet.Load("http://www.google.com");
+
+        // Get <a> tags that have a href attribute and non-whitespace inner text
+        var linksOnPage = from lnks in document.DocumentNode.Descendants()
+                          where lnks.Name == "a" &&
+                                lnks.Attributes["href"] != null &&
+                                lnks.InnerText.Trim().Length > 0
+                          select new
+                          {
+                              Url = lnks.Attributes["href"].Value,
+                              Text = lnks.InnerText
+                          };
+
+        string summary = string.Format("URL {0} loaded in {1:N0} milliseconds. {2:N0} links discovered...",
+                                        webGet.ResponseUri.ToString(), webGet.RequestDuration, linksOnPage.Count());
+    }
 
         /// <summary>
         /// Added Service Operation

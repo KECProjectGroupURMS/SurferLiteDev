@@ -26,6 +26,9 @@ namespace WcfServiceLibraryServerForQuickTest
         //int GetHtml(Uri URL);
 
         [OperationContract]
+        void getdatafromPack();
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
