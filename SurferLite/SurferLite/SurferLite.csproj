@@ -147,6 +147,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\ServiceReferences.Designer.ClientConfig" />
     <None Include="Service References\ServiceReferenceForFinal\service.wsdl" />
     <None Include="Service References\ServiceReferenceForFinal\service.xsd">

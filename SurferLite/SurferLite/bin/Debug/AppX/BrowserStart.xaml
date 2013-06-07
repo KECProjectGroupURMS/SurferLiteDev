@@ -15,6 +15,8 @@
         <TextBlock x:Name="TextBlockSize" HorizontalAlignment="Left" Margin="862,130,0,0" TextWrapping="Wrap" Text="Size" VerticalAlignment="Top"/>
         <TextBlock x:Name="TextBlockAnsSize" HorizontalAlignment="Left" Margin="862,150,0,0" TextWrapping="Wrap" Text="AnsSize" VerticalAlignment="Top"/>
         <ListBox x:ConnectionId='2' x:Name="ListBoxUrls" HorizontalAlignment="Left" Height="617" Margin="930,130,0,0" VerticalAlignment="Top" Width="392"                                    />
+        <HyperlinkButton x:ConnectionId='3' Content="SeeSourceOfPage" HorizontalAlignment="Left" Margin="702,57,0,0" VerticalAlignment="Top"                                                />
+        <TextBlock x:Name="TextBlockSource" HorizontalAlignment="Left" Margin="930,95,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="652" Width="392" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
 
     </Grid>
 </Page>
