@@ -194,9 +194,8 @@ namespace SurferLite
                 {
                     TextBoxUrl.Text = selectedItems[0].ToString();
                     currentRootUrl = TextBoxUrl.Text;
-                    ListBoxUrls.ItemsSource = await client.GetHrefLinksAsync(TextBoxUrl.Text);
                 }
-                
+                ListBoxUrls.ItemsSource = await client.GetHrefLinksAsync(TextBoxUrl.Text);                
                 NavigateThroughSurferLite(TextBoxUrl.Text);
             }
             else

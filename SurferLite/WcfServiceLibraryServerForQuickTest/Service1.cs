@@ -12,6 +12,7 @@ using System.IO;
 //Added for remote webpage manipulation
 using HtmlAgilityPack;
 using System.IO.Compression;
+using System.Web.Hosting;
 
 namespace WcfServiceLibraryServerForQuickTest
 {
@@ -164,11 +165,13 @@ namespace WcfServiceLibraryServerForQuickTest
             //Console.WriteLine("MHTML is \n " + mhtml);
 
             //testing.SavePageTextTest("http://www.google.com", @"C:\Google_SavePageText.txt");
-            testing.SavePageTest("http://www.google.com", @"C:\Google_SavePage.html");
-            //testing.createMHTMLFile2("http://www.google.com", @"C:\FinalTest.mht");
-            //testing.createHTMLFile("http://www.google.com", @"C:\RezaSavePageComplete.html");
 
-            //testing.createMHTMLFile2("http://www.google.com", @"C:\NewTests.mht");
+            //testing.SavePageTest("http://www.google.com", @"Temporary\New.htm");
+            //testing.createMHTMLFile2("http://www.google.com", @"C:\FinalTest.mht");
+
+            testing.createHTMLFile("http://hacktolive.org/wiki/Hacktolive.org", @"Temporary\Hacktolive.html");
+
+            //testing.createMHTMLFile2("http://hacktolive.org/wiki/Hacktolive.org", @"Temporary\Hacktolive.mht");
             //testing.createMHTMLFile("http://www.google.com", @"C:\NewTests.mht");
 
             //const string testString = @"----=_NextPart_000_00";

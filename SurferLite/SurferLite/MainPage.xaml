@@ -8,6 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
         <Grid HorizontalAlignment="Left" Height="176" Margin="521,294,0,0" VerticalAlignment="Top" Width="390">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="128*"/>
@@ -31,6 +36,7 @@
             <CheckBox Content="Keep Logged in" HorizontalAlignment="Left" Margin="10,11,0,0" Grid.Row="3" VerticalAlignment="Top" Grid.Column="1"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="150" Margin="110,565,0,0" VerticalAlignment="Top" Width="1177"/>
+        <Button Content="About Us" HorizontalAlignment="Left" Margin="551,505,0,0" VerticalAlignment="Top" Click="aboutUs"/>
 
     </Grid>
 </Page>

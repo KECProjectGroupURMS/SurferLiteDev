@@ -39,5 +39,10 @@ namespace SurferLite
         {
             this.Frame.Navigate(typeof(BrowserStart));
         }
+
+        private void aboutUs(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AboutPage));
+        }
     }
 }
