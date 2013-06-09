@@ -22,6 +22,7 @@
         <ListBox x:Name="ListBoxUrls" HorizontalAlignment="Left" Height="617" Margin="930,130,0,0" VerticalAlignment="Top" Width="392" SelectionChanged="SelectedListItem"/>
         <HyperlinkButton Content="SeeSourceOfPage" HorizontalAlignment="Left" Margin="702,57,0,0" VerticalAlignment="Top" Click="SeeSource" DoubleTapped="CollapseSource"/>
         <TextBlock x:Name="TextBlockSource" HorizontalAlignment="Left" Margin="930,95,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="652" Width="392" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+        <Button Content="Sign Out" HorizontalAlignment="Left" Margin="1226,26,0,0" VerticalAlignment="Top" Click="SignOutClicked"/>
 
     </Grid>
 </Page>

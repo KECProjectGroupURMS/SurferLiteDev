@@ -35,6 +35,7 @@ namespace SurferLite
         {
             //string abc="<script type=\"text/javascript\" src=\"http://api.filepicker.io/v1/filepicker.js\"></script><script>filepicker.setKey(\"ArssyemSbTa6gPcnwkzXCz\")</script><script type=\"text/javascript\">filepicker.pick(function(FPFile){console.log(FPFile.url);});</script><body><input type=\"filepicker\" name=\"attachment\"><button data-fp-url=\"http://87107.zbigz.com/core/outfile.php?did=86d4ba33ee841d7943d939571e281278\">Save File</button></body>";
             //WebViewCloudDisk.NavigateToString(abc);
+            WebViewCloudDisk.NavigateToString("The navigated string is commented in code.");
         }
 
         private void backButtonClicked(object sender, RoutedEventArgs e)

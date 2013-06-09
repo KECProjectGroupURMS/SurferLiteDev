@@ -44,5 +44,10 @@ namespace SurferLite
         {
             this.Frame.Navigate(typeof(AboutPage));
         }
+
+        private void RegisterClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Registration));
+        }
     }
 }

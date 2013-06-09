@@ -55,7 +55,7 @@ namespace SurferLite
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             // First page which is automatically loaded on Page start
-            NavigateThroughSurferLite("http://www.bing.com");            
+            //NavigateThroughSurferLite("http://www.bing.com");            
         }
 
         /// <summary>
@@ -172,8 +172,14 @@ namespace SurferLite
                 NavigateThroughSurferLite(TextBoxUrl.Text);
 
                 // Get list of hrefs in the requested page from server
-                ListBoxUrls.ItemsSource = await client.GetHrefLinksAsync(TextBoxUrl.Text);
-
+                try
+                {
+                    ListBoxUrls.ItemsSource = await client.GetHrefLinksAsync(TextBoxUrl.Text);
+                }
+                catch
+                {
+                    WebViewBrowse.NavigateToString("Hrefs can't be get.");
+                }
                 //Save original Text as root url for relative paths
                 currentRootUrl = TextBoxUrl.Text;
             }
@@ -215,6 +221,11 @@ namespace SurferLite
         {
             TextBlockSource.Visibility = Visibility.Collapsed;
             ListBoxUrls.Visibility = Visibility.Visible;
+        }
+
+        private void SignOutClicked(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }
