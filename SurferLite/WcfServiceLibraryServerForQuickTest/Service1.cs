@@ -16,6 +16,7 @@ using System.Web.Hosting;
 
 namespace WcfServiceLibraryServerForQuickTest
 {
+    
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class ServiceOnAzure : IService1
     {
@@ -169,7 +170,7 @@ namespace WcfServiceLibraryServerForQuickTest
             //testing.SavePageTest("http://www.google.com", @"Temporary\New.htm");
             //testing.createMHTMLFile2("http://www.google.com", @"C:\FinalTest.mht");
 
-            testing.createHTMLFile("http://hacktolive.org/wiki/Hacktolive.org", @"Temporary\Hacktolive.html");
+            testing.createHTMLFile("http://www.google.com", @"Temporary\Hacktolive.html");
 
             //testing.createMHTMLFile2("http://hacktolive.org/wiki/Hacktolive.org", @"Temporary\Hacktolive.mht");
             //testing.createMHTMLFile("http://www.google.com", @"C:\NewTests.mht");

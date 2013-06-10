@@ -34,14 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CustomException">
-      <HintPath>..\..\..\..\..\Downloads\Compressed\url2mhtml\url2mhtml\url2mhtml\bin\Debug\CustomException.dll</HintPath>
+    <Reference Include="CustomException, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\CustomException.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>bin\HtmlAgilityPack.dll</HintPath>
     </Reference>
-    <Reference Include="MHTMLBuilder">
-      <HintPath>..\..\..\..\..\Downloads\Compressed\url2mhtml\url2mhtml\url2mhtml\bin\Debug\MHTMLBuilder.dll</HintPath>
+    <Reference Include="MHTMLBuilder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MHTMLBuilder.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
