@@ -8,6 +8,16 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="121,134,0,0" TextWrapping="Wrap" Text="This started from the requirement of computer engineering students to do final year major project. This project was chosen after searching what NOT to do on internet. We wanted something new." VerticalAlignment="Top" FontSize="18" Width="1116"/>
+        <TextBlock HorizontalAlignment="Left" Margin="121,72,0,0" TextWrapping="Wrap" Text="About Us" VerticalAlignment="Top" FontSize="22"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="83,664,0,0" VerticalAlignment="Top" Click="backButtonClicked"/>
+        <WebView x:Name="WebViewCloudDisk" HorizontalAlignment="Left" Height="412" Margin="121,213,0,0" VerticalAlignment="Top" Width="842"/>
 
     </Grid>
 </Page>

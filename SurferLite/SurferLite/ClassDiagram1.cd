@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SurferLite.AboutPage" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AboutPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurferLite.App" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurferLite.BrowserStart">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEIAAAAAAAAAAAAAAAAACQAAABACAAAAACABAAAAAA=</HashCode>
+      <FileName>BrowserStart.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurferLite.CompressionStatistics" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CompressionStatistics.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurferLite.HistoryAndBookmarks" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HistoryAndBookmarks.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurferLite.MainPage" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurferLite.Offline_Saved_Pages">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Offline Saved Pages.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurferLite.PageToTestServiceOperations">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PageToTestServiceOperations.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurferLite.Settings">
+    <Position X="6" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Settings.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurferLite.ServiceReferenceForFinal.CompositeType" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAACAAAAAAAAAgAAAAAAgAAAAAAAQAAI=</HashCode>
+      <FileName>Service References\ServiceReferenceForFinal\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SurferLite.ServiceReferenceForFinal.Service1Client" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="SurferLite.ServiceReferenceForFinal.Service1Client.EndpointConfiguration" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Service References\ServiceReferenceForFinal\Reference.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAQAAAAAAAJAAQAAAAAAACAAEAAQEAAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceForFinal\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SurferLite.ServiceReferenceForTest.CompositeType" BaseTypeListCollapsed="true">
+    <Position X="2" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAACAAAAAAAAAgAAAAAAgAAAAAAAQAAI=</HashCode>
+      <FileName>Service References\ServiceReferenceForTest\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SurferLite.ServiceReferenceForTest.Service1Client" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="SurferLite.ServiceReferenceForTest.Service1Client.EndpointConfiguration" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Service References\ServiceReferenceForTest\Reference.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAQABAAAAAJAEQAAAAAAACEAEAAQEgAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceForTest\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="SurferLite.ServiceReferenceForFinal.IService1" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceForFinal\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SurferLite.ServiceReferenceForFinal.IService1Channel">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceForFinal\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SurferLite.ServiceReferenceForTest.IService1" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQABAAAAAAAEAAAAAAAAAEAAAAAEgAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceForTest\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SurferLite.ServiceReferenceForTest.IService1Channel" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceForTest\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
