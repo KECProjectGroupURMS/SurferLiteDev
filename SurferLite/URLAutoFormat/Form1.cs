@@ -20,6 +20,11 @@ namespace URLAutoFormat
         private void button1_Click(object sender, EventArgs e)
         {
             // We need to put main code here of applying formatting input URL
+
+            //check if the url is ok
+            if (Uri.IsWellFormedUriString(textBoxInput.Text,UriKind.RelativeOrAbsolute)){
+                textBoxOutput.Text = textBoxInput.Text;
+            }
         }
     }
 }
