@@ -16,5 +16,10 @@ namespace URLAutoFormat
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // We need to put main code here of applying formatting input URL
+        }
     }
 }
