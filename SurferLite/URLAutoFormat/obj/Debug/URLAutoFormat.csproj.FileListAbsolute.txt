@@ -1,0 +1,9 @@
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\URLAutoFormat\bin\Debug\URLAutoFormat.exe.config
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\URLAutoFormat\bin\Debug\URLAutoFormat.exe
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\URLAutoFormat\bin\Debug\URLAutoFormat.pdb
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\URLAutoFormat\obj\Debug\URLAutoFormat.csprojResolveAssemblyReference.cache
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\URLAutoFormat\obj\Debug\URLAutoFormat.Form1.resources
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\URLAutoFormat\obj\Debug\URLAutoFormat.Properties.Resources.resources
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\URLAutoFormat\obj\Debug\URLAutoFormat.csproj.GenerateResource.Cache
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\URLAutoFormat\obj\Debug\URLAutoFormat.exe
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\URLAutoFormat\obj\Debug\URLAutoFormat.pdb

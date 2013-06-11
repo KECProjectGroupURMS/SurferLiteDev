@@ -13,6 +13,7 @@ using System.IO;
 using HtmlAgilityPack;
 using System.IO.Compression;
 using System.Web.Hosting;
+using System.Diagnostics;
 
 namespace WcfServiceLibraryServerForQuickTest
 {
@@ -266,6 +267,10 @@ namespace WcfServiceLibraryServerForQuickTest
             catch (CustomException.BuilderDownLoadHTMLException e)
             {
                 Console.WriteLine("BuilderDownLoadHTMLException " + e.CustomMessage);
+            }
+            finally
+            {
+                Debug.WriteLine("OK");
             }
 
             return path;
