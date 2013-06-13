@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="SurferLite.BrowserStart"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SurferLite"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <TextBlock HorizontalAlignment="Left" Margin="88,26,0,0" TextWrapping="Wrap" Text="Modify this with most used bookmarks in view which can be clicked to got o specific sites" VerticalAlignment="Top" FontSize="22"/>
+        <ProgressRing x:Name="ProgressRingLoad" HorizontalAlignment="Left" Margin="438,52,0,0" VerticalAlignment="Top" Height="78" Width="150"/>
+        <WebView x:Name="WebViewBrowse" HorizontalAlignment="Left" Height="617" Margin="128,130,0,0" VerticalAlignment="Top" Width="718"/>
+        <TextBox x:ConnectionId='1' x:Name="TextBoxUrl" HorizontalAlignment="Left" Margin="128,95,0,0" TextWrapping="Wrap" Text="http://www.bing.com" VerticalAlignment="Top" Width="718"                   />
+        <TextBlock x:Name="TextBlockSize" HorizontalAlignment="Left" Margin="862,130,0,0" TextWrapping="Wrap" Text="Size" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TextBlockAnsSize" HorizontalAlignment="Left" Margin="862,150,0,0" TextWrapping="Wrap" Text="AnsSize" VerticalAlignment="Top"/>
+        <ListBox x:ConnectionId='2' x:Name="ListBoxUrls" HorizontalAlignment="Left" Height="617" Margin="930,130,0,0" VerticalAlignment="Top" Width="392"                                    />
+        <HyperlinkButton x:ConnectionId='3' Content="SeeSourceOfPage" HorizontalAlignment="Left" Margin="702,57,0,0" VerticalAlignment="Top"                                                />
+        <TextBlock x:Name="TextBlockSource" HorizontalAlignment="Left" Margin="930,95,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="652" Width="392" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+        <Button x:ConnectionId='4' Content="Sign Out" HorizontalAlignment="Left" Margin="1226,26,0,0" VerticalAlignment="Top"                       />
+
+    </Grid>
+</Page>
+
