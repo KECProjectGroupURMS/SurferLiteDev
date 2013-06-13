@@ -25,3 +25,54 @@ C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\obj\Debug\resour
 C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\obj\Debug\pri.resfiles
 C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\obj\Debug\LanguageQualifiers.txt
 C:\Users\Uddhab\Desktop\browser interface\SurferLite\SurferLite\obj\Debug\ProjectArchitectures.txt
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.exe
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.pdb
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\resources.pri
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\AppxManifest.xml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.build.appxrecipe
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\App.g.i.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\App.g.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\AboutPage.g.i.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\AboutPage.g.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\BrowserStart.g.i.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\BrowserStart.g.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Common\StandardStyles.g.i.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Common\StandardStyles.g.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\CompressionStatistics.g.i.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\CompressionStatistics.g.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\HistoryAndBookmarks.g.i.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\HistoryAndBookmarks.g.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\MainPage.g.i.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\MainPage.g.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Offline Saved Pages.g.i.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Offline Saved Pages.g.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\PageToTestServiceOperations.g.i.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\PageToTestServiceOperations.g.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Registration.g.i.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Registration.g.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Settings.g.i.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Settings.g.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\App.xaml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\AboutPage.xaml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\BrowserStart.xaml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Common\StandardStyles.xaml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\CompressionStatistics.xaml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\HistoryAndBookmarks.xaml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\MainPage.xaml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Offline Saved Pages.xaml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\PageToTestServiceOperations.xaml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Registration.xaml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Settings.xaml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\SurferLite.exe
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\SurferLite.pdb
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\priconfig.xml.intermediate
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\layout.resfiles.intermediate
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\resources.resfiles.intermediate
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\pri.resfiles.intermediate
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\priconfig.xml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\layout.resfiles
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\resources.resfiles
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\pri.resfiles
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\LanguageQualifiers.txt
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\ProjectArchitectures.txt
