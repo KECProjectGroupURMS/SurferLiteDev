@@ -95,7 +95,6 @@ namespace SurferLite
             
             // Cleanup if they are to be used again
             compressor.Dispose();
-            ms.Dispose();
             
             return result;
 
