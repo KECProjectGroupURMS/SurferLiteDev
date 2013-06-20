@@ -51,6 +51,7 @@ namespace WcfServiceLibraryServerForQuickTest
             
             return newList;
         }
+
         public List<string> GetData(string url)
         {
             if (url == "http://")
