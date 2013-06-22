@@ -41,6 +41,9 @@
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\AboutPage.xaml">
       <PackagePath>AboutPage.xaml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\Animations.xaml">
+      <PackagePath>Animations.xaml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\BrowserStart.xaml">
       <PackagePath>BrowserStart.xaml</PackagePath>
     </AppxPackagedFile>

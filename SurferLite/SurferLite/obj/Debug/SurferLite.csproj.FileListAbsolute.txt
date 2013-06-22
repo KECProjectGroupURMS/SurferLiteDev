@@ -34,6 +34,8 @@ C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\A
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\App.g.cs
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\AboutPage.g.i.cs
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\AboutPage.g.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Animations.g.i.cs
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Animations.g.cs
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\BrowserStart.g.i.cs
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\BrowserStart.g.cs
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Common\StandardStyles.g.i.cs
@@ -55,6 +57,7 @@ C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\S
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\XamlTypeInfo.g.cs
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\App.xaml
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\AboutPage.xaml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Animations.xaml
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\BrowserStart.xaml
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Common\StandardStyles.xaml
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\CompressionStatistics.xaml
@@ -66,10 +69,6 @@ C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\R
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\Settings.xaml
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\SurferLite.exe
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\SurferLite.pdb
-C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\priconfig.xml.intermediate
-C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\layout.resfiles.intermediate
-C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\resources.resfiles.intermediate
-C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\pri.resfiles.intermediate
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\priconfig.xml
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\layout.resfiles
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\obj\Debug\resources.resfiles

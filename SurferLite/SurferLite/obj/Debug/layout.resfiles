@@ -3,6 +3,7 @@ Assets\SmallLogo.png
 Assets\SplashScreen.png
 Assets\StoreLogo.png
 AboutPage.xaml
+Animations.xaml
 App.xaml
 BrowserStart.xaml
 Common\StandardStyles.xaml

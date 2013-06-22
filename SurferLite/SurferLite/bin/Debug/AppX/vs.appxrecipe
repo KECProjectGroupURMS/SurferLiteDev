@@ -16,37 +16,37 @@
     <AppXManifest Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-06-20T09:05:43.008</Modified>
+      <Modified>2013-06-20T11:08:32.093</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.exe">
       <PackagePath>SurferLite.exe</PackagePath>
-      <Modified>2013-06-20T09:05:41.223</Modified>
+      <Modified>2013-06-20T11:11:30.716</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.pdb">
       <PackagePath>SurferLite.pdb</PackagePath>
-      <Modified>2013-06-20T09:05:41.178</Modified>
+      <Modified>2013-06-20T11:11:30.691</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-04-30T14:31:59.711</Modified>
+      <Modified>2013-06-20T09:52:28.116</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-04-30T08:23:57.205</Modified>
+      <Modified>2013-06-20T09:52:28.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-04-30T08:23:57.080</Modified>
+      <Modified>2013-06-20T09:52:28.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-04-30T14:32:38.536</Modified>
+      <Modified>2013-06-20T09:52:28.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
@@ -55,6 +55,10 @@
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\AboutPage.xaml">
       <PackagePath>AboutPage.xaml</PackagePath>
       <Modified>2013-06-11T02:34:06.700</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\Animations.xaml">
+      <PackagePath>Animations.xaml</PackagePath>
+      <Modified>2013-06-20T11:10:37.777</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\BrowserStart.xaml">
       <PackagePath>BrowserStart.xaml</PackagePath>
@@ -94,7 +98,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-06-20T09:05:42.033</Modified>
+      <Modified>2013-06-20T11:08:31.255</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
