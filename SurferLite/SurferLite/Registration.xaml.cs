@@ -35,8 +35,10 @@ namespace SurferLite
         {
         }
 
-        private void BackClicked(object sender, RoutedEventArgs e)
+        private async void BackClicked(object sender, RoutedEventArgs e)
         {
+            Item item = new Item { Text = "Awesome item" };
+            await App.MobileService.GetTable<Item>().InsertAsync(item);
             this.Frame.Navigate(typeof(MainPage));
         }
     }

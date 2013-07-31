@@ -11,6 +11,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Popups;
+using Microsoft.WindowsAzure.MobileServices;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -31,10 +33,10 @@ namespace SurferLite
         /// </summary>
         /// <param name="e">Event data that describes how this page was reached.  The Parameter
         /// property is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
+            await Authenticate();
         }
-
         private void StartClicked(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(BrowserStart));
@@ -48,6 +50,32 @@ namespace SurferLite
         private void RegisterClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Registration));
+        }
+
+        private MobileServiceUser user;
+
+        private async System.Threading.Tasks.Task Authenticate()
+        {
+            while (user == null)
+            {
+                string message;
+                try
+                {
+                    user = await App.MobileService.LoginAsync(MobileServiceAuthenticationProvider.Google);
+                    //message = string.Format("You are now logged in - {0}", user.UserId);
+                    message = string.Format("Sucess.");
+                }
+                catch (InvalidOperationException)
+                {
+                    message = "You must log in. Login Required";
+                }
+
+
+                var dialog = new MessageDialog(message);
+                dialog.Commands.Add(new UICommand("OK"));
+                await dialog.ShowAsync();
+            }
+
         }
     }
 }
