@@ -56,6 +56,15 @@
             <Button Content="Frist Button" />
             <Button Content="Second Button" />
             <Button Content="Third Button" />
+            <Button> Fourth Button</Button> <!-- so content property is default property of button-->
+            <Button>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/surferlite.png" Width="20" Height="20"/>
+                    <TextBlock Text="ButtonwithImage" Margin="10,0,0,0"/>
+
+                </StackPanel>
+          </Button>
         </StackPanel>
+        <Image Source="Assets/surferlite.png" Grid.Row="2" Grid.Column="2" />
     </Grid>
 </Page>
