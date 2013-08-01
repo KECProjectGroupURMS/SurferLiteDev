@@ -26,8 +26,8 @@ namespace SurferLite
     public sealed partial class BrowserStart : Page
     {
         // Reference to the WCF service
-        ServiceReferenceForTest.Service1Client client;
-
+        //ServiceReferenceForTest.Service1Client client;
+        ServiceReferenceSurferliteAzureServer.ServiceSurferliteClient client;
         // Saves Root Url for later use to concatinate with relative paths
         string currentRootUrl;
 
@@ -37,7 +37,7 @@ namespace SurferLite
 
             // Initialize the reference object with a service
             try{
-                client = new ServiceReferenceForTest.Service1Client();
+                client = new ServiceReferenceSurferliteAzureServer.ServiceSurferliteClient();
             }
             catch{
                 WebViewBrowse.NavigateToString("Can't connect to the SurferLite server");

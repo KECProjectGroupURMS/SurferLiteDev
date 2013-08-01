@@ -34,7 +34,8 @@ namespace SurferLite
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             ProgressRing1.IsActive = true;
-            ServiceReferenceForTest.Service1Client client = new ServiceReferenceForTest.Service1Client();
+            ServiceReferenceSurferliteAzureServer.ServiceSurferliteClient client = new ServiceReferenceSurferliteAzureServer.ServiceSurferliteClient();
+            //ServiceReferenceForTest.Service1Client client = new ServiceReferenceForTest.Service1Client();
             ListBoxMeta.ItemsSource = await client.GetDataAsync(TextBoxUrl.Text);
             ProgressRing1.IsActive = false;
         }
@@ -42,7 +43,9 @@ namespace SurferLite
         private async void ButtonGetData(object sender, RoutedEventArgs e)
         {
             ProgressRing1.IsActive = true;
-            ServiceReferenceForTest.Service1Client client = new ServiceReferenceForTest.Service1Client();
+            //ServiceReferenceForTest.Service1Client client = new ServiceReferenceForTest.Service1Client();
+            ServiceReferenceSurferliteAzureServer.ServiceSurferliteClient client = new ServiceReferenceSurferliteAzureServer.ServiceSurferliteClient();
+            
             //ListBoxMeta.Items.Add(await client.GetDataAsync());
             ListBoxMeta.ItemsSource = await client.GetDataAsync(TextBoxUrl.Text);
             

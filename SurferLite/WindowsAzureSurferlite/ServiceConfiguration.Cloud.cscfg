@@ -3,7 +3,7 @@
   <Role name="WCFServiceSurferlite">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=portalvhdsttynh6yyg3st7;AccountKey=98geuLlPFP8Q9Va1XSGj8PQOLcWgp2dpnwaf0/ci1yEcfd16ILT59xVh4+Inq200+BncQo4vxYKA8n7oQWK2Ig==" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

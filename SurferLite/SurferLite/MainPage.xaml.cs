@@ -63,7 +63,7 @@ namespace SurferLite
                 {
                     user = await App.MobileService.LoginAsync(MobileServiceAuthenticationProvider.Google);
                     //message = string.Format("You are now logged in - {0}", user.UserId);
-                    message = string.Format("Sucess.");
+                    message = string.Format("Success.");
                 }
                 catch (InvalidOperationException)
                 {
