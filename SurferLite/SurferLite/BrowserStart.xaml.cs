@@ -31,6 +31,9 @@ namespace SurferLite
         // Saves Root Url for later use to concatinate with relative paths
         string currentRootUrl;
 
+        // Saves total data usage
+        static int dataSize=0;
+
         public BrowserStart()
         {
             this.InitializeComponent();
@@ -134,7 +137,10 @@ namespace SurferLite
                 //XXXXXX: Stream pullStream = await client.GetHtmlAsync(URL);
                 
                 byte[] pullStream = await client.GetHtmlAsync(URL);
-                                
+                
+                // Update total data
+                dataSize += pullStream.Length;
+
                 // Displaying size of byte[] got from service
                 TextBlockSize.Text = pullStream.Length.ToString()+" B";
                 
