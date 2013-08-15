@@ -234,7 +234,6 @@ namespace SurferLite
 
         private void SignOutClicked(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Animations));
         }
 
         private void gobackpage(object sender, RoutedEventArgs e)

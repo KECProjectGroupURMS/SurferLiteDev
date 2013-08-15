@@ -45,29 +45,12 @@
                 <EntranceThemeTransition />
             </TransitionCollection>
         </Grid.ChildrenTransitions>
-<<<<<<< HEAD
         <TextBlock HorizontalAlignment="Left" Margin="2,26,0,0" TextWrapping="Wrap" Text="Modify this with most used bookmarks in view which can be clicked to got o specific sites" VerticalAlignment="Top" FontSize="22" Grid.Column="1" Height="26" Width="866"/>
         <WebView x:Name="WebViewBrowse" HorizontalAlignment="Left" Height="689" Margin="10,69,0,0" VerticalAlignment="Top" Width="1346" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
         <ListBox x:ConnectionId='3' x:Name="ListBoxUrls" HorizontalAlignment="Left" Height="617" Margin="844,37,0,0" VerticalAlignment="Top" Width="392"                                     Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
         <HyperlinkButton x:ConnectionId='4' Content="SeeSourceOfPage" HorizontalAlignment="Left" Margin="616,57,0,0" VerticalAlignment="Top"                                                 Grid.Column="1" Grid.RowSpan="2" Height="39" Width="152"/>
         <TextBlock x:Name="TextBlockSource" HorizontalAlignment="Left" Margin="844,2,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="652" Width="392" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
         <Button x:ConnectionId='5' Content="Sign Out" HorizontalAlignment="Left" Margin="1140,26,0,0" VerticalAlignment="Top"                        Grid.Column="1" Height="38" Width="93"/>
-=======
-        <TextBlock HorizontalAlignment="Left" Margin="88,26,0,0" TextWrapping="Wrap" Text="Modify this with most used bookmarks in view which can be clicked to got o specific sites" VerticalAlignment="Top" FontSize="22"/>
-        <ProgressRing x:Name="ProgressRingLoad" HorizontalAlignment="Left" Margin="438,52,0,0" VerticalAlignment="Top" Height="78" Width="150"/>
-        <WebView x:Name="WebViewBrowse" HorizontalAlignment="Left" Height="617" Margin="128,130,0,0" VerticalAlignment="Top" Width="718"/>
-        <TextBox x:ConnectionId='1' x:Name="TextBoxUrl" HorizontalAlignment="Left" Margin="128,95,0,0" TextWrapping="Wrap" Text="http://www.bing.com" VerticalAlignment="Top" Width="718"                   />
-        <TextBlock x:Name="TextBlockSize" HorizontalAlignment="Left" Margin="862,130,0,0" TextWrapping="Wrap" Text="Size" VerticalAlignment="Top"/>
-        <TextBlock x:Name="TextBlockAnsSize" HorizontalAlignment="Left" Margin="862,150,0,0" TextWrapping="Wrap" Text="AnsSize" VerticalAlignment="Top"/>
-        <ListBox x:ConnectionId='2' x:Name="ListBoxUrls" HorizontalAlignment="Left" Height="617" Margin="930,130,0,0" VerticalAlignment="Top" Width="392"                                    />
-        <HyperlinkButton x:ConnectionId='3' Content="SeeSourceOfPage" HorizontalAlignment="Left" Margin="702,57,0,0" VerticalAlignment="Top"                                                />
-        <TextBlock x:Name="TextBlockSource" HorizontalAlignment="Left" Margin="930,95,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="652" Width="392" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
-<<<<<<< HEAD
-        <Button x:ConnectionId='5' Content="Sign Out" HorizontalAlignment="Left" Margin="1226,26,0,0" VerticalAlignment="Top"                       />
->>>>>>> origin/edit-downloaded-html
-=======
-        <Button x:ConnectionId='4' Content="Sign Out" HorizontalAlignment="Left" Margin="1226,26,0,0" VerticalAlignment="Top"                       />
->>>>>>> origin/client-interface-optimization
 
     </Grid>
 </Page>

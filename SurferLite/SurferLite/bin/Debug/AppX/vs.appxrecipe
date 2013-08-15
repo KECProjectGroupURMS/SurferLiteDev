@@ -16,27 +16,17 @@
     <AppXManifest Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Modified>2013-08-15T09:55:49.664</Modified>
-=======
-      <Modified>2013-06-16T01:01:11.519</Modified>
->>>>>>> origin/edit-downloaded-html
-=======
-      <Modified>2013-06-20T11:08:32.093</Modified>
->>>>>>> origin/client-interface-optimization
+      <Modified>2013-08-15T12:05:34.937</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.exe">
       <PackagePath>SurferLite.exe</PackagePath>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Modified>2013-08-15T10:09:02.879</Modified>
+      <Modified>2013-08-15T12:05:33.748</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.pdb">
       <PackagePath>SurferLite.pdb</PackagePath>
-      <Modified>2013-08-15T10:09:02.849</Modified>
+      <Modified>2013-08-15T12:05:33.739</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Callisto\1.3.1\References\CommonConfiguration\neutral\Callisto.dll">
       <PackagePath>Callisto.dll</PackagePath>
@@ -44,177 +34,127 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\packages\Microsoft.Bcl.Async.1.0.16\lib\win8\Microsoft.Threading.Tasks.dll">
       <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
-      <Modified>2013-08-01T03:55:51.734</Modified>
+      <Modified>2013-08-15T11:43:59.025</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\packages\Microsoft.Bcl.Async.1.0.16\lib\win8\Microsoft.Threading.Tasks.Extensions.dll">
       <PackagePath>Microsoft.Threading.Tasks.Extensions.dll</PackagePath>
-      <Modified>2013-08-01T03:55:51.718</Modified>
+      <Modified>2013-08-15T11:43:59.023</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\packages\WindowsAzure.MobileServices.1.0.1\lib\netcore45\Microsoft.WindowsAzure.Mobile.dll">
       <PackagePath>Microsoft.WindowsAzure.Mobile.dll</PackagePath>
-      <Modified>2013-08-01T03:55:52.614</Modified>
+      <Modified>2013-08-15T11:43:59.243</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\packages\WindowsAzure.MobileServices.1.0.1\lib\netcore45\Microsoft.WindowsAzure.Mobile.Ext.dll">
       <PackagePath>Microsoft.WindowsAzure.Mobile.Ext.dll</PackagePath>
-      <Modified>2013-08-01T03:55:52.583</Modified>
+      <Modified>2013-08-15T11:43:59.237</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-      <Modified>2013-08-01T03:55:52.419</Modified>
+      <Modified>2013-08-15T11:43:59.199</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\packages\Microsoft.Net.Http.2.1.10\lib\win8\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
-      <Modified>2013-08-01T03:55:52.118</Modified>
+      <Modified>2013-08-15T11:43:59.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\packages\Microsoft.Net.Http.2.1.10\lib\win8\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
-      <Modified>2013-08-01T03:55:52.134</Modified>
+      <Modified>2013-08-15T11:43:59.106</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Callisto\1.3.1\Redist\CommonConfiguration\neutral\Themes\Generic.xaml">
       <PackagePath>Callisto\Themes\Generic.xaml</PackagePath>
       <Modified>2013-08-15T05:57:47.965</Modified>
-=======
-      <Modified>2013-06-16T01:01:10.685</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.pdb">
-      <PackagePath>SurferLite.pdb</PackagePath>
-      <Modified>2013-06-16T01:01:10.675</Modified>
->>>>>>> origin/edit-downloaded-html
-=======
-      <Modified>2013-06-20T11:11:30.716</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.pdb">
-      <PackagePath>SurferLite.pdb</PackagePath>
-      <Modified>2013-06-20T11:11:30.691</Modified>
->>>>>>> origin/client-interface-optimization
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-<<<<<<< HEAD
-      <Modified>2013-08-01T03:53:59.712</Modified>
-=======
-      <Modified>2013-06-20T09:52:28.116</Modified>
->>>>>>> origin/client-interface-optimization
+      <Modified>2013-08-15T11:43:58.246</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-<<<<<<< HEAD
-      <Modified>2013-08-01T03:53:59.712</Modified>
-=======
-      <Modified>2013-06-20T09:52:28.131</Modified>
->>>>>>> origin/client-interface-optimization
+      <Modified>2013-08-15T11:43:58.247</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-<<<<<<< HEAD
-      <Modified>2013-08-01T08:21:19.185</Modified>
-=======
-      <Modified>2013-06-20T09:52:28.131</Modified>
->>>>>>> origin/client-interface-optimization
+      <Modified>2013-08-15T11:43:58.247</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-<<<<<<< HEAD
-      <Modified>2013-08-01T03:53:59.728</Modified>
+      <Modified>2013-08-15T11:43:58.248</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\surferlite.png">
       <PackagePath>Assets\surferlite.png</PackagePath>
-      <Modified>2013-08-01T03:56:51.414</Modified>
+      <Modified>2013-08-15T11:43:58.248</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>
-      <Modified>2013-08-02T02:40:16.152</Modified>
-=======
-      <Modified>2013-06-20T09:52:28.131</Modified>
->>>>>>> origin/client-interface-optimization
+      <Modified>2013-08-15T11:43:58.256</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
-      <Modified>2013-08-01T08:38:55.795</Modified>
+      <Modified>2013-08-15T11:43:58.245</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\AboutPage.xaml">
       <PackagePath>AboutPage.xaml</PackagePath>
-      <Modified>2013-08-01T03:53:59.712</Modified>
+      <Modified>2013-08-15T11:43:58.243</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\AboutUserControl.xaml">
       <PackagePath>AboutUserControl.xaml</PackagePath>
-      <Modified>2013-08-15T09:55:32.171</Modified>
+      <Modified>2013-08-15T11:43:58.244</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\BasicPage1.xaml">
       <PackagePath>BasicPage1.xaml</PackagePath>
-      <Modified>2013-08-02T02:40:16.009</Modified>
+      <Modified>2013-08-15T11:43:58.248</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\BrowserForwardBackward.xaml">
       <PackagePath>BrowserForwardBackward.xaml</PackagePath>
-      <Modified>2013-08-15T09:22:11.180</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\Animations.xaml">
-      <PackagePath>Animations.xaml</PackagePath>
-      <Modified>2013-06-20T11:10:37.777</Modified>
+      <Modified>2013-08-15T11:43:58.249</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\BrowserStart.xaml">
       <PackagePath>BrowserStart.xaml</PackagePath>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Modified>2013-08-15T10:08:57.877</Modified>
-=======
-      <Modified>2013-06-16T01:01:03.130</Modified>
->>>>>>> origin/edit-downloaded-html
-=======
-      <Modified>2013-06-16T01:02:43.621</Modified>
->>>>>>> origin/client-interface-optimization
+      <Modified>2013-08-15T11:43:58.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
-      <Modified>2013-07-31T09:36:41.967</Modified>
+      <Modified>2013-08-15T11:43:58.257</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\CompressionStatistics.xaml">
       <PackagePath>CompressionStatistics.xaml</PackagePath>
-      <Modified>2013-07-31T09:36:41.985</Modified>
+      <Modified>2013-08-15T11:43:58.258</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\HistoryAndBookmarks.xaml">
       <PackagePath>HistoryAndBookmarks.xaml</PackagePath>
-      <Modified>2013-07-31T09:36:42.001</Modified>
+      <Modified>2013-08-15T11:43:58.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2013-07-31T09:36:42.021</Modified>
+      <Modified>2013-08-15T11:43:58.260</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\Offline Saved Pages.xaml">
       <PackagePath>Offline Saved Pages.xaml</PackagePath>
-      <Modified>2013-07-31T09:36:42.029</Modified>
+      <Modified>2013-08-15T11:43:58.260</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\PageToTestServiceOperations.xaml">
       <PackagePath>PageToTestServiceOperations.xaml</PackagePath>
-      <Modified>2013-07-31T09:36:42.038</Modified>
+      <Modified>2013-08-15T11:43:58.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\Registration.xaml">
       <PackagePath>Registration.xaml</PackagePath>
-      <Modified>2013-07-31T09:36:42.046</Modified>
+      <Modified>2013-08-15T11:43:58.264</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\Settings.xaml">
       <PackagePath>Settings.xaml</PackagePath>
-      <Modified>2013-07-31T09:36:42.126</Modified>
+      <Modified>2013-08-15T11:43:58.291</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\XAMLPractice01.xaml">
       <PackagePath>XAMLPractice01.xaml</PackagePath>
-      <Modified>2013-08-01T08:57:31.403</Modified>
+      <Modified>2013-08-15T11:43:58.294</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Modified>2013-08-15T09:55:49.208</Modified>
-=======
-      <Modified>2013-06-16T01:01:10.891</Modified>
->>>>>>> origin/edit-downloaded-html
-=======
-      <Modified>2013-06-20T11:08:31.255</Modified>
->>>>>>> origin/client-interface-optimization
+      <Modified>2013-08-15T12:05:34.497</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
