@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>N5110-PC</Machine>
+    <WindowsUser>Uddhab</WindowsUser>
+    <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>C3557C7B5ADA75028932A08D3D7BFFF6763FE058EABC1147063F2EBD4342A1E9</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>b4d1d222-03ed-42cd-bdcf-1be03657ca81_1.0.0.0_neutral__e20rmwe176y7e</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>b4d1d222-03ed-42cd-bdcf-1be03657ca81_e20rmwe176y7e!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>b4d1d222-03ed-42cd-bdcf-1be03657ca81</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Uddhab</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-06-20T11:12:23.009</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\SurferLite.exe">
+      <PackagePath>SurferLite.exe</PackagePath>
+      <Modified>2013-06-20T11:12:22.387</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\SurferLite.pdb">
+      <PackagePath>SurferLite.pdb</PackagePath>
+      <Modified>2013-06-20T11:12:22.363</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-06-20T09:52:28.116</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-06-20T09:52:28.131</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-06-20T09:52:28.131</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-06-20T09:52:28.131</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2013-06-11T02:34:06.708</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\AboutPage.xaml">
+      <PackagePath>AboutPage.xaml</PackagePath>
+      <Modified>2013-06-11T02:34:06.700</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\Animations.xaml">
+      <PackagePath>Animations.xaml</PackagePath>
+      <Modified>2013-06-20T11:10:37.777</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\BrowserStart.xaml">
+      <PackagePath>BrowserStart.xaml</PackagePath>
+      <Modified>2013-06-16T01:02:43.621</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2013-06-11T02:34:06.745</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\CompressionStatistics.xaml">
+      <PackagePath>CompressionStatistics.xaml</PackagePath>
+      <Modified>2013-06-11T02:34:06.749</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\HistoryAndBookmarks.xaml">
+      <PackagePath>HistoryAndBookmarks.xaml</PackagePath>
+      <Modified>2013-06-11T02:34:06.755</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+      <Modified>2013-06-11T02:34:06.762</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\Offline Saved Pages.xaml">
+      <PackagePath>Offline Saved Pages.xaml</PackagePath>
+      <Modified>2013-06-11T02:34:06.769</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\PageToTestServiceOperations.xaml">
+      <PackagePath>PageToTestServiceOperations.xaml</PackagePath>
+      <Modified>2013-06-11T02:34:06.779</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\Registration.xaml">
+      <PackagePath>Registration.xaml</PackagePath>
+      <Modified>2013-06-11T02:34:06.793</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\Settings.xaml">
+      <PackagePath>Settings.xaml</PackagePath>
+      <Modified>2013-06-11T02:34:06.874</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-06-20T11:12:22.689</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

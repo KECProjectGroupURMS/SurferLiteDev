@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="SurferLite.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SurferLite"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="121,134,0,0" TextWrapping="Wrap" Text="This started from the requirement of computer engineering students to do final year major project. This project was chosen after searching what NOT to do on internet. We wanted something new." VerticalAlignment="Top" FontSize="18" Width="1116"/>
+        <TextBlock HorizontalAlignment="Left" Margin="121,72,0,0" TextWrapping="Wrap" Text="About Us" VerticalAlignment="Top" FontSize="22"/>
+        <Button x:ConnectionId='1' Content="Back" HorizontalAlignment="Left" Margin="83,664,0,0" VerticalAlignment="Top"                          />
+        <WebView x:Name="WebViewCloudDisk" HorizontalAlignment="Left" Height="412" Margin="121,213,0,0" VerticalAlignment="Top" Width="842"/>
+
+    </Grid>
+</Page>
+

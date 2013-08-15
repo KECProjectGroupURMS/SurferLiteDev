@@ -17,15 +17,20 @@
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Modified>2013-08-15T09:55:49.664</Modified>
 =======
       <Modified>2013-06-16T01:01:11.519</Modified>
 >>>>>>> origin/edit-downloaded-html
+=======
+      <Modified>2013-06-20T11:08:32.093</Modified>
+>>>>>>> origin/client-interface-optimization
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.exe">
       <PackagePath>SurferLite.exe</PackagePath>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Modified>2013-08-15T10:09:02.879</Modified>
     </AppxPackagedFile>
@@ -75,25 +80,45 @@
       <PackagePath>SurferLite.pdb</PackagePath>
       <Modified>2013-06-16T01:01:10.675</Modified>
 >>>>>>> origin/edit-downloaded-html
+=======
+      <Modified>2013-06-20T11:11:30.716</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\SurferLite.pdb">
+      <PackagePath>SurferLite.pdb</PackagePath>
+      <Modified>2013-06-20T11:11:30.691</Modified>
+>>>>>>> origin/client-interface-optimization
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+<<<<<<< HEAD
       <Modified>2013-08-01T03:53:59.712</Modified>
+=======
+      <Modified>2013-06-20T09:52:28.116</Modified>
+>>>>>>> origin/client-interface-optimization
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+<<<<<<< HEAD
       <Modified>2013-08-01T03:53:59.712</Modified>
+=======
+      <Modified>2013-06-20T09:52:28.131</Modified>
+>>>>>>> origin/client-interface-optimization
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+<<<<<<< HEAD
       <Modified>2013-08-01T08:21:19.185</Modified>
+=======
+      <Modified>2013-06-20T09:52:28.131</Modified>
+>>>>>>> origin/client-interface-optimization
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+<<<<<<< HEAD
       <Modified>2013-08-01T03:53:59.728</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Assets\surferlite.png">
@@ -103,6 +128,9 @@
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>
       <Modified>2013-08-02T02:40:16.152</Modified>
+=======
+      <Modified>2013-06-20T09:52:28.131</Modified>
+>>>>>>> origin/client-interface-optimization
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
@@ -124,13 +152,21 @@
       <PackagePath>BrowserForwardBackward.xaml</PackagePath>
       <Modified>2013-08-15T09:22:11.180</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\Animations.xaml">
+      <PackagePath>Animations.xaml</PackagePath>
+      <Modified>2013-06-20T11:10:37.777</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\BrowserStart.xaml">
       <PackagePath>BrowserStart.xaml</PackagePath>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Modified>2013-08-15T10:08:57.877</Modified>
 =======
       <Modified>2013-06-16T01:01:03.130</Modified>
 >>>>>>> origin/edit-downloaded-html
+=======
+      <Modified>2013-06-16T01:02:43.621</Modified>
+>>>>>>> origin/client-interface-optimization
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
@@ -171,10 +207,14 @@
     <AppxPackagedFile Include="C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\SurferLite\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Modified>2013-08-15T09:55:49.208</Modified>
 =======
       <Modified>2013-06-16T01:01:10.891</Modified>
 >>>>>>> origin/edit-downloaded-html
+=======
+      <Modified>2013-06-20T11:08:31.255</Modified>
+>>>>>>> origin/client-interface-optimization
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
