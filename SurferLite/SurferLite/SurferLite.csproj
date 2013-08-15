@@ -194,7 +194,6 @@
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
-    <Content Include="Assets\surferlite.png" />
     <Content Include="Common\ReadMe.txt" />
     <None Include="Service References\ServiceReferenceSurferliteAzureServer\Service11.disco" />
     <None Include="Service References\ServiceReferenceSurferliteAzureServer\Reference.svcmap">
@@ -310,4 +309,3 @@
   </Target>
   -->
 </Project>
-
