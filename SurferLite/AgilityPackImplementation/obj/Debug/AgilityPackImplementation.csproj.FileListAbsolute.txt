@@ -4,6 +4,7 @@ C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\AgilityPackImplementat
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\AgilityPackImplementation\bin\Debug\HtmlAgilityPack.dll
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\AgilityPackImplementation\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\AgilityPackImplementation\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\AgilityPackImplementation\obj\Debug\AgilityPackImplementation.csprojResolveAssemblyReference.cache
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\AgilityPackImplementation\obj\Debug\AgilityPackImplementation.Form1.resources
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\AgilityPackImplementation\obj\Debug\AgilityPackImplementation.Properties.Resources.resources
 C:\Users\Uddhab\Documents\GitHub\SurferLiteDev\SurferLite\AgilityPackImplementation\obj\Debug\AgilityPackImplementation.csproj.GenerateResource.Cache
