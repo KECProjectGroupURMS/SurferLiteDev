@@ -22,6 +22,7 @@ namespace WCFServiceSurferlite
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IServiceSurferlite
     {
+    
         public List<string> GetHrefLinks(string url)
         {
             //var webDocument = new HtmlDocument();

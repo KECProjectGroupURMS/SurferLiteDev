@@ -14,7 +14,11 @@ using Windows.UI.Xaml.Navigation;
 
 using System.Net;
 using System.IO.Compression;
+
+//share contract 1
+using Windows.ApplicationModel.DataTransfer;
 using System.Text;
+using Windows.Storage.Streams;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -177,7 +181,7 @@ namespace SurferLite
                 }
                 catch
                 {
-                    WebViewBrowse.NavigateToString("Hrefs can't be get.");
+                    NavigateThroughSurferLite("https://www.google.com.np/search?q=" + TextBoxUrl.Text);
                 }
                 //Save original Text as root url for relative paths
                 currentRootUrl = TextBoxUrl.Text;
@@ -225,6 +229,10 @@ namespace SurferLite
         private void SignOutClicked(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void gobackpage(object sender, RoutedEventArgs e)
+        {
         }
     }
 }
