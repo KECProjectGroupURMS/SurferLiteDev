@@ -15,6 +15,10 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Microsoft.WindowsAzure.MobileServices;
 
+using Windows.UI.ApplicationSettings;
+using Callisto.Controls;
+using Windows.UI;
+
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
 namespace SurferLite
@@ -24,6 +28,9 @@ namespace SurferLite
     /// </summary>
     sealed partial class App : Application
     {
+        private Color _background = Color.FromArgb(255, 0, 77, 96);
+
+
         public static MobileServiceClient MobileService = new MobileServiceClient(
     "https://surferlite.azure-mobile.net/",
     "GUDMTpLnLikUvBNxxlseQanTdxbeyr89"
@@ -48,6 +55,8 @@ namespace SurferLite
         {
             Frame rootFrame = Window.Current.Content as Frame;
 
+            SettingsPane.GetForCurrentView().CommandsRequested += OnCommandsRequested;
+
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
             if (rootFrame == null)
@@ -69,13 +78,31 @@ namespace SurferLite
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                if (!rootFrame.Navigate(typeof(MainPage /*Back to main from PageToTestServiceOperations*/), args.Arguments))
+                if (!rootFrame.Navigate(typeof(BrowserStart/*Back to main from PageToTestServiceOperations*/), args.Arguments))
                 {
                     throw new Exception("Failed to create initial page");
                 }
             }
             // Ensure the current window is active
             Window.Current.Activate();
+        }
+
+        private void OnCommandsRequested(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs args)
+        {    // Add an About command
+            var about = new SettingsCommand("about", "About", (handler) =>
+            {
+                var settings = new SettingsFlyout();
+                settings.Content = new AboutUserControl();
+                settings.HeaderBrush = new SolidColorBrush(_background);
+                settings.Background = new SolidColorBrush(_background);
+                //settings.HeaderBrush = new SolidColorBrush(_background);
+                //settings.Background = new SolidColorBrush(_background);
+                settings.HeaderText = "About";
+                settings.IsOpen = true;
+            });
+
+            args.Request.ApplicationCommands.Add(about);
+
         }
 
         /// <summary>

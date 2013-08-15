@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WCFServiceSurferlite.AzureLocalStorageTraceListener" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>AzureLocalStorageTraceListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WCFServiceSurferlite.CompositeType" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAQAAA=</HashCode>
+      <FileName>IService1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WCFServiceSurferlite.Service1" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAEAUAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service1.svc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="WCFServiceSurferlite.ConvertionTesting" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIIAAAAAAAAAgAACAAAAAAAAggAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Service1.svc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WCFServiceSurferlite.WebRole" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebRole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="WCFServiceSurferlite.IServiceSurferlite">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAEAUAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IService1.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

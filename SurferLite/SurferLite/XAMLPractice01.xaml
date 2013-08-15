@@ -10,21 +10,21 @@
     <!-- page content can be only one-->
     <Grid x:Name="layoutGrid" Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="140" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <!--whatever remains-->
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="2*" />
-            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="228*" />
+            <ColumnDefinition Width="455*" />
+            <ColumnDefinition Width="683*" />
             <!-- portions -->
         </Grid.ColumnDefinitions>
 
         <!-- property or attached attribute-->
-        <TextBlock Text="Surferlite"
+        <TextBlock Text="{StaticResource AppName}"
                    Grid.Row="1"
                    Grid.Column="1"
                    Height="23" 
@@ -56,15 +56,35 @@
             <Button Content="Frist Button" />
             <Button Content="Second Button" />
             <Button Content="Third Button" />
-            <Button> Fourth Button</Button> <!-- so content property is default property of button-->
+            <Button>Fourth Button</Button>
+            <!-- so content property is default property of button-->
             <Button>
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Assets/surferlite.png" Width="20" Height="20"/>
                     <TextBlock Text="ButtonwithImage" Margin="10,0,0,0"/>
 
                 </StackPanel>
-          </Button>
+            </Button>
         </StackPanel>
         <Image Source="Assets/surferlite.png" Grid.Row="2" Grid.Column="2" />
+
+        <!-- Title-->
+        <TextBlock Text="{StaticResource AppName}"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Height="23" 
+                   Margin="0,0,0,0"
+                   Name="TextBlockAppTitle"
+                   FontSize="24"/>
+        <ListBox HorizontalAlignment="Left" Height="200" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="Auto">
+            <Button Height="36" Width="196"/>
+            <Button Height="36" Width="194"/>
+            <Button Height="38" Width="189"/>
+            <Button Height="32" Width="192"/>
+            <Button/>
+            <Button/>
+            <Button/>
+
+        </ListBox>
     </Grid>
 </Page>

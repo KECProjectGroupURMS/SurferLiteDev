@@ -6,23 +6,51 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.TopAppBar>
+        <AppBar Margin="0,0,0,-25" IsOpen="True">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <Button  Style="{StaticResource BackButtonStyle}" Content="Button" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Click="gobackpage"/>
+
+                    <TextBox x:Name="TextBoxUrl" HorizontalAlignment="Left" Margin="10,10,10,0" TextWrapping="Wrap" Text="http://www.bing.com" VerticalAlignment="Top" Width="718" KeyUp="KeyUpEnter" Height="32"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+                    <StackPanel Width="580">
+                        <TextBlock x:Name="TextBlockAnsSize" HorizontalAlignment="Left" TextWrapping="Wrap" Text="AnsSize" VerticalAlignment="Top" Height="15" Width="155"/>
+                        <TextBlock x:Name="TextBlockSize" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Size" VerticalAlignment="Top" Height="13" Width="155"/>
+                    </StackPanel>
+                    <ProgressRing x:Name="ProgressRingLoad" HorizontalAlignment="Left" VerticalAlignment="Top" Height="54" Width="61"/>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+
+    </Page.TopAppBar>
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="207*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="87*"/>
+            <ColumnDefinition Width="1280*"/>
+        </Grid.ColumnDefinitions>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition />
             </TransitionCollection>
         </Grid.ChildrenTransitions>
-        <TextBlock HorizontalAlignment="Left" Margin="88,26,0,0" TextWrapping="Wrap" Text="Modify this with most used bookmarks in view which can be clicked to got o specific sites" VerticalAlignment="Top" FontSize="22"/>
-        <ProgressRing x:Name="ProgressRingLoad" HorizontalAlignment="Left" Margin="438,52,0,0" VerticalAlignment="Top" Height="78" Width="150"/>
-        <WebView x:Name="WebViewBrowse" HorizontalAlignment="Left" Height="617" Margin="128,130,0,0" VerticalAlignment="Top" Width="718"/>
-        <TextBox x:Name="TextBoxUrl" HorizontalAlignment="Left" Margin="128,95,0,0" TextWrapping="Wrap" Text="http://www.bing.com" VerticalAlignment="Top" Width="718" KeyUp="KeyUpEnter"/>
-        <TextBlock x:Name="TextBlockSize" HorizontalAlignment="Left" Margin="862,130,0,0" TextWrapping="Wrap" Text="Size" VerticalAlignment="Top"/>
-        <TextBlock x:Name="TextBlockAnsSize" HorizontalAlignment="Left" Margin="862,150,0,0" TextWrapping="Wrap" Text="AnsSize" VerticalAlignment="Top"/>
-        <ListBox x:Name="ListBoxUrls" HorizontalAlignment="Left" Height="617" Margin="930,130,0,0" VerticalAlignment="Top" Width="392" SelectionChanged="SelectedListItem"/>
-        <HyperlinkButton Content="SeeSourceOfPage" HorizontalAlignment="Left" Margin="702,57,0,0" VerticalAlignment="Top" Click="SeeSource" DoubleTapped="CollapseSource"/>
-        <TextBlock x:Name="TextBlockSource" HorizontalAlignment="Left" Margin="930,95,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="652" Width="392" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
-        <Button Content="Sign Out" HorizontalAlignment="Left" Margin="1226,26,0,0" VerticalAlignment="Top" Click="SignOutClicked"/>
+        <TextBlock HorizontalAlignment="Left" Margin="2,26,0,0" TextWrapping="Wrap" Text="Modify this with most used bookmarks in view which can be clicked to got o specific sites" VerticalAlignment="Top" FontSize="22" Grid.Column="1" Height="26" Width="866"/>
+        <WebView x:Name="WebViewBrowse" HorizontalAlignment="Left" Height="689" Margin="10,69,0,0" VerticalAlignment="Top" Width="1346" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="ListBoxUrls" HorizontalAlignment="Left" Height="617" Margin="844,37,0,0" VerticalAlignment="Top" Width="392" SelectionChanged="SelectedListItem" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
+        <HyperlinkButton Content="SeeSourceOfPage" HorizontalAlignment="Left" Margin="616,57,0,0" VerticalAlignment="Top" Click="SeeSource" DoubleTapped="CollapseSource" Grid.Column="1" Grid.RowSpan="2" Height="39" Width="152"/>
+        <TextBlock x:Name="TextBlockSource" HorizontalAlignment="Left" Margin="844,2,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="652" Width="392" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
+        <Button Content="Sign Out" HorizontalAlignment="Left" Margin="1140,26,0,0" VerticalAlignment="Top" Click="SignOutClicked" Grid.Column="1" Height="38" Width="93"/>
 
     </Grid>
 </Page>
