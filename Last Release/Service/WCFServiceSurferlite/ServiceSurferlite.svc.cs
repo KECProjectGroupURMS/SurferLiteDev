@@ -14,6 +14,9 @@ namespace WCFServiceSurferlite
     {
         public string GetData(int value)
         {
+            // TEST: DELETE LATER
+            LogDepartment.Log("Done creation process");
+
             return string.Format("You entered: {0}", value);
         }
 

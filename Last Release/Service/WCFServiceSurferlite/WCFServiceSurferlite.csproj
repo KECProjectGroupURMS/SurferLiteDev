@@ -76,11 +76,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AzureLocalStorageTraceListener.cs" />
+    <Compile Include="ClientContactDepartment.cs" />
+    <Compile Include="CompressorDepartment.cs" />
+    <Compile Include="DataAnalyzeModifyFilterDepartment.cs" />
+    <Compile Include="InternetContactDepartment.cs" />
+    <Compile Include="InternetReceiverDepartment.cs" />
+    <Compile Include="LogDepartment.cs" />
     <Compile Include="ServiceSurferlite.svc.cs">
       <DependentUpon>ServiceSurferlite.svc</DependentUpon>
     </Compile>
     <Compile Include="IServiceSurferlite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserDataStoreDepartment.cs" />
     <Compile Include="WebRole.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
+    <Content Include="ClassDiagramServer.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

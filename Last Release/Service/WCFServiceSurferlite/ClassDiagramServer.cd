@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WCFServiceSurferlite.AzureLocalStorageTraceListener" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>AzureLocalStorageTraceListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WCFServiceSurferlite.ClientContactDepartment" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="InternetContactDepartment" Type="WCFServiceSurferlite.InternetContactDepartment">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.123" Y="-0.525" Height="0.182" Width="2.142" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClientContactDepartment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="InternetContactDepartment" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WCFServiceSurferlite.CompressorDepartment" Collapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CompressorDepartment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WCFServiceSurferlite.DataAnalyzeModifyFilterDepartment" Collapsed="true">
+    <Position X="4.25" Y="3.25" Width="1.5" />
+    <AssociationLine Name="CompressorDepartment" Type="WCFServiceSurferlite.CompressorDepartment">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.895" Y="0.327" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>DataAnalyzeModifyFilterDepartment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CompressorDepartment" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WCFServiceSurferlite.InternetContactDepartment" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InternetContactDepartment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WCFServiceSurferlite.InternetReceiverDepartment" Collapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <AssociationLine Name="DataAnalyzeModifyFilterDepartment" Type="WCFServiceSurferlite.DataAnalyzeModifyFilterDepartment">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.517" Y="0.619" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InternetReceiverDepartment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DataAnalyzeModifyFilterDepartment" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WCFServiceSurferlite.CompositeType" Collapsed="true">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAQAAA=</HashCode>
+      <FileName>IServiceSurferlite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WCFServiceSurferlite.LogDepartment" Collapsed="true">
+    <Position X="4.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LogDepartment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WCFServiceSurferlite.ServiceSurferLite" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ServiceSurferlite.svc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WCFServiceSurferlite.UserDataStoreDepartment" Collapsed="true">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserDataStoreDepartment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WCFServiceSurferlite.WebRole" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebRole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="WCFServiceSurferlite.IServiceSurferlite" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IServiceSurferlite.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
