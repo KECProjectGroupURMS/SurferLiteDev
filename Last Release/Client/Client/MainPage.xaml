@@ -6,8 +6,45 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.TopAppBar>
+        <AppBar Background="#E51E3B6C" BorderBrush="#E5408BB0" IsOpen="True" IsSticky="True">
+            <Grid Height="105">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="backButton" Style="{StaticResource BackButtonStyle}" Margin="36,20,36,0" VerticalAlignment="Top"/>
+                    <TextBox Margin="0,20,0,0" Width="716" BorderThickness="5" FontSize="16" FontWeight="Bold" Padding="10,5" BorderBrush="#FF1879DA" Height="48" VerticalAlignment="Top" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal" Width="80" />
+
+            </Grid>
+        </AppBar>
+
+    </Page.TopAppBar>
+    <Page.BottomAppBar>
+        <AppBar x:Name="bottomAppBar" Padding="10,0,10,0" Background="#E51E3B6C" BorderBrush="#E5408BB0">
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button Style="{StaticResource EditAppBarButtonStyle}" />
+                    <Button Style="{StaticResource RemoveAppBarButtonStyle}" />
+                    <Button Style="{StaticResource AddAppBarButtonStyle}" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Style="{StaticResource RefreshAppBarButtonStyle}"/>
+                    <Button Style="{StaticResource HelpAppBarButtonStyle}"/>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
 
     <Grid Background="#FF5487A5">
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="287*"/>
+            <RowDefinition Height="45*"/>
+        </Grid.RowDefinitions>
+        <WebView HorizontalAlignment="Left" Height="570" Margin="0,3,0,0" VerticalAlignment="Top" Width="1366" Grid.Row="1"/>
     </Grid>
 </Page>
