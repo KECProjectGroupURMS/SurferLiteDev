@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Client Side class diagram partial">
+    <Position X="1.827" Y="1.82" Height="0.423" Width="4.681" />
+  </Comment>
+  <Class Name="Client.App" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.CallerDepartment">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CallerDepartment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.CompressionDepartment">
+    <Position X="1.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CompressionDepartment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.CustomerDepartment">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <AssociationLine Name="CompressionDepartment" Type="Client.CompressionDepartment">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.1" Y="0.252" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAACAAAAAIAA=</HashCode>
+      <FileName>CustomerDepartment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CallerDepartment" />
+      <Property Name="CompressionDepartment" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Client.MainPage" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client.ReceiverDepartment">
+    <Position X="5" Y="4.25" Width="1.5" />
+    <AssociationLine Name="CompressionDepartment" Type="Client.CompressionDepartment">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.12" Y="-0.286" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReceiverDepartment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CompressionDepartment" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
