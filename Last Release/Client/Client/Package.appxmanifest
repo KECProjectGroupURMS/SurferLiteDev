@@ -1,39 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-
-  <Identity Name="199af6df-c60e-41d1-b3f9-ee0e6470ee2e"
-            Publisher="CN=Uddhab"
-            Version="1.0.0.0" />
-
+  <Identity Name="199af6df-c60e-41d1-b3f9-ee0e6470ee2e" Publisher="CN=Uddhab" Version="1.1.0.0" />
   <Properties>
-    <DisplayName>Client</DisplayName>
-    <PublisherDisplayName>Uddhab</PublisherDisplayName>
+    <DisplayName>Surferlite</DisplayName>
+    <PublisherDisplayName>URMS</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.2.1</OSMinVersion>
     <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
   </Prerequisites>
-
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-        Executable="$targetnametoken$.exe"
-        EntryPoint="Client.App">
-        <VisualElements
-            DisplayName="Client"
-            Logo="Assets\Logo.png"
-            SmallLogo="Assets\SmallLogo.png"
-            Description="Client"
-            ForegroundText="light"
-            BackgroundColor="#464646">
-            <DefaultTile ShowName="allLogos" />
-            <SplashScreen Image="Assets\SplashScreen.png" />
-        </VisualElements>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Client.App">
+      <VisualElements DisplayName="SurferLite" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="Surferlite is a client app to access the Surferlite service hosted in azure cloud." ForegroundText="light" BackgroundColor="#5487A5">
+        <DefaultTile ShowName="allLogos" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#5487A5" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+        </InitialRotationPreference>
+      </VisualElements>
     </Application>
   </Applications>
   <Capabilities>
