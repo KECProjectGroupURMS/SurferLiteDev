@@ -64,20 +64,8 @@ namespace Client.ServiceReferenceAzure {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReferenceAzure.IServiceSurferlite")]
     public interface IServiceSurferlite {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSurferlite/GetHrefLinks", ReplyAction="http://tempuri.org/IServiceSurferlite/GetHrefLinksResponse")]
-        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetHrefLinksAsync(string url);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSurferlite/GetData", ReplyAction="http://tempuri.org/IServiceSurferlite/GetDataResponse")]
-        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetDataAsync(string url);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSurferlite/ServiceDownloadTest", ReplyAction="http://tempuri.org/IServiceSurferlite/ServiceDownloadTestResponse")]
-        System.Threading.Tasks.Task ServiceDownloadTestAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSurferlite/GetHtml", ReplyAction="http://tempuri.org/IServiceSurferlite/GetHtmlResponse")]
-        System.Threading.Tasks.Task<byte[]> GetHtmlAsync(System.Uri URL);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSurferlite/getdatafromPack", ReplyAction="http://tempuri.org/IServiceSurferlite/getdatafromPackResponse")]
-        System.Threading.Tasks.Task getdatafromPackAsync();
+        System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSurferlite/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IServiceSurferlite/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<Client.ServiceReferenceAzure.CompositeType> GetDataUsingDataContractAsync(Client.ServiceReferenceAzure.CompositeType composite);
@@ -126,24 +114,8 @@ namespace Client.ServiceReferenceAzure {
                 base(binding, remoteAddress) {
         }
         
-        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetHrefLinksAsync(string url) {
-            return base.Channel.GetHrefLinksAsync(url);
-        }
-        
-        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetDataAsync(string url) {
-            return base.Channel.GetDataAsync(url);
-        }
-        
-        public System.Threading.Tasks.Task ServiceDownloadTestAsync() {
-            return base.Channel.ServiceDownloadTestAsync();
-        }
-        
-        public System.Threading.Tasks.Task<byte[]> GetHtmlAsync(System.Uri URL) {
-            return base.Channel.GetHtmlAsync(URL);
-        }
-        
-        public System.Threading.Tasks.Task getdatafromPackAsync() {
-            return base.Channel.getdatafromPackAsync();
+        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
+            return base.Channel.GetDataAsync(value);
         }
         
         public System.Threading.Tasks.Task<Client.ServiceReferenceAzure.CompositeType> GetDataUsingDataContractAsync(Client.ServiceReferenceAzure.CompositeType composite) {
@@ -172,7 +144,7 @@ namespace Client.ServiceReferenceAzure {
         
         private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration) {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IServiceSurferlite)) {
-                return new System.ServiceModel.EndpointAddress("http://surferlitedev.cloudapp.net/Service1.svc");
+                return new System.ServiceModel.EndpointAddress("http://168.63.240.225/ServiceSurferlite.svc");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

@@ -10,6 +10,11 @@ namespace Client
     class CallerDepartment
     {
         internal ServiceReferenceAzure.ServiceSurferliteClient clientStaff;
-        
+
+        public CallerDepartment()
+        {
+            clientStaff = new ServiceReferenceAzure.ServiceSurferliteClient();
+            clientStaff.GetDataAsync(0);
+        }        
     }
 }

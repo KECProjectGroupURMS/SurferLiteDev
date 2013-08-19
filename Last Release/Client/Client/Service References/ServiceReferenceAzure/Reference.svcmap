@@ -21,16 +21,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://surferlitedev.cloudapp.net/Service1.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://168.63.240.225/ServiceSurferlite.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="526e2ca4-1095-4a74-b37d-49a594a79eef" SourceId="1" SourceUrl="http://surferlitedev.cloudapp.net/Service1.svc?xsd=xsd3" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="a09ad634-8b73-4a40-9825-1ce48a754266" SourceId="1" SourceUrl="http://surferlitedev.cloudapp.net/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="e179024c-07d7-44d6-b74d-abf0d6761d8d" SourceId="1" SourceUrl="http://surferlitedev.cloudapp.net/Service1.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="5dd0d3e4-c606-41a7-8789-8d0d4de8425c" SourceId="1" SourceUrl="http://surferlitedev.cloudapp.net/Service1.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="7458a7ef-2658-44b4-ab01-a2780dc9406c" SourceId="1" SourceUrl="http://surferlitedev.cloudapp.net/Service1.svc?disco" />
-    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="5e9ab542-4fc2-4f9f-a309-3cb165b4fae0" SourceId="1" SourceUrl="http://surferlitedev.cloudapp.net/Service1.svc?xsd=xsd4" />
-    <MetadataFile FileName="Service14.xsd" MetadataType="Schema" ID="550d4116-107b-4cdb-ae45-40a9cfba4d04" SourceId="1" SourceUrl="http://surferlitedev.cloudapp.net/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceSurferLite.wsdl" MetadataType="Wsdl" ID="c09f26b4-51fb-4bf5-a30c-0f43aead68a5" SourceId="1" SourceUrl="http://168.63.240.225/ServiceSurferlite.svc?wsdl" />
+    <MetadataFile FileName="ServiceSurferlite.xsd" MetadataType="Schema" ID="bc1441d8-a900-46a6-9bbd-2cb8cd684a27" SourceId="1" SourceUrl="http://168.63.240.225/ServiceSurferlite.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceSurferlite1.xsd" MetadataType="Schema" ID="2e30f1ef-ddc7-453e-ab67-bf16da33b7ce" SourceId="1" SourceUrl="http://168.63.240.225/ServiceSurferlite.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceSurferlite2.xsd" MetadataType="Schema" ID="c709deaf-d1d4-4508-b099-fedd926a271a" SourceId="1" SourceUrl="http://168.63.240.225/ServiceSurferlite.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceSurferlite.disco" MetadataType="Disco" ID="5b502852-f600-489b-9b82-ec6a2fa7bea4" SourceId="1" SourceUrl="http://168.63.240.225/ServiceSurferlite.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

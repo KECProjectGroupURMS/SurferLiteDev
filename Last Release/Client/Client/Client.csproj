@@ -131,20 +131,14 @@
     <None Include="Service References\ServiceReferenceAzure\Client.ServiceReferenceAzure.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReferenceAzure\Service1.wsdl" />
-    <None Include="Service References\ServiceReferenceAzure\Service1.xsd">
+    <None Include="Service References\ServiceReferenceAzure\ServiceSurferLite.wsdl" />
+    <None Include="Service References\ServiceReferenceAzure\ServiceSurferlite.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReferenceAzure\Service11.xsd">
+    <None Include="Service References\ServiceReferenceAzure\ServiceSurferlite1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReferenceAzure\Service12.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReferenceAzure\Service13.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReferenceAzure\Service14.xsd">
+    <None Include="Service References\ServiceReferenceAzure\ServiceSurferlite2.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -153,13 +147,13 @@
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
+    <None Include="Service References\ServiceReferenceAzure\ServiceSurferlite.disco" />
     <None Include="Service References\ServiceReferenceAzure\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Service References\ServiceReferenceAzure\configuration.svcinfo" />
     <None Include="Service References\ServiceReferenceAzure\configuration91.svcinfo" />
-    <None Include="Service References\ServiceReferenceAzure\Service1.disco" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
