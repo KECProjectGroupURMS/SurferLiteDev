@@ -44,5 +44,5 @@
         </AppBar>
     </Page.BottomAppBar>
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}"/>
+    <Grid Background="#FF035E6C"/>
 </Page>
