@@ -7,6 +7,19 @@ namespace WCFServiceSurferlite
 {
     public class DataAnalyzeModifyFilterDepartment
     {
+        private string changedByte;
+        internal string modifiedByte
+        {
+            get
+            {
+                return changedByte;
+            }
+            set
+            {
+                changedByte = value;
+            }
+        }
+
         public CompressorDepartment CompressorDepartment
         {
             get
@@ -17,5 +30,10 @@ namespace WCFServiceSurferlite
             {
             }
         }
+
+        public void RemoveImage() { }
+        public void RemoveHrefs() { }
+        public void ChangeHtml() { }
+        
     }
 }

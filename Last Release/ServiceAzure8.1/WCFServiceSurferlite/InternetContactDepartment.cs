@@ -7,5 +7,10 @@ namespace WCFServiceSurferlite
 {
     public class InternetContactDepartment
     {
+        private byte[] dataReceived;
+        public void SendReceiveRequest(Uri url)
+        {
+
+        }
     }
 }

@@ -7,5 +7,11 @@ namespace WCFServiceSurferlite
 {
     public class UserDataStoreDepartment
     {
+        private string store;
+
+        public void SaveInfo()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
