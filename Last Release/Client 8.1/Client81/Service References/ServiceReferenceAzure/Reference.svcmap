@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="be495b35-ecec-4610-9a49-1fd689f5ec7f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://slite.cloudapp.net/ServiceSurferlite.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceSurferlite.xsd" MetadataType="Schema" ID="8d4ecacb-594c-41e4-bf06-3c24f6ff9479" SourceId="1" SourceUrl="http://slite.cloudapp.net/ServiceSurferlite.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceSurferLite.wsdl" MetadataType="Wsdl" ID="ec05fbd3-c55f-4908-80be-2b9cd5ac76fe" SourceId="1" SourceUrl="http://slite.cloudapp.net/ServiceSurferlite.svc?wsdl" />
+    <MetadataFile FileName="ServiceSurferlite.disco" MetadataType="Disco" ID="a58f29e2-bc93-455a-9055-549add8e5bf0" SourceId="1" SourceUrl="http://slite.cloudapp.net/ServiceSurferlite.svc?disco" />
+    <MetadataFile FileName="ServiceSurferlite1.xsd" MetadataType="Schema" ID="6e99707b-2fae-4fea-9dbf-7e1df8459966" SourceId="1" SourceUrl="http://slite.cloudapp.net/ServiceSurferlite.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceSurferlite2.xsd" MetadataType="Schema" ID="e163a2ab-2a88-40d0-82a1-352916cbe9b4" SourceId="1" SourceUrl="http://slite.cloudapp.net/ServiceSurferlite.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

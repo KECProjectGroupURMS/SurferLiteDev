@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="a525c7c0-133b-4a4b-bacf-ed701fca4c34" Publisher="CN=n5110" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>Client81</DisplayName>
+    <PublisherDisplayName>n5110</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Client81.App">
+      <m2:VisualElements DisplayName="Client81" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Client81 is a Windows 8.1 version of Client of surferlite cloud app." ForegroundText="light" BackgroundColor="#035E6C">
+        <m2:DefaultTile ShortName="SurferLite" DefaultSize="wide310x150Logo" Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#035E6C" />
+        <m2:InitialRotationPreference>
+          <m2:Rotation Preference="landscape" />
+        </m2:InitialRotationPreference>
+        <m2:ApplicationView MinWidth="width500" />
+      </m2:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

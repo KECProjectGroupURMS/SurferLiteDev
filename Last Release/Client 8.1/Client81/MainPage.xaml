@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="Client81.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Client81"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.TopAppBar>
+        <AppBar IsSticky="True" Background="#E5232F57" BorderBrush="#E51A166E">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="915*"/>
+                    <ColumnDefinition Width="451*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <AppBarButton HorizontalAlignment="Stretch" Label="Back" VerticalAlignment="Stretch" Icon="Back"/>
+                    <TextBox Width="812" TextWrapping="Wrap" Text="http://" Margin="0,15,0,45" Padding="10,5,10,3" FontSize="16"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal" Width="400">
+                    <ProgressRing HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top" Width="100"/>
+                    <AppBarButton HorizontalAlignment="Stretch" Label="Go" VerticalAlignment="Stretch" Icon="Go"/>
+                    <AppBarButton HorizontalAlignment="Stretch" Label="Stop" VerticalAlignment="Stretch" Icon="Stop"/>
+                    <AppBarButton HorizontalAlignment="Left" Label="Refresh" VerticalAlignment="Top" Icon="Refresh"/>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
+    <Page.BottomAppBar>
+        <AppBar Background="#E5232F57" BorderBrush="#E51A166E">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <AppBarButton HorizontalAlignment="Stretch" Label="New Tab" VerticalAlignment="Stretch" Icon="NewWindow"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+                    <AppBarButton HorizontalAlignment="Stretch" Label="Settings" VerticalAlignment="Stretch" Icon="Setting"/>
+                    <AppBarSeparator HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    <AppBarButton Height="100" Label="Bookmarks" Width="100" Icon="Favorite"/>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="#FF418089"/>
+</Page>
