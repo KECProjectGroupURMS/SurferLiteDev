@@ -12,6 +12,11 @@ namespace Client81
         private string status;
         private string url;
 
+        public string browseStatus
+        {
+            get{return status;}
+            set { status = value; }
+        }
         public string stringURL
         {
             get
@@ -58,5 +63,10 @@ namespace Client81
             return new Uri("https://www.google.com/");
         }
 
+
+        internal void GetUri()
+        {
+            status = "Completed";
+        }
     }
 }

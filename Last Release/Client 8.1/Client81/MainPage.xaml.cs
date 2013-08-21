@@ -22,9 +22,53 @@ namespace Client81
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private CustomerDepartment cusDep;
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            WebViewContent.LoadCompleted += Completed;
+            WebViewContent.NavigationStarting += WebViewContent_NavigationStarting;
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            ProgressStart();
+            cusDep = new CustomerDepartment();
+            cusDep.stringURL = TextBoxUrl.Text;
+            cusDep.GetUri();
+            try
+            {
+                WebViewContent.Navigate(new Uri(cusDep.stringURL));
+            }
+            catch
+            {
+                WebViewContent.NavigateToString("Connection Error");
+            }
+        }
+
+        private void WebViewContent_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
+        {
+            ProgressStart();
+            cusDep.browseStatus = "Getting Page";
+            TextBlockStatus.Text = cusDep.browseStatus;
+        }
+
+        private void Completed(object sender, NavigationEventArgs e)
+        {
+            cusDep.browseStatus = "Page Load Completed.";
+            TextBlockStatus.Text = cusDep.browseStatus;
+            ProgressStop();
+        }
+
+        private void ProgressStart()
+        {
+            ProgressRingBrowse.IsActive = true;
+        }
+        private void ProgressStop()
+        {
+            ProgressRingBrowse.IsActive = false;
         }
     }
 }

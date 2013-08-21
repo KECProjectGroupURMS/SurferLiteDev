@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Page.TopAppBar>
-        <AppBar IsSticky="True" Background="#E5232F57" BorderBrush="#E51A166E">
+        <AppBar Background="#E5232F57" BorderBrush="#E51A166E">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="915*"/>
@@ -15,11 +15,11 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal">
                     <AppBarButton HorizontalAlignment="Stretch" Label="Back" VerticalAlignment="Stretch" Icon="Back"/>
-                    <TextBox Width="812" TextWrapping="Wrap" Text="http://" Margin="0,15,0,45" Padding="10,5,10,3" FontSize="16"/>
+                    <TextBox x:Name="TextBoxUrl" Width="812" TextWrapping="Wrap" Text="http://" Margin="0,15,0,45" Padding="10,5,10,3" FontSize="16"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal" Width="400">
-                    <ProgressRing HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top" Width="100"/>
-                    <AppBarButton HorizontalAlignment="Stretch" Label="Go" VerticalAlignment="Stretch" Icon="Go"/>
+                    <ProgressRing x:Name="ProgressRingBrowse" HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top" Width="100"/>
+                    <AppBarButton HorizontalAlignment="Stretch" Label="Go" VerticalAlignment="Stretch" Icon="Go" Click="AppBarButton_Click"/>
                     <AppBarButton HorizontalAlignment="Stretch" Label="Stop" VerticalAlignment="Stretch" Icon="Stop"/>
                     <AppBarButton HorizontalAlignment="Left" Label="Refresh" VerticalAlignment="Top" Icon="Refresh"/>
                 </StackPanel>
@@ -45,5 +45,12 @@
         </AppBar>
     </Page.BottomAppBar>
 
-    <Grid Background="#FF418089"/>
+    <Grid Background="#FF418089">
+        <WebView x:Name="WebViewContent" Margin="0,100,0,0"/>
+        <TextBlock x:Name="TextBlockStatus" HorizontalAlignment="Left" Margin="10,0,0,197" TextWrapping="Wrap" Text="{Binding browseStatus}" Width="1346" FontSize="18" Foreground="#FFE63939" Height="33" VerticalAlignment="Bottom">
+            <TextBlock.DataContext>
+                <local:CustomerDepartment/>
+            </TextBlock.DataContext>
+        </TextBlock>
+    </Grid>
 </Page>
