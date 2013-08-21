@@ -35,7 +35,7 @@ namespace WCFServiceSurferlite
         {
             get
             {
-                throw new System.NotImplementedException();
+                return new UserDataStoreDepartment();
             }
             set
             { 

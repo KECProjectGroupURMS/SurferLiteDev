@@ -25,9 +25,11 @@ namespace WCFServiceSurferlite
             return string.Format("You entered: {0}", url.ToString());
         }
 
-        public string SaveDataToCloud(Object data)
+        //public string SaveDataToCloud(Object data)
+        public string SaveDataToCloud(string filename="Log")
         {
-            clientDep.UserDataStoreDepartment.SaveInfo(data);
+            UserDataStoreDepartment userData=new UserDataStoreDepartment();
+            userData.SaveInfo("username", "password",filename);
             return "Success";
         }
 
