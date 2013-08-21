@@ -3,14 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+// for network support for example HttpWebRquest
+using System.Net;
+
+// for streams
+using System.IO;
+
 namespace WCFServiceSurferlite
 {
     public class InternetContactDepartment
     {
-        private byte[] dataReceived;
+        private byte[] newReceivedByteArray;
+        public byte[] NewReceivedByteArray
+        {
+            get { return newReceivedByteArray; }
+            set { newReceivedByteArray = value; }
+        }
+
         public void SendReceiveRequest(Uri url)
         {
+            HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create(url);
+            HttpWebResponse HttpWResp = (HttpWebResponse)HttpWReq.GetResponse();
 
+            Stream gotStream;
+            gotStream = HttpWResp.GetResponseStream();
+
+            //getting ready for source
+            var sourceStream = new MemoryStream();
+            gotStream.CopyTo(sourceStream);
+            sourceStream.Close();
+
+            //converting to byte[]
+            NewReceivedByteArray = sourceStream.ToArray();
         }
     }
 }

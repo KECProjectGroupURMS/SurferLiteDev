@@ -6,6 +6,9 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
+// For stream
+using System.IO;
+
 namespace WCFServiceSurferlite
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
@@ -14,7 +17,8 @@ namespace WCFServiceSurferlite
     {
 
         [OperationContract]
-        string GetData(Uri url);
+        Stream GetData(Uri url);
+        //String GetData(Uri url);
 
         [OperationContract]
         string SaveDataToCloud(string filename);
