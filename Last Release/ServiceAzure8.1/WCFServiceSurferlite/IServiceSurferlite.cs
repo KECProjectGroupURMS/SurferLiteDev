@@ -14,7 +14,7 @@ namespace WCFServiceSurferlite
     {
 
         [OperationContract]
-        string GetData(int value);
+        string GetData(Uri url);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

@@ -12,12 +12,23 @@ namespace WCFServiceSurferlite
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class ServiceSurferLite : IServiceSurferlite
     {
-        public string GetData(int value)
+        ClientContactDepartment clientDep;
+
+        public string GetData(Uri url)
         {
             // TEST: DELETE LATER
-            LogDepartment.Log("Done creation process");
+            LogDepartment.Log("Request Got for: "+url.ToString());
+            clientDep = new ClientContactDepartment();
 
-            return string.Format("You entered: {0}", value);
+            
+            clientDep.InternetContactDepartment.SendReceiveRequest(url);
+            return string.Format("You entered: {0}", url.ToString());
+        }
+
+        public string SaveDataToCloud(Object data)
+        {
+            clientDep.UserDataStoreDepartment.SaveInfo(data);
+            return "Success";
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)

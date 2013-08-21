@@ -9,9 +9,9 @@ namespace WCFServiceSurferlite
     {
         private string store;
 
-        public void SaveInfo()
+        internal void SaveInfo(object data)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }
