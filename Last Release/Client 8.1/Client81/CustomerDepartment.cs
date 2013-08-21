@@ -11,12 +11,14 @@ namespace Client81
     {
         private string status;
         private string url;
+        private string data;
 
         public string browseStatus
         {
             get{return status;}
             set { status = value; }
         }
+
         public string stringURL
         {
             get
@@ -36,11 +38,17 @@ namespace Client81
             }
         }
 
+        public string dataReceived
+        {
+            get { return data; }
+            set { data = value; }
+        }
+
         internal CallerDepartment CallerDepartment
         {
             get
             {
-                throw new System.NotImplementedException();
+                return new CallerDepartment();
             }
             set
             {
@@ -57,16 +65,11 @@ namespace Client81
             {
             }
         }
-
-        private Uri UrlModifier(string URLString)
-        {
-            return new Uri("https://www.google.com/");
-        }
-
-
+        
         internal void GetUri()
         {
-            status = "Completed";
+            //Gets page from server here and store to data
+            data = CallerDepartment.SendRequest(url);
         }
     }
 }

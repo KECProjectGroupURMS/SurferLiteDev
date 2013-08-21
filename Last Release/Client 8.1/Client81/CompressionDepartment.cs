@@ -15,7 +15,7 @@ namespace Client81
     //This class handles decompression of data form receiver and give it to customer
     class CompressionDepartment
     {
-        string dataResult;
+        string dataDecompressed;
 
         public string DecompressBytes(byte[] compressedByte)
         {

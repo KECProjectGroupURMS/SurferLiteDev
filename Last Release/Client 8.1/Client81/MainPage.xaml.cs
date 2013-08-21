@@ -38,9 +38,19 @@ namespace Client81
             cusDep = new CustomerDepartment();
             cusDep.stringURL = TextBoxUrl.Text;
             cusDep.GetUri();
+            NavigateInWebview();
+        }
+
+        private void NavigateInWebview()
+        {
             try
             {
-                WebViewContent.Navigate(new Uri(cusDep.stringURL));
+                //WebViewContent.Navigate(new Uri(cusDep.stringURL));
+                if (cusDep.dataReceived == "NoNetwork")
+                {
+                    WebViewContent.Navigate(new Uri(cusDep.stringURL));
+                }
+                WebViewContent.NavigateToString(cusDep.dataReceived);
             }
             catch
             {
@@ -53,6 +63,7 @@ namespace Client81
             ProgressStart();
             cusDep.browseStatus = "Getting Page";
             TextBlockStatus.Text = cusDep.browseStatus;
+            
         }
 
         private void Completed(object sender, NavigationEventArgs e)
@@ -69,6 +80,16 @@ namespace Client81
         private void ProgressStop()
         {
             ProgressRingBrowse.IsActive = false;
+        }
+
+        private void TextBoxUrl_KeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                cusDep = new CustomerDepartment();
+                cusDep.GetUri();
+                NavigateInWebview();
+            }
         }
     }
 }

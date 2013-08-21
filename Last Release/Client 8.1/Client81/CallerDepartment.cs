@@ -10,11 +10,20 @@ namespace Client81
     class CallerDepartment
     {
         internal ServiceReferenceAzure.ServiceSurferliteClient clientStaff;
+        internal string receivedData;
 
         public CallerDepartment()
         {
             clientStaff = new ServiceReferenceAzure.ServiceSurferliteClient();
-            clientStaff.GetDataAsync(0);
-        }      
+        }
+
+        internal string SendRequest(string stringURL)
+        {
+            try{
+                receivedData = "New";
+                return receivedData;
+            }
+            catch { return "NoNetwork"; }
+        }
     }
 }

@@ -15,7 +15,7 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal">
                     <AppBarButton HorizontalAlignment="Stretch" Label="Back" VerticalAlignment="Stretch" Icon="Back"/>
-                    <TextBox x:Name="TextBoxUrl" Width="812" TextWrapping="Wrap" Text="http://" Margin="0,15,0,45" Padding="10,5,10,3" FontSize="16"/>
+                    <TextBox x:Name="TextBoxUrl" Width="812" TextWrapping="Wrap" Text="http://" Margin="0,15,0,45" Padding="10,5,10,3" FontSize="16" KeyUp="TextBoxUrl_KeyUp"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal" Width="400">
                     <ProgressRing x:Name="ProgressRingBrowse" HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top" Width="100"/>
@@ -45,7 +45,7 @@
         </AppBar>
     </Page.BottomAppBar>
 
-    <Grid Background="#FF418089">
+    <Grid Background="#FF035E6C">
         <WebView x:Name="WebViewContent" Margin="0,100,0,0"/>
         <TextBlock x:Name="TextBlockStatus" HorizontalAlignment="Left" Margin="10,0,0,197" TextWrapping="Wrap" Text="{Binding browseStatus}" Width="1346" FontSize="18" Foreground="#FFE63939" Height="33" VerticalAlignment="Bottom">
             <TextBlock.DataContext>
