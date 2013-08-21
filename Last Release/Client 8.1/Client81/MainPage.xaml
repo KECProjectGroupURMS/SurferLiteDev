@@ -14,12 +14,13 @@
                     <ColumnDefinition Width="451*"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal">
-                    <AppBarButton HorizontalAlignment="Stretch" Label="Back" VerticalAlignment="Stretch" Icon="Back"/>
-                    <TextBox x:Name="TextBoxUrl" Width="812" TextWrapping="Wrap" Text="http://" Margin="0,15,0,45" Padding="10,5,10,3" FontSize="16" KeyUp="TextBoxUrl_KeyUp"/>
+                    <AppBarButton x:Name="AppBarButtonBack" HorizontalAlignment="Stretch" Label="Back" VerticalAlignment="Stretch" Icon="Back" Click="AppBarButtonBack_Click"/>
+                    <TextBox x:Name="TextBoxUrl" Width="698" TextWrapping="Wrap" Text="http://" Margin="0,15,0,45" Padding="10,5,10,3" FontSize="16" KeyUp="TextBoxUrl_KeyUp"/>
+                    <AppBarButton x:Name="AppBarButtonForward" HorizontalAlignment="Stretch" Label="Forward" VerticalAlignment="Stretch" Icon="Forward" Click="AppBarButtonForward_Click"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal" Width="400">
                     <ProgressRing x:Name="ProgressRingBrowse" HorizontalAlignment="Stretch" Height="100" VerticalAlignment="Top" Width="100"/>
-                    <AppBarButton HorizontalAlignment="Stretch" Label="Go" VerticalAlignment="Stretch" Icon="Go" Click="AppBarButton_Click"/>
+                    <AppBarButton x:Name="AppBarButtonGo" HorizontalAlignment="Stretch" Label="Go" VerticalAlignment="Stretch" Icon="Go" Click="AppBarButtonGo_Click"/>
                     <AppBarButton HorizontalAlignment="Stretch" Label="Stop" VerticalAlignment="Stretch" Icon="Stop"/>
                     <AppBarButton HorizontalAlignment="Left" Label="Refresh" VerticalAlignment="Top" Icon="Refresh"/>
                 </StackPanel>
@@ -35,11 +36,12 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal">
                     <AppBarButton HorizontalAlignment="Stretch" Label="New Tab" VerticalAlignment="Stretch" Icon="NewWindow"/>
+                    <AppBarButton x:Name="AppBarButtonBookmarkPage" HorizontalAlignment="Stretch" Label="Bookmarks Page" VerticalAlignment="Stretch" Icon="Bookmarks" Click="AppBarButtonBookmarkPage_Click" />
                 </StackPanel>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
                     <AppBarButton HorizontalAlignment="Stretch" Label="Settings" VerticalAlignment="Stretch" Icon="Setting"/>
                     <AppBarSeparator HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                    <AppBarButton Height="100" Label="Bookmarks" Width="100" Icon="Favorite"/>
+                    <AppBarButton x:Name="AppBarButtonBookmarks" Height="100" Label="Bookmarks" Width="100" Icon="Favorite" Click="AppBarButtonBookmarks_Click"/>
                 </StackPanel>
             </Grid>
         </AppBar>
