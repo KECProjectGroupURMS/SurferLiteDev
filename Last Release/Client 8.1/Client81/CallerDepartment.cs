@@ -28,7 +28,6 @@ namespace Client81
         {
             client = new ServiceReferenceAzureLocal.ServiceSurferliteClient();
             //client = new ServiceReferenceAzure.ServiceSurferliteClient();
-            ans = "true";
         }
 
         public async Task SendRequest(string stringURL)
@@ -36,7 +35,6 @@ namespace Client81
             Uri url = new Uri(stringURL);
             receivedData = await client.GetDataAsync(url);
             length=receivedData.Length.ToString();
-
             this.ReceivedData = this.receivedData;
             //receivedData = await clientStaff.GetDataAsync(new Uri(stringURL));
         }

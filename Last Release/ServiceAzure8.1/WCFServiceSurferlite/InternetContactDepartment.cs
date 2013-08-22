@@ -23,6 +23,8 @@ namespace WCFServiceSurferlite
         public void SendReceiveRequest(Uri url)
         {
             HttpWebRequest HttpWReq = (HttpWebRequest)WebRequest.Create(url);
+            //HttpWReq.MaximumAutomaticRedirections = 1;
+            //HttpWReq.AllowAutoRedirect = true;
             HttpWebResponse HttpWResp = (HttpWebResponse)HttpWReq.GetResponse();
 
             Stream gotStream;

@@ -67,6 +67,9 @@ namespace Client81.ServiceReferenceAzure {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSurferlite/GetData", ReplyAction="http://tempuri.org/IServiceSurferlite/GetDataResponse")]
         System.Threading.Tasks.Task<byte[]> GetDataAsync(System.Uri url);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSurferlite/GetDataTest", ReplyAction="http://tempuri.org/IServiceSurferlite/GetDataTestResponse")]
+        System.Threading.Tasks.Task<string> GetDataTestAsync(string uri);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceSurferlite/SaveDataToCloud", ReplyAction="http://tempuri.org/IServiceSurferlite/SaveDataToCloudResponse")]
         System.Threading.Tasks.Task<string> SaveDataToCloudAsync(string filename);
         
@@ -119,6 +122,10 @@ namespace Client81.ServiceReferenceAzure {
         
         public System.Threading.Tasks.Task<byte[]> GetDataAsync(System.Uri url) {
             return base.Channel.GetDataAsync(url);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetDataTestAsync(string uri) {
+            return base.Channel.GetDataTestAsync(uri);
         }
         
         public System.Threading.Tasks.Task<string> SaveDataToCloudAsync(string filename) {

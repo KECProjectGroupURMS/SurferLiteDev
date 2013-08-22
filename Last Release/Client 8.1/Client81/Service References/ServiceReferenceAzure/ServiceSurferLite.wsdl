@@ -14,6 +14,12 @@
   <wsdl:message name="IServiceSurferlite_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceSurferlite_GetDataTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataTest" />
+  </wsdl:message>
+  <wsdl:message name="IServiceSurferlite_GetDataTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataTestResponse" />
+  </wsdl:message>
   <wsdl:message name="IServiceSurferlite_SaveDataToCloud_InputMessage">
     <wsdl:part name="parameters" element="tns:SaveDataToCloud" />
   </wsdl:message>
@@ -31,6 +37,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceSurferlite/GetData" message="tns:IServiceSurferlite_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceSurferlite/GetDataResponse" message="tns:IServiceSurferlite_GetData_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetDataTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceSurferlite/GetDataTest" message="tns:IServiceSurferlite_GetDataTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceSurferlite/GetDataTestResponse" message="tns:IServiceSurferlite_GetDataTest_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="SaveDataToCloud">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceSurferlite/SaveDataToCloud" message="tns:IServiceSurferlite_SaveDataToCloud_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceSurferlite/SaveDataToCloudResponse" message="tns:IServiceSurferlite_SaveDataToCloud_OutputMessage" />
@@ -44,6 +54,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IServiceSurferlite/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataTest">
+      <soap:operation soapAction="http://tempuri.org/IServiceSurferlite/GetDataTest" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

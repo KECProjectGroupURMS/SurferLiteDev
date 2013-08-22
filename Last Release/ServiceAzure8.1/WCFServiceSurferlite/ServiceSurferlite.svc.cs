@@ -23,28 +23,51 @@ namespace WCFServiceSurferlite
         public Stream GetData(Uri url)
         //public string GetData(Uri url)
         {
-            
-            
-            // TEST: DELETE LATER
-            LogDepartment.Log("Request Got for: " + url.ToString());
-            
-            internetContact = new InternetContactDepartment();
-            internetContact.SendReceiveRequest(url);
-
-            comDep = new CompressorDepartment();
-            comDep.CompressBytes(internetContact.NewReceivedByteArray);
-
-            //return comDep.CompressedStream.Length.ToString();
-            return comDep.CompressedStream;
-        }
-
-        //public Stream GetData(Uri url)
-        public string GetDataTest(Uri url)
-        {
             try
             {
                 // TEST: DELETE LATER
-                LogDepartment.Log("Request Got for: " + url.ToString());
+                try {
+                    LogDepartment.Log("Request Got for: " + url.ToString());
+                }
+                catch
+                {
+                }
+                
+                internetContact = new InternetContactDepartment();
+                internetContact.SendReceiveRequest(url);
+
+                comDep = new CompressorDepartment();
+                comDep.CompressBytes(internetContact.NewReceivedByteArray);
+
+                //return comDep.CompressedStream.Length.ToString();
+                return comDep.CompressedStream;
+            }
+            catch (Exception e)
+            {
+                string test = "Error: "+e.ToString();
+                byte[] byteArray = Encoding.ASCII.GetBytes(test);
+
+                comDep = new CompressorDepartment();
+                comDep.CompressBytes(byteArray);
+
+                return comDep.CompressedStream;
+            }
+        }
+
+        //public Stream GetData(Uri url)
+        public string GetDataTest(string uri)
+        {
+            try
+            {
+                Uri url = new Uri(uri);
+                // TEST: DELETE LATER
+                try
+                {
+                    LogDepartment.Log("Request Got for: " + url.ToString());
+                }
+                catch
+                {
+                }
 
                 internetContact = new InternetContactDepartment();
                 internetContact.SendReceiveRequest(url);
@@ -55,9 +78,9 @@ namespace WCFServiceSurferlite
                 //return comDep.CompressedStream.Length.ToString();
                 return comDep.CompressedStream.ToString();
             }
-            catch
+            catch(Exception e)
             {
-                return "Error in execution of the server codes.";
+                return e.ToString()+"Error in execution of the server codes.";
             }
             
         }
@@ -65,11 +88,25 @@ namespace WCFServiceSurferlite
         //public string SaveDataToCloud(Object data)
         public string SaveDataToCloud(string filename="Log")
         {
-            userData = new UserDataStoreDepartment();
-            userData.SaveInfo("username", "password", filename);
+            try
+            {
+                userData = new UserDataStoreDepartment();
+                userData.SaveInfo("username", "password", filename);
 
-            LogDepartment.Log("Save data cloud to success: " + filename);
-            return "Success";
+                try
+                {
+                    LogDepartment.Log("Save data cloud to success: " + filename);
+                }
+                catch
+                {
+                }
+                
+                return "Success";
+            }
+            catch(Exception e)
+            {
+                return e.ToString()+" Unsucess";
+            }
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
