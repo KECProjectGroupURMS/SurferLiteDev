@@ -21,6 +21,9 @@ namespace WCFServiceSurferlite
         //String GetData(Uri url);
 
         [OperationContract]
+        string GetDataTest(Uri url);
+
+        [OperationContract]
         string SaveDataToCloud(string filename);
 
         [OperationContract]

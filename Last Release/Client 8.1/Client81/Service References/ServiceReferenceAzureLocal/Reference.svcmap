@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="83940dd8-6411-424a-8b51-dfe3ad1db72e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1/ServiceSurferlite.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceSurferlite.disco" MetadataType="Disco" ID="46eaeef3-66f5-4470-a083-f0ecd637496d" SourceId="1" SourceUrl="http://127.0.0.1/ServiceSurferlite.svc?disco" />
+    <MetadataFile FileName="ServiceSurferLite.wsdl" MetadataType="Wsdl" ID="380a384f-4fbd-4861-9ba2-7d7a647fbdc0" SourceId="1" SourceUrl="http://127.0.0.1/ServiceSurferlite.svc?wsdl" />
+    <MetadataFile FileName="ServiceSurferlite.xsd" MetadataType="Schema" ID="e8247404-dd2f-435d-b6a5-8b91add48b4f" SourceId="1" SourceUrl="http://127.0.0.1/ServiceSurferlite.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceSurferlite1.xsd" MetadataType="Schema" ID="f5c84c39-d12c-459d-a12b-f7cd4818c556" SourceId="1" SourceUrl="http://127.0.0.1/ServiceSurferlite.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceSurferlite2.xsd" MetadataType="Schema" ID="027cb695-93a2-4bf4-8da1-65072ec16a60" SourceId="1" SourceUrl="http://127.0.0.1/ServiceSurferlite.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceSurferlite3.xsd" MetadataType="Schema" ID="e0c6cc8d-ec8a-4ce3-9bf4-970f1a3d2ac2" SourceId="1" SourceUrl="http://127.0.0.1/ServiceSurferlite.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

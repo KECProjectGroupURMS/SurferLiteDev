@@ -12,6 +12,13 @@ namespace Client81
         private string status;
         private string url;
         private string data;
+        private string decompressedData;
+
+        public string DecompressedData
+        {
+            get { return decompressedData; }
+            set { decompressedData = value; }
+        }
 
         public string browseStatus
         {
@@ -27,7 +34,7 @@ namespace Client81
             }
             set
             {
-                if (value.Contains("http://"))
+                if (value.Contains("http://") | value.Contains("https://"))
                 {
                     url = value;
                 }
@@ -44,32 +51,23 @@ namespace Client81
             set { data = value; }
         }
 
-        internal CallerDepartment CallerDepartment
-        {
-            get
-            {
-                return new CallerDepartment();
-            }
-            set
-            {
-            }
-        }
+        private CallerDepartment CallerDepartment;
 
-        internal CompressionDepartment CompressionDepartment
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        internal CompressionDepartment CompressionDepartment;
         
-        internal void GetUri()
+        public async Task GetUri()
         {
+            CallerDepartment = new CallerDepartment();
+            
+            await CallerDepartment.SendRequest(stringURL);
+
+            CompressionDepartment = new Client81.CompressionDepartment();
+            CompressionDepartment.DecompressBytes(CallerDepartment.ReceivedData);
+
+            DecompressedData = CompressionDepartment.DataDecompressed;
             //Gets page from server here and store to data
-            data = CallerDepartment.SendRequest(url);
+            //data = CallerDepartment.SendRequest(url);
+            
         }
     }
 }

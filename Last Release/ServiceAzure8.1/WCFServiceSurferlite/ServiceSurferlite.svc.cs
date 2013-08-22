@@ -38,6 +38,30 @@ namespace WCFServiceSurferlite
             return comDep.CompressedStream;
         }
 
+        //public Stream GetData(Uri url)
+        public string GetDataTest(Uri url)
+        {
+            try
+            {
+                // TEST: DELETE LATER
+                LogDepartment.Log("Request Got for: " + url.ToString());
+
+                internetContact = new InternetContactDepartment();
+                internetContact.SendReceiveRequest(url);
+
+                comDep = new CompressorDepartment();
+                comDep.CompressBytes(internetContact.NewReceivedByteArray);
+
+                //return comDep.CompressedStream.Length.ToString();
+                return comDep.CompressedStream.ToString();
+            }
+            catch
+            {
+                return "Error in execution of the server codes.";
+            }
+            
+        }
+
         //public string SaveDataToCloud(Object data)
         public string SaveDataToCloud(string filename="Log")
         {
