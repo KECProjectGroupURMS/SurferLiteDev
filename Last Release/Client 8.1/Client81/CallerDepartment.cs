@@ -4,26 +4,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Stream
+using System.IO;
+
 namespace Client81
 {
     // This class contacts to server with request got from customer
     class CallerDepartment
     {
-        internal ServiceReferenceAzure.ServiceSurferliteClient clientStaff;
-        internal string receivedData;
+        //internal ServiceReferenceAzure.ServiceSurferliteClient client;
+        internal ServiceReferenceAzureLocal.ServiceSurferliteClient client;
+        internal byte[] receivedData;
+        public byte[] ReceivedData
+        {
+            get { return receivedData; }
+            set { receivedData = value; }
+        }
+
+        internal string ans;
+        internal string length;
 
         public CallerDepartment()
         {
-            clientStaff = new ServiceReferenceAzure.ServiceSurferliteClient();
+            client = new ServiceReferenceAzureLocal.ServiceSurferliteClient();
+            //client = new ServiceReferenceAzure.ServiceSurferliteClient();
         }
 
-        internal string SendRequest(string stringURL)
+        public async Task SendRequest(string stringURL)
         {
-            try{
-                receivedData = "New";
-                return receivedData;
-            }
-            catch { return "NoNetwork"; }
+            Uri url = new Uri(stringURL);
+            receivedData = await client.GetDataAsync(url);
+            length=receivedData.Length.ToString();
+            this.ReceivedData = this.receivedData;
+            //receivedData = await clientStaff.GetDataAsync(new Uri(stringURL));
+        }
+
+        public async void SaveDataToCloud()
+        {
+            //await client.SaveDataToCloudAsync("Log");
+            //string ans = await client.SaveDataToCloudAsync("Log");
         }
     }
 }

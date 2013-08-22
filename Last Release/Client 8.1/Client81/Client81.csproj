@@ -119,6 +119,11 @@
       <DependentUpon>PageBookmarks.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServiceReferenceAzureLocal\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReferenceAzure\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,10 +136,16 @@
     </AppxManifest>
     <None Include="Client81_TemporaryKey.pfx" />
     <None Include="Properties\ServiceReferences.Designer.ClientConfig" />
+    <None Include="Service References\ServiceReferenceAzureLocal\ServiceSurferLite.wsdl" />
+    <None Include="Service References\ServiceReferenceAzureLocal\ServiceSurferlite.xsd" />
+    <None Include="Service References\ServiceReferenceAzureLocal\ServiceSurferlite1.xsd" />
+    <None Include="Service References\ServiceReferenceAzureLocal\ServiceSurferlite2.xsd" />
+    <None Include="Service References\ServiceReferenceAzureLocal\ServiceSurferlite3.xsd" />
     <None Include="Service References\ServiceReferenceAzure\ServiceSurferLite.wsdl" />
     <None Include="Service References\ServiceReferenceAzure\ServiceSurferlite.xsd" />
     <None Include="Service References\ServiceReferenceAzure\ServiceSurferlite1.xsd" />
     <None Include="Service References\ServiceReferenceAzure\ServiceSurferlite2.xsd" />
+    <None Include="Service References\ServiceReferenceAzure\ServiceSurferlite3.xsd" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.scale-100.png" />
@@ -142,6 +153,13 @@
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <None Include="Service References\ServiceReferenceAzureLocal\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReferenceAzureLocal\configuration.svcinfo" />
+    <None Include="Service References\ServiceReferenceAzureLocal\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReferenceAzureLocal\ServiceSurferlite.disco" />
     <Page Include="PageBookmarks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -165,6 +183,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReferenceAzureLocal\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceAzure\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">

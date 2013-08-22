@@ -3,7 +3,15 @@
   <Role name="WCFServiceSurferlite">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=portalvhdsttynh6yyg3st7;AccountKey=98geuLlPFP8Q9Va1XSGj8PQOLcWgp2dpnwaf0/ci1yEcfd16ILT59xVh4+Inq200+BncQo4vxYKA8n7oQWK2Ig==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="surferlite" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBpQYJKoZIhvcNAQcDoIIBljCCAZICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCECSzxImpv6ePTU7S8+s/TOUwDQYJKoZIhvcNAQEBBQAEggEAaszHb2ir2BuKmgFKR1ds7qXAswalHzByxU7rlVyncMjUNqxRHsrXWGGlmaAFu1H6M2ycFeHV6b3HvTi7nLrXoLWFwJwLRzub5t2ARr67vEcuJa99GKlcpz1tcwyTkvinHX5YlozvWWoYA9opDy+ke+YwNOpLuN9c9O4w0I6qAr4T+uTj1iPMN8HNWJyW4wWOTzgo05Xm0GivpJlaiHGfUpfTBGDJPctiqsc8f3tWbE0ztLi6iGu8b9frjKZM0cfzdju/4wtDWIZebAr8rlkOwV0oExZXrOWeXEt80AmIfWtL4SzJRsbS/+PCttpGl+XWvbdlzuTnvgiXEvRTa9bxfTA7BgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECOmY3Xcp5oftgBjjWnwUv+u3mPnxXGHXlLfi1rMMnV5kY1k=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-08-21T23:59:59.0000000+05:45" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
     </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="9431C345AD21811676A9E2140E957B64CD054598" thumbprintAlgorithm="sha1" />
+    </Certificates>
   </Role>
 </ServiceConfiguration>

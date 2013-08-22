@@ -16,8 +16,13 @@ namespace Client81
     class CompressionDepartment
     {
         string dataDecompressed;
+        public string DataDecompressed
+        {
+            get { return dataDecompressed; }
+            set { dataDecompressed = value; }
+        }
 
-        public string DecompressBytes(byte[] compressedByte)
+        public void DecompressBytes(byte[] compressedByte)
         {
             // for holding decompressed byte
             string result;
@@ -50,7 +55,7 @@ namespace Client81
             // Cleanup if they are to be used again
             compressor.Dispose();
 
-            return result;
+            this.dataDecompressed= result;
 
             ////Uncomment these if you want to use String instead of string (Some modification have to be done may be)
 

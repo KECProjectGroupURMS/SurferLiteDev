@@ -85,6 +85,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Related_Files\Log.txt" />
     <Content Include="ServiceSurferlite.svc" />
   </ItemGroup>
   <ItemGroup>

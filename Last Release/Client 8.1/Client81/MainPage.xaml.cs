@@ -12,6 +12,10 @@ using Windows.Graphics.Imaging;
 //for ObservableCollections
 using System.Collections.ObjectModel;
 
+using System.Threading;
+
+//for colors
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Client81
@@ -22,6 +26,7 @@ namespace Client81
     public sealed partial class MainPage : Page
     {
         private CustomerDepartment cusDep;
+        ServiceReferenceAzureLocal.ServiceSurferliteClient client;
 
         static ObservableCollection<BookmarkItem> bookmarkss = new ObservableCollection<BookmarkItem>();
         internal static ObservableCollection<BookmarkItem> bookmarks
@@ -34,39 +39,26 @@ namespace Client81
         {
             this.InitializeComponent();
 
-            WebViewContent.NavigationCompleted += WebViewContent_NavigationCompleted;
-            WebViewContent.NavigationStarting += WebViewContent_NavigationStarting;
-
             this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
         }
 
-        private void WebViewContent_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
-        {
-            cusDep.browseStatus = "Page Load Completed.";
-            TextBlockStatus.Text = cusDep.browseStatus;
-            ProgressStop();
-        }
+        
 
         private void AppBarButtonGo_Click(object sender, RoutedEventArgs e)
         {
-            ProgressStart();
-            cusDep = new CustomerDepartment();
-            cusDep.stringURL = TextBoxUrl.Text;
-            cusDep.GetUri();
-            NavigateInWebview();
-            TextBoxUrl.Text = cusDep.stringURL;
+            Browse();
         }
 
         private void NavigateInWebview()
         {
             try
             {
-                WebViewContent.Navigate(new Uri(cusDep.stringURL));
-                //if (cusDep.dataReceived == "NoNetwork")
-                //{
-                //    WebViewContent.Navigate(new Uri(cusDep.stringURL));
-                //}
-                //WebViewContent.NavigateToString(cusDep.dataReceived);
+                //For direct navigation
+                //WebViewContent.Navigate(new Uri(cusDep.stringURL));
+
+                //Navigation to decompressed string
+                WebViewContent.NavigateToString(cusDep.DecompressedData);
+                
             }
             catch
             {
@@ -74,34 +66,23 @@ namespace Client81
             }
         }
 
-        private void WebViewContent_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
-        {
-            ProgressStart();
-            cusDep.browseStatus = "Getting Page";
-            TextBlockStatus.Text = cusDep.browseStatus;
-
-        }
-
         private void ProgressStart()
         {
             ProgressRingBrowse.IsActive = true;
+            RectangleProgress.Margin = new Thickness(0, 0, 700, 0);
         }
+
         private void ProgressStop()
         {
             ProgressRingBrowse.IsActive = false;
+            RectangleProgress.Margin = new Thickness(0, 0, 0, 0);
         }
 
         private void TextBoxUrl_KeyUp(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == Windows.System.VirtualKey.Enter)
             {
-                ProgressStart();
-                cusDep = new CustomerDepartment();
-                cusDep.stringURL = TextBoxUrl.Text;
-                cusDep.GetUri();
-                TextBoxUrl.Text = cusDep.stringURL;
-                NavigateInWebview();
-                ProgressStop();
+                Browse();
             }
         }
 
@@ -167,6 +148,76 @@ namespace Client81
         private void AppBarButtonBookmarkPage_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(PageBookmarks));
+        }
+
+        private async void AppBarButtonReqPageSize_Click(object sender, RoutedEventArgs e)
+        {
+            //CallerDepartment call = new CallerDepartment();
+            //call.SendRequest(TextBoxUrl.Text);
+            //call.SaveDataToCloud();
+            //TextBlockSize.Text = call.receivedData.ToString();
+            try
+            {
+                client = new ServiceReferenceAzureLocal.ServiceSurferliteClient();
+                //client = new ServiceReferenceAzure.ServiceSurferliteClient();
+            }
+            catch
+            {
+               WebViewContent.NavigateToString("Can't connect to the SurferLite server");
+            }
+
+            if (client != null)
+            {
+                ProgressStart();
+                try
+                {
+                    byte[] newSt = await client.GetDataAsync(new Uri("http://www.bing.com/"));
+                    TextBlockSize.Text = newSt.Length.ToString();
+
+                    string ans = await client.SaveDataToCloudAsync("Log");
+                }
+                catch (Exception f)
+                {
+                    // There is some error. This needs modification so Exception is exact
+                    WebViewContent.NavigateToString(f.ToString());
+                }
+                ProgressStop();
+
+            }
+
+        }
+
+        private async void Browse()
+        {
+            ProgressRingBrowse.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+            ProgressStart();
+            
+            cusDep = new CustomerDepartment();
+            cusDep.stringURL = TextBoxUrl.Text;
+            await cusDep.GetUri();
+            NavigateInWebview();
+            TextBoxUrl.Text = cusDep.stringURL;
+        }
+
+        private void AppBarButtonStop_Click(object sender, RoutedEventArgs e)
+        {
+            WebViewContent.Stop();
+            ProgressStop();
+        }
+
+        private void WebViewContent_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        {
+            cusDep.browseStatus = "Page Load Completed.";
+            TextBlockStatus.Text = cusDep.browseStatus;
+            ProgressStop();
+        }
+
+        private void WebViewContent_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
+        {
+            ProgressRingBrowse.Foreground = new SolidColorBrush(Windows.UI.Colors.Blue);
+            ProgressStart();
+            cusDep.browseStatus = "Getting Page";
+            TextBlockStatus.Text = cusDep.browseStatus;
         }
     }
 }

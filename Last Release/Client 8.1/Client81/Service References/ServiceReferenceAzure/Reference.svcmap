@@ -24,10 +24,11 @@
     <MetadataSource Address="http://slite.cloudapp.net/ServiceSurferlite.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServiceSurferlite.xsd" MetadataType="Schema" ID="8d4ecacb-594c-41e4-bf06-3c24f6ff9479" SourceId="1" SourceUrl="http://slite.cloudapp.net/ServiceSurferlite.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceSurferlite3.xsd" MetadataType="Schema" ID="c9e2b701-731a-48d7-96f1-aa1608378d25" SourceId="1" SourceUrl="http://slite.cloudapp.net/ServiceSurferlite.svc?xsd=xsd3" />
     <MetadataFile FileName="ServiceSurferLite.wsdl" MetadataType="Wsdl" ID="ec05fbd3-c55f-4908-80be-2b9cd5ac76fe" SourceId="1" SourceUrl="http://slite.cloudapp.net/ServiceSurferlite.svc?wsdl" />
-    <MetadataFile FileName="ServiceSurferlite.disco" MetadataType="Disco" ID="a58f29e2-bc93-455a-9055-549add8e5bf0" SourceId="1" SourceUrl="http://slite.cloudapp.net/ServiceSurferlite.svc?disco" />
     <MetadataFile FileName="ServiceSurferlite1.xsd" MetadataType="Schema" ID="6e99707b-2fae-4fea-9dbf-7e1df8459966" SourceId="1" SourceUrl="http://slite.cloudapp.net/ServiceSurferlite.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceSurferlite.xsd" MetadataType="Schema" ID="8d4ecacb-594c-41e4-bf06-3c24f6ff9479" SourceId="1" SourceUrl="http://slite.cloudapp.net/ServiceSurferlite.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceSurferlite.disco" MetadataType="Disco" ID="a58f29e2-bc93-455a-9055-549add8e5bf0" SourceId="1" SourceUrl="http://slite.cloudapp.net/ServiceSurferlite.svc?disco" />
     <MetadataFile FileName="ServiceSurferlite2.xsd" MetadataType="Schema" ID="e163a2ab-2a88-40d0-82a1-352916cbe9b4" SourceId="1" SourceUrl="http://slite.cloudapp.net/ServiceSurferlite.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>

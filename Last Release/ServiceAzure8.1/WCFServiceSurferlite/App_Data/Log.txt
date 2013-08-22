@@ -1,4 +1,0 @@
-8/21/2013 9:50:18 AM: Request Got.
-8/21/2013 9:50:39 AM: Request Got.
-8/21/2013 9:52:24 AM: Request Got for: http://google/
-8/21/2013 9:52:46 AM: Request Got for: http://www.facebook.com/
