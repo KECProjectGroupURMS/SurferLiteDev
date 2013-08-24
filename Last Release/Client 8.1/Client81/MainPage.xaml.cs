@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 
 using System.Threading;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
 
 //for colors
 
@@ -27,7 +28,6 @@ namespace Client81
     public sealed partial class MainPage : Page
     {
         private CustomerDepartment cusDep;
-        ServiceReferenceAzureLocal.ServiceSurferliteClient client;
 
         static ObservableCollection<BookmarkItem> bookmarkss = new ObservableCollection<BookmarkItem>();
         internal static ObservableCollection<BookmarkItem> bookmarks
@@ -36,18 +36,61 @@ namespace Client81
             set { bookmarkss = value; }
         }
 
+        public static class Settings {
+            public static bool ToggleSwitchCompression=false;
+            public static bool ToggleSwitchImage = false;
+            public static bool ToggleSwitchScript = false;
+        }
+
         public MainPage()
         {
             this.InitializeComponent();
+            
 
+            Windows.UI.ApplicationSettings.SettingsPane.GetForCurrentView().CommandsRequested += MainPage_CommandsRequested;
             this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
+
+            WebViewContent_Copy.Visibility = Visibility.Collapsed;
+            WebViewContent_Copy2.Visibility = Visibility.Collapsed;
+            WebViewContent_Copy3.Visibility = Visibility.Collapsed;
+            
         }
 
-        
-
-        private void AppBarButtonGo_Click(object sender, RoutedEventArgs e)
+        private void MainPage_CommandsRequested(Windows.UI.ApplicationSettings.SettingsPane sender, Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs args)
         {
-            Browse();
+            Windows.UI.ApplicationSettings.SettingsCommand generalSetting =
+        new Windows.UI.ApplicationSettings.SettingsCommand("AppSettings", "SurferLite Settings", (handler) =>
+        {
+            SettingsFlyoutGeneral generalSettingsFlyout = new SettingsFlyoutGeneral();
+            generalSettingsFlyout.Show();
+
+        });
+
+            args.Request.ApplicationCommands.Add(generalSetting);
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            try
+            {
+                if (e.Parameter.ToString() != "")
+                {
+                    string name = e.Parameter as string;
+                    TextBoxUrl.Text = name;
+                    cusDep.stringURL = name;
+                    Browse();
+                    //WebViewContent.Navigate(new Uri(name));
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        private async void AppBarButtonGo_Click(object sender, RoutedEventArgs e)
+        {
+            await Browse();
         }
 
         private void NavigateInWebview()
@@ -58,12 +101,20 @@ namespace Client81
                 //WebViewContent.Navigate(new Uri(cusDep.stringURL));
 
                 //Navigation to decompressed string
-                WebViewContent.NavigateToString(cusDep.DecompressedData);
+                if (WebViewContent.Visibility == Visibility.Visible)
+                {
+                    WebViewContent.NavigateToString(cusDep.DecompressedData);
+                }
+                else WebViewContent_Copy.NavigateToString(cusDep.DecompressedData);
+                
                 
             }
             catch
             {
-                WebViewContent.NavigateToString("Connection Error");
+                if (WebViewContent.Visibility == Visibility.Visible)
+                {
+                    WebViewContent.NavigateToString("Connection Error");
+                }else WebViewContent_Copy.NavigateToString("Connection Error");
             }
         }
 
@@ -79,24 +130,35 @@ namespace Client81
             RectangleProgress.Margin = new Thickness(0, 0, 0, 0);
         }
 
-        private void TextBoxUrl_KeyUp(object sender, KeyRoutedEventArgs e)
+        private async void TextBoxUrl_KeyUp(object sender, KeyRoutedEventArgs e)
         {
             if (e.Key == Windows.System.VirtualKey.Enter)
             {
-                Browse();
+                await Browse();
             }
         }
 
         private void AppBarButtonBack_Click(object sender, RoutedEventArgs e)
         {
-            WebViewContent.Navigate(new Uri("http://www.bing.com"));
-            if (WebViewContent.CanGoBack) WebViewContent.GoBack();
+            //WebViewContent.Navigate(new Uri("http://www.bing.com"));
+            if (WebViewContent.CanGoBack)
+            {
+                WebViewContent.GoBack();
+                TextBoxUrl.Text = WebViewContent.Source.AbsoluteUri;
+            }
             //WebViewContent.GoBack();
         }
 
         private void AppBarButtonForward_Click(object sender, RoutedEventArgs e)
         {
-            if (WebViewContent.CanGoForward) WebViewContent.GoForward();
+            //if (WebViewContent.CanGoForward) WebViewContent.GoForward();
+            //WebViewContent.Navigate(new Uri("http://www.bing.com"));
+            if (WebViewContent.CanGoForward)
+            {
+                WebViewContent.GoForward();
+                TextBoxUrl.Text = WebViewContent.Source.AbsoluteUri;
+            }
+            //WebViewContent.GoBack();
         }
 
         private async void AppBarButtonBookmarks_Click(object sender, RoutedEventArgs e)
@@ -122,7 +184,17 @@ namespace Client81
 
             BookmarkItem item = new BookmarkItem();
             item.Title = WebViewContent.DocumentTitle;
-            item.PageUrl = WebViewContent.Source;
+
+            try
+            {
+                item.PageUrl = new Uri(TextBoxUrl.Text);
+            }
+            catch
+            {
+
+            }
+            //item.PageUrl = WebViewContent.Source;
+            
             item.Preview = small;
 
             bookmarks.Add(item);
@@ -193,22 +265,44 @@ namespace Client81
 
         }
 
-        private async void Browse()
+        private async Task Browse()
         {
             ProgressRingBrowse.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
             ProgressStart();
 
             cusDep = new CustomerDepartment();
-            cusDep.stringURL = TextBoxUrl.Text;
+            if (!(TextBoxUrl.Text.Contains("http://") || TextBoxUrl.Text.Contains("https://") || TextBoxUrl.Text.Contains(".com")))
+            {
+                cusDep.stringURL = "http://www.google.com/search?q=" + TextBoxUrl.Text;
+            } else cusDep.stringURL = TextBoxUrl.Text;
             try
             {
-                await cusDep.GetUri();
-                NavigateInWebview();
-                TextBoxUrl.Text = cusDep.stringURL;
+                if (Settings.ToggleSwitchCompression == true)
+                {
+                    await cusDep.GetUri();
+                    NavigateInWebview();
+                    TextBoxUrl.Text = cusDep.stringURL;
+                }
+                else
+                {
+                    if (WebViewContent.Visibility == Visibility.Visible)
+                    {
+                        WebViewContent.Navigate(new Uri(cusDep.stringURL));
+                    }
+
+                    else
+                    {
+                        WebViewContent_Copy.Navigate(new Uri(cusDep.stringURL));
+                    }
+                    
+                }
+                
             }
             catch (Exception e)
             {
-                WebViewContent.NavigateToString(e.ToString());
+                if (WebViewContent.Visibility == Visibility.Visible)
+                    WebViewContent.NavigateToString(e.ToString());
+                else WebViewContent_Copy.NavigateToString(e.ToString());
             }
             
         }
@@ -247,8 +341,14 @@ namespace Client81
 
         private void WebViewContent_NavigationStarting(WebView sender, WebViewNavigationStartingEventArgs args)
         {
-            ProgressRingBrowse.Foreground = new SolidColorBrush(Windows.UI.Colors.Blue);
+            ProgressRingBrowse.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
             ProgressStart();
+
+            if (WebViewContent.Visibility == Visibility.Visible)
+            {
+                TextBoxUrl.Text = WebViewContent.Source.AbsoluteUri;
+            }
+            else TextBoxUrl.Text = WebViewContent_Copy.Source.AbsoluteUri;
             //cusDep.browseStatus = "Getting Page";
             //TextBlockStatus.Text = cusDep.browseStatus;
         }
@@ -256,6 +356,41 @@ namespace Client81
         private void WebViewContent_ScriptNotify(object sender, NotifyEventArgs e)
         {
             Browse(e.Value);
+        }
+
+        private void AppBarButtonSettings_Click(object sender, RoutedEventArgs e)
+        {
+
+            SettingsFlyoutGeneral updatesFlyout = new SettingsFlyoutGeneral();
+            updatesFlyout.ShowIndependent();
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            //WebViewContent.Refresh();
+            Browse();
+        }
+
+        private void AppBarNewTab_Click(object sender, RoutedEventArgs e)
+        {
+            WebViewContent.Visibility = Visibility.Collapsed;
+            WebViewContent_Copy.Visibility = Visibility.Visible;
+            try
+            {
+                TextBoxUrl.Text = WebViewContent_Copy.Source.AbsoluteUri;
+            }
+            catch { }
+        }
+
+        private void AppBarOldTab_Click(object sender, RoutedEventArgs e)
+        {
+            WebViewContent_Copy.Visibility = Visibility.Collapsed;
+            WebViewContent.Visibility = Visibility.Visible;
+            try
+            {
+                TextBoxUrl.Text = WebViewContent.Source.AbsoluteUri;
+            }
+            catch { }
         }
     }
 }

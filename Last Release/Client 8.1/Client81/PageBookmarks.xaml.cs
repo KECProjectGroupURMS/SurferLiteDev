@@ -44,12 +44,19 @@ namespace Client81
         private void bookmarkList_ItemClick(object sender, ItemClickEventArgs e)
         {
             BookmarkItem b = (BookmarkItem)e.ClickedItem;
-            this.Frame.Navigate(typeof(MainPage),b.PageUrl);
+            if (b.PageUrl == null)
+            {
+                this.Frame.Navigate(typeof(MainPage));
+            }
+            else
+            {
+                this.Frame.Navigate(typeof(MainPage), b.PageUrl.AbsoluteUri);
+            }
         }
 
         private void bookmarkList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            
         }
     }
 
