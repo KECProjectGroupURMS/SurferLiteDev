@@ -44,10 +44,10 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal">
                     <AppBarButton x:Name="AppBarNewTab" HorizontalAlignment="Stretch" Label="New Tab" VerticalAlignment="Stretch" Icon="NewWindow" Click="AppBarNewTab_Click"/>
+                    <AppBarButton x:Name="AppBarOldTab" HorizontalAlignment="Stretch" Label="Old Tab" VerticalAlignment="Stretch" Icon="MailReplyAll" Click="AppBarOldTab_Click"/>
                     <AppBarButton x:Name="AppBarButtonBookmarkPage" HorizontalAlignment="Stretch" Label="Bookmarks Page" VerticalAlignment="Stretch" Icon="Bookmarks" Click="AppBarButtonBookmarkPage_Click" />
                     <AppBarButton x:Name="AppBarButtonReqPageSize" HorizontalAlignment="Stretch" Label="Request page size" VerticalAlignment="Stretch" Click="AppBarButtonReqPageSize_Click" Icon="Globe"/>
                     <TextBlock x:Name="TextBlockSize" TextWrapping="Wrap" Text="Content" FontSize="48" Margin="0,14,0,29" Width="187"/>
-                    <AppBarButton x:Name="AppBarOldTab" HorizontalAlignment="Stretch" Label="Old Tab" VerticalAlignment="Stretch" Icon="NewWindow" Click="AppBarOldTab_Click"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
                     <AppBarButton x:Name="AppBarButtonSettings" HorizontalAlignment="Stretch" Label="Settings" VerticalAlignment="Stretch" Icon="Setting" Click="AppBarButtonSettings_Click"/>
