@@ -8,7 +8,15 @@
     mc:Ignorable="d">
 
     <Grid Background="#FF035E6C">
-        <ListView x:Name="bookmarkList" ItemClick="bookmarkList_ItemClick" IsItemClickEnabled="True" Margin="67,185,1096,114" SelectionChanged="bookmarkList_SelectionChanged">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="365*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="660*"/>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="bookmarkList" ItemClick="bookmarkList_ItemClick" IsItemClickEnabled="True" Margin="28,93,0,0" SelectionChanged="bookmarkList_SelectionChanged" Grid.Column="1" Grid.Row="1" Height="527" VerticalAlignment="Top" HorizontalAlignment="Left" Width="298">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -24,8 +32,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="ButtonBackToMain" Content="BackToMain" HorizontalAlignment="Left" Margin="1006,582,0,0" VerticalAlignment="Top" Click="ButtonBackToMain_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="67,49,0,0" TextWrapping="Wrap" Text="Bookmarks" VerticalAlignment="Top" FontSize="48"/>
+        <TextBlock HorizontalAlignment="Left" Margin="92,5,0,0" TextWrapping="Wrap" Text="Bookmarks" VerticalAlignment="Top" FontSize="48" Grid.Column="1" Height="58" Width="234" Grid.Row="1"/>
+        <AppBarButton x:Name="ButtonBackToMain1" Height="79" Label="" Width="87" Icon="Back" Grid.Column="1" Margin="-2,-4,0,0" Grid.Row="1" Click="ButtonBackToMain_Click"/>
 
     </Grid>
 </Page>
