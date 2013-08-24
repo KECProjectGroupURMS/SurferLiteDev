@@ -50,10 +50,10 @@
                     <AppBarSeparator HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                     <AppBarButton x:Name="AppBarButtonBookmarks" Height="100" Label="Bookmarks" Width="100" Icon="Favorite" Click="AppBarButtonBookmarks_Click"/>
                 </StackPanel>
-                <Grid Grid.ColumnSpan="2" Margin="0,100,0,0">
+                <Grid Grid.ColumnSpan="2" Margin="0,120,0,0">
                     <Rectangle Fill="#E5232F57" Height="30" Margin="0,0,0,0" Stroke="Black" VerticalAlignment="Top"/>
                 </Grid>
-                <Grid Grid.ColumnSpan="2" Margin="0,100,0,0" Background="#E5232F57">
+                <Grid Grid.ColumnSpan="2" Margin="0,120,0,0" Background="#E5232F57">
                     <Rectangle x:Name="RectangleProgress" Fill="#FF22AA7F" Height="30" Margin="0,0,1366,0" Stroke="Black" VerticalAlignment="Top"/>
                 </Grid>
             </Grid>
@@ -61,6 +61,6 @@
     </Page.BottomAppBar>
 
     <Grid Background="#FF035E6C">
-        <WebView x:Name="WebViewContent" NavigationCompleted="WebViewContent_NavigationCompleted" NavigationStarting="WebViewContent_NavigationStarting"/>
+        <WebView x:Name="WebViewContent" NavigationCompleted="WebViewContent_NavigationCompleted" NavigationStarting="WebViewContent_NavigationStarting" ScriptNotify="WebViewContent_ScriptNotify"/>
     </Grid>
 </Page>

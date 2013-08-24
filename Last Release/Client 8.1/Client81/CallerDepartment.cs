@@ -12,8 +12,8 @@ namespace Client81
     // This class contacts to server with request got from customer
     class CallerDepartment
     {
-        //internal ServiceReferenceAzure.ServiceSurferliteClient client;
-        internal ServiceReferenceAzureLocal.ServiceSurferliteClient client;
+        internal ServiceReferenceAzure.ServiceSurferliteClient client;
+        //internal ServiceReferenceAzureLocal.ServiceSurferliteClient client;
         internal byte[] receivedData;
         public byte[] ReceivedData
         {
@@ -26,8 +26,8 @@ namespace Client81
 
         public CallerDepartment()
         {
-            client = new ServiceReferenceAzureLocal.ServiceSurferliteClient();
-            //client = new ServiceReferenceAzure.ServiceSurferliteClient();
+            //client = new ServiceReferenceAzureLocal.ServiceSurferliteClient();
+            client = new ServiceReferenceAzure.ServiceSurferliteClient();
         }
 
         public async Task SendRequest(string stringURL)

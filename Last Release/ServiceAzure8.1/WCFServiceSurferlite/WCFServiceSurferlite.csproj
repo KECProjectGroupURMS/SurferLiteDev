@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>Related_Files\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
@@ -90,7 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AzureLocalStorageTraceListener.cs" />
-    <Compile Include="ClientContactDepartment.cs" />
     <Compile Include="CompressorDepartment.cs" />
     <Compile Include="DataAnalyzeModifyFilterDepartment.cs" />
     <Compile Include="InternetContactDepartment.cs" />

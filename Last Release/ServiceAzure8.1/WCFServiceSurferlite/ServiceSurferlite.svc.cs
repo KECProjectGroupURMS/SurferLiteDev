@@ -15,10 +15,12 @@ namespace WCFServiceSurferlite
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class ServiceSurferLite : IServiceSurferlite
     {
-        ClientContactDepartment clientDep;
         UserDataStoreDepartment userData;
         InternetContactDepartment internetContact;
         CompressorDepartment comDep;
+        DataAnalyzeModifyFilterDepartment DAMFD;
+        string sizeOriginal;
+        string sizeResult;
 
         public Stream GetData(Uri url)
         //public string GetData(Uri url)
@@ -35,9 +37,18 @@ namespace WCFServiceSurferlite
                 
                 internetContact = new InternetContactDepartment();
                 internetContact.SendReceiveRequest(url);
+                sizeOriginal = internetContact.NewReceivedByteArray.Length.ToString();
+
+                DAMFD =new DataAnalyzeModifyFilterDepartment();
+                DAMFD.RemoveScriptsStyleComment(internetContact.NewReceivedByteArray);
+
+                DAMFD.RemoveHrefs(internetContact.NewReceivedByteArray);
 
                 comDep = new CompressorDepartment();
-                comDep.CompressBytes(internetContact.NewReceivedByteArray);
+                //comDep.CompressBytes(internetContact.NewReceivedByteArray);
+                comDep.CompressBytes(DAMFD.ModifiedByte);
+
+                sizeResult = comDep.CompressedStream.Length.ToString();
 
                 //return comDep.CompressedStream.Length.ToString();
                 return comDep.CompressedStream;

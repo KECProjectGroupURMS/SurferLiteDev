@@ -13,6 +13,7 @@ using Windows.Graphics.Imaging;
 using System.Collections.ObjectModel;
 
 using System.Threading;
+using Windows.UI.Xaml.Media;
 
 //for colors
 
@@ -88,7 +89,9 @@ namespace Client81
 
         private void AppBarButtonBack_Click(object sender, RoutedEventArgs e)
         {
+            WebViewContent.Navigate(new Uri("http://www.bing.com"));
             if (WebViewContent.CanGoBack) WebViewContent.GoBack();
+            //WebViewContent.GoBack();
         }
 
         private void AppBarButtonForward_Click(object sender, RoutedEventArgs e)
@@ -152,38 +155,41 @@ namespace Client81
 
         private async void AppBarButtonReqPageSize_Click(object sender, RoutedEventArgs e)
         {
-            //CallerDepartment call = new CallerDepartment();
-            //call.SendRequest(TextBoxUrl.Text);
-            //call.SaveDataToCloud();
-            //TextBlockSize.Text = call.receivedData.ToString();
-            try
-            {
-                client = new ServiceReferenceAzureLocal.ServiceSurferliteClient();
-                //client = new ServiceReferenceAzure.ServiceSurferliteClient();
-            }
-            catch
-            {
-               WebViewContent.NavigateToString("Can't connect to the SurferLite server");
-            }
+            ////CallerDepartment call = new CallerDepartment();
+            ////call.SendRequest(TextBoxUrl.Text);
+            ////call.SaveDataToCloud();
+            ////TextBlockSize.Text = call.receivedData.ToString();
+            //try
+            //{
+            //    client = new ServiceReferenceAzureLocal.ServiceSurferliteClient();
+            //    //client = new ServiceReferenceAzure.ServiceSurferliteClient();
+            //}
+            //catch
+            //{
+            //   WebViewContent.NavigateToString("Can't connect to the SurferLite server");
+            //}
 
-            if (client != null)
-            {
-                ProgressStart();
-                try
-                {
-                    byte[] newSt = await client.GetDataAsync(new Uri("http://www.bing.com/"));
-                    TextBlockSize.Text = newSt.Length.ToString();
+            //if (client != null)
+            //{
+            //    ProgressStart();
+            //    try
+            //    {
+            //        byte[] newSt = await client.GetDataAsync(new Uri("http://www.bing.com/"));
+            //        TextBlockSize.Text = newSt.Length.ToString();
 
-                    string ans = await client.SaveDataToCloudAsync("Log");
-                }
-                catch (Exception f)
-                {
-                    // There is some error. This needs modification so Exception is exact
-                    WebViewContent.NavigateToString(f.ToString());
-                }
-                ProgressStop();
+            //        string ans = await client.SaveDataToCloudAsync("Log");
+            //    }
+            //    catch (Exception f)
+            //    {
+            //        // There is some error. This needs modification so Exception is exact
+            //        WebViewContent.NavigateToString(f.ToString());
+            //    }
+            //    ProgressStop();
 
-            }
+            //}
+            string newstring = "<!DOCTYPE html><html><head>    <title>Example HTML document</title>    <script type=\"text/javascript\">        function SendBlue() {            window.external.notify('blue');        }        function SendGreen() {            window.external.notify('green');        }    </script></head><body>    <h1>Hi!</h1>    <p>This is a simple test page for window.external.notify(). When you click on either of the buttons below it will send a notification to the host.</p>    <button onclick=\"window.external.notify('blue');\">Send Blue</button>    <button onclick=\"SendGreen()\">Send Green</button><a href=\"#\" onclick=\"window.external.notify('blue');\">LINK</a><button onclick=\"window.external.notify('test')\" >Click Here!</button></body></html>";
+            WebViewContent.NavigateToString(newstring);
+            WebViewContent.NavigationStarting -= WebViewContent_NavigationStarting;
 
         }
 
@@ -191,12 +197,39 @@ namespace Client81
         {
             ProgressRingBrowse.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
             ProgressStart();
-            
+
             cusDep = new CustomerDepartment();
             cusDep.stringURL = TextBoxUrl.Text;
-            await cusDep.GetUri();
-            NavigateInWebview();
-            TextBoxUrl.Text = cusDep.stringURL;
+            try
+            {
+                await cusDep.GetUri();
+                NavigateInWebview();
+                TextBoxUrl.Text = cusDep.stringURL;
+            }
+            catch (Exception e)
+            {
+                WebViewContent.NavigateToString(e.ToString());
+            }
+            
+        }
+
+        private async void Browse(string url)
+        {
+            ProgressRingBrowse.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+            ProgressStart();
+
+            cusDep = new CustomerDepartment();
+            cusDep.stringURL = url;
+            try
+            {
+                await cusDep.GetUri();
+                NavigateInWebview();
+                TextBoxUrl.Text = cusDep.stringURL;
+            }
+            catch (Exception e)
+            {
+                WebViewContent.NavigateToString(e.ToString());
+            }
         }
 
         private void AppBarButtonStop_Click(object sender, RoutedEventArgs e)
@@ -207,8 +240,8 @@ namespace Client81
 
         private void WebViewContent_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
         {
-            cusDep.browseStatus = "Page Load Completed.";
-            TextBlockStatus.Text = cusDep.browseStatus;
+            //cusDep.browseStatus = "Page Load Completed.";
+            //TextBlockStatus.Text = cusDep.browseStatus;
             ProgressStop();
         }
 
@@ -216,8 +249,13 @@ namespace Client81
         {
             ProgressRingBrowse.Foreground = new SolidColorBrush(Windows.UI.Colors.Blue);
             ProgressStart();
-            cusDep.browseStatus = "Getting Page";
-            TextBlockStatus.Text = cusDep.browseStatus;
+            //cusDep.browseStatus = "Getting Page";
+            //TextBlockStatus.Text = cusDep.browseStatus;
+        }
+
+        private void WebViewContent_ScriptNotify(object sender, NotifyEventArgs e)
+        {
+            Browse(e.Value);
         }
     }
 }
