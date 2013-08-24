@@ -14,10 +14,8 @@ using System.Collections.ObjectModel;
 
 using System.Threading;
 using Windows.UI.Xaml.Media;
-<<<<<<< HEAD
-=======
+
 using Windows.UI.Xaml.Navigation;
->>>>>>> origin/Focus-on-html-parsing
 
 //for colors
 
