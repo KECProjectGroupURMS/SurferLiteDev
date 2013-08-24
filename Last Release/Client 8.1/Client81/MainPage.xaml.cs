@@ -13,6 +13,7 @@ using Windows.Graphics.Imaging;
 using System.Collections.ObjectModel;
 
 using System.Threading;
+using Windows.UI.Xaml.Media;
 
 //for colors
 
