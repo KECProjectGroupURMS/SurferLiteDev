@@ -45,24 +45,30 @@
                 <StackPanel Orientation="Horizontal">
                     <AppBarButton x:Name="AppBarNewTab" HorizontalAlignment="Stretch" Label="New Tab" VerticalAlignment="Stretch" Icon="NewWindow" Click="AppBarNewTab_Click"/>
                     <AppBarButton x:Name="AppBarOldTab" HorizontalAlignment="Stretch" Label="Old Tab" VerticalAlignment="Stretch" Icon="MailReplyAll" Click="AppBarOldTab_Click"/>
+                    <AppBarSeparator HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                     <AppBarButton x:Name="AppBarButtonBookmarkPage" HorizontalAlignment="Stretch" Label="Bookmarks Page" VerticalAlignment="Stretch" Icon="Bookmarks" Click="AppBarButtonBookmarkPage_Click" />
                     <AppBarButton x:Name="AppBarButtonReqPageSize" HorizontalAlignment="Stretch" Label="Request page size" VerticalAlignment="Stretch" Click="AppBarButtonReqPageSize_Click" Icon="Globe"/>
-                    <TextBlock x:Name="TextBlockSize" TextWrapping="Wrap" Text="Content" FontSize="48" Margin="0,14,0,29" Width="187"/>
+                    <TextBlock x:Name="TextBlockSize" TextWrapping="Wrap" FontSize="48" Margin="0,14,0,29" Width="204" Text="{Binding browseStatus}" >
+                        <TextBlock.DataContext>
+                            <local:CustomerDepartment/>
+                        </TextBlock.DataContext>
+                    </TextBlock>
                 </StackPanel>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
                     <AppBarButton x:Name="AppBarButtonSettings" HorizontalAlignment="Stretch" Label="Settings" VerticalAlignment="Stretch" Icon="Setting" Click="AppBarButtonSettings_Click"/>
                     <AppBarSeparator HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                     <AppBarButton x:Name="AppBarButtonBookmarks" Height="100" Label="Bookmarks" Width="100" Icon="Favorite" Click="AppBarButtonBookmarks_Click"/>
                 </StackPanel>
+                <AppBarButton x:Name="AppBarButtonSave" Grid.Column="1" HorizontalAlignment="Left" Label="Save Data to Cloud" Margin="0,0,0,0" VerticalAlignment="Top" Icon="Save" Click="AppBarButtonSave_Click"/>
             </Grid>
         </AppBar>
     </Page.BottomAppBar>
 
     <Grid Background="#FF035E6C">
-        <WebView x:Name="WebViewContent" NavigationCompleted="WebViewContent_NavigationCompleted" NavigationStarting="WebViewContent_NavigationStarting" ScriptNotify="WebViewContent_ScriptNotify"/>
-        <WebView x:Name="WebViewContent_Copy" NavigationCompleted="WebViewContent_NavigationCompleted" NavigationStarting="WebViewContent_NavigationStarting" ScriptNotify="WebViewContent_ScriptNotify"/>
-        <WebView x:Name="WebViewContent_Copy1" NavigationCompleted="WebViewContent_NavigationCompleted" NavigationStarting="WebViewContent_NavigationStarting" ScriptNotify="WebViewContent_ScriptNotify"/>
-        <WebView x:Name="WebViewContent_Copy2" NavigationCompleted="WebViewContent_NavigationCompleted" NavigationStarting="WebViewContent_NavigationStarting" ScriptNotify="WebViewContent_ScriptNotify"/>
-        <WebView x:Name="WebViewContent_Copy3" NavigationCompleted="WebViewContent_NavigationCompleted" NavigationStarting="WebViewContent_NavigationStarting" ScriptNotify="WebViewContent_ScriptNotify"/>
+        <WebView x:Name="WebViewContent" ContentLoading="WebViewContent_ContentLoading" NavigationCompleted="WebViewContent_NavigationCompleted" NavigationStarting="WebViewContent_NavigationStarting" ScriptNotify="WebViewContent_ScriptNotify"/>
+        <WebView x:Name="WebViewContentSecond" ContentLoading="WebViewContent_ContentLoading" NavigationCompleted="WebViewContent_NavigationCompleted" NavigationStarting="WebViewContent_NavigationStarting" ScriptNotify="WebViewContent_ScriptNotify"/>
+        <WebView x:Name="WebViewContentThird" ContentLoading="WebViewContent_ContentLoading" NavigationCompleted="WebViewContent_NavigationCompleted" NavigationStarting="WebViewContent_NavigationStarting" ScriptNotify="WebViewContent_ScriptNotify"/>
+        <WebView x:Name="WebViewContentFourth" ContentLoading="WebViewContent_ContentLoading" NavigationCompleted="WebViewContent_NavigationCompleted" NavigationStarting="WebViewContent_NavigationStarting" ScriptNotify="WebViewContent_ScriptNotify"/>
+        <WebView x:Name="WebViewContent_Copy1" ContentLoading="WebViewContent_ContentLoading" NavigationCompleted="WebViewContent_NavigationCompleted" NavigationStarting="WebViewContent_NavigationStarting" ScriptNotify="WebViewContent_ScriptNotify"/>
     </Grid>
 </Page>

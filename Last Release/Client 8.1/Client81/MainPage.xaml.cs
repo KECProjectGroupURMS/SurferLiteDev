@@ -17,7 +17,14 @@ using Windows.UI.Xaml.Media;
 
 using Windows.UI.Xaml.Navigation;
 
-//for colors
+//for tile updates
+using Windows.UI.Notifications;
+using Windows.Data.Xml.Dom;
+using System.Collections.Generic;
+
+
+
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,9 +33,11 @@ namespace Client81
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    /// 
     public sealed partial class MainPage : Page
     {
         private CustomerDepartment cusDep;
+        public static List<string> history=new List<string>();
 
         static ObservableCollection<BookmarkItem> bookmarkss = new ObservableCollection<BookmarkItem>();
         internal static ObservableCollection<BookmarkItem> bookmarks
@@ -46,15 +55,76 @@ namespace Client81
         public MainPage()
         {
             this.InitializeComponent();
+
+            ////for tile
+            //XmlDocument tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileWide310x150BlockAndText01);
+
+            //XmlNodeList tileTextAttributes = tileXml.GetElementsByTagName("text");
+            //tileTextAttributes[0].InnerText = "Hello World! My very own tile notification";
+            //tileTextAttributes[1].InnerText = "Test is this.";
+
+            //TileNotification tileNotification = new TileNotification(tileXml);
+
+            //tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddSeconds(2);
+
+            //TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
+            /////////////
+
+            //
+
+            WriteOnTile("Surferlite is currently on");
+            
             
 
             Windows.UI.ApplicationSettings.SettingsPane.GetForCurrentView().CommandsRequested += MainPage_CommandsRequested;
             this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
 
-            WebViewContent_Copy.Visibility = Visibility.Collapsed;
-            WebViewContent_Copy2.Visibility = Visibility.Collapsed;
-            WebViewContent_Copy3.Visibility = Visibility.Collapsed;
+            WebViewContentSecond.Visibility = Visibility.Collapsed;
+            WebViewContentThird.Visibility = Visibility.Collapsed;
+            WebViewContentFourth.Visibility = Visibility.Collapsed;
             
+        }
+
+        private void WriteOnTile(string p)
+        {
+            // create a string with the tile template xml
+            string tileXmlString = "<tile>"
+                              + "<visual version='2'>"
+                              + "<binding template='TileSquare150x150Text04' fallback='TileSquareText04'>"
+                              + "<text id='1'>"+p+"</text>"
+                              + "</binding>"
+                              + "<binding template='TileWide310x150Text03' fallback='TileWideText03'>"
+                              + "<text id='1'>" + p + "</text>"
+                              + "</binding>"
+                              + "<binding template='TileSquare310x310Text05'>"
+                              + "<text id='1'>" + p + "</text>"
+                              + "</binding>"
+                              + "<binding template='TileWide310x150BlockAndText01'>"
+                              + "<text id='1'>" + p + "</text>"
+                              + "<text id='2'>" + p + "</text>"
+                              + "</binding>"
+                              + "</visual>"
+                              + "</tile>";
+
+            // create a DOM
+            Windows.Data.Xml.Dom.XmlDocument tileDOM = new Windows.Data.Xml.Dom.XmlDocument();
+            // load the xml string into the DOM, catching any invalid xml characters 
+            tileDOM.LoadXml(tileXmlString);
+
+            // create a tile notification
+            TileNotification tile = new TileNotification(tileDOM);
+
+            // send the notification to the app's application tile
+            TileUpdateManager.CreateTileUpdaterForApplication().Update(tile);
+        }
+
+        private WebView CurrentWebView()
+        {
+            if (WebViewContent.Visibility == Visibility.Visible)
+            {
+                return WebViewContent;
+            }
+            else return WebViewContentSecond;
         }
 
         private void MainPage_CommandsRequested(Windows.UI.ApplicationSettings.SettingsPane sender, Windows.UI.ApplicationSettings.SettingsPaneCommandsRequestedEventArgs args)
@@ -102,23 +172,16 @@ namespace Client81
                 //WebViewContent.Navigate(new Uri(cusDep.stringURL));
 
                 //Navigation to decompressed string
-                if (WebViewContent.Visibility == Visibility.Visible)
-                {
-                    WebViewContent.NavigateToString(cusDep.DecompressedData);
-                }
-                else WebViewContent_Copy.NavigateToString(cusDep.DecompressedData);
+                CurrentWebView().NavigateToString(cusDep.DecompressedData);
                 
                 
             }
             catch
             {
-                if (WebViewContent.Visibility == Visibility.Visible)
-                {
-                    WebViewContent.NavigateToString("Connection Error");
-                }else WebViewContent_Copy.NavigateToString("Connection Error");
+                CurrentWebView().NavigateToString("Connection Error");
             }
         }
-
+        
         private void ProgressStart()
         {
             ProgressRingBrowse.IsActive = true;
@@ -142,34 +205,34 @@ namespace Client81
         private void AppBarButtonBack_Click(object sender, RoutedEventArgs e)
         {
             //WebViewContent.Navigate(new Uri("http://www.bing.com"));
-            if (WebViewContent.CanGoBack)
+            if (CurrentWebView().CanGoBack)
             {
-                WebViewContent.GoBack();
-                TextBoxUrl.Text = WebViewContent.Source.AbsoluteUri;
+                CurrentWebView().GoBack();
+                TextBoxUrl.Text = CurrentWebView().Source.AbsoluteUri;
             }
-            //WebViewContent.GoBack();
+            //CurrentWebView().GoBack();
         }
 
         private void AppBarButtonForward_Click(object sender, RoutedEventArgs e)
         {
             //if (WebViewContent.CanGoForward) WebViewContent.GoForward();
             //WebViewContent.Navigate(new Uri("http://www.bing.com"));
-            if (WebViewContent.CanGoForward)
+            if (CurrentWebView().CanGoForward)
             {
-                WebViewContent.GoForward();
-                TextBoxUrl.Text = WebViewContent.Source.AbsoluteUri;
+                CurrentWebView().GoForward();
+                TextBoxUrl.Text = CurrentWebView().Source.AbsoluteUri;
             }
-            //WebViewContent.GoBack();
+            //CurrentWebView().GoBack();
         }
 
         private async void AppBarButtonBookmarks_Click(object sender, RoutedEventArgs e)
         {
             InMemoryRandomAccessStream ms = new InMemoryRandomAccessStream();
-            await WebViewContent.CapturePreviewToStreamAsync(ms);
+            await CurrentWebView().CapturePreviewToStreamAsync(ms);
 
             //Create a small thumbnail
             int longlength = 180, width = 0, height = 0;
-            double srcwidth = WebViewContent.ActualWidth, srcheight = WebViewContent.ActualHeight;
+            double srcwidth = CurrentWebView().ActualWidth, srcheight = CurrentWebView().ActualHeight;
             double factor = srcwidth / srcheight;
             if (factor < 1)
             {
@@ -184,7 +247,7 @@ namespace Client81
             BitmapSource small = await resize(width, height, ms);
 
             BookmarkItem item = new BookmarkItem();
-            item.Title = WebViewContent.DocumentTitle;
+            item.Title = CurrentWebView().DocumentTitle;
 
             try
             {
@@ -194,7 +257,7 @@ namespace Client81
             {
 
             }
-            //item.PageUrl = WebViewContent.Source;
+            //item.PageUrl = CurrentWebView().Source;
             
             item.Preview = small;
 
@@ -261,8 +324,8 @@ namespace Client81
 
             //}
             string newstring = "<!DOCTYPE html><html><head>    <title>Example HTML document</title>    <script type=\"text/javascript\">        function SendBlue() {            window.external.notify('blue');        }        function SendGreen() {            window.external.notify('green');        }    </script></head><body>    <h1>Hi!</h1>    <p>This is a simple test page for window.external.notify(). When you click on either of the buttons below it will send a notification to the host.</p>    <button onclick=\"window.external.notify('blue');\">Send Blue</button>    <button onclick=\"SendGreen()\">Send Green</button><a href=\"#\" onclick=\"window.external.notify('blue');\">LINK</a><button onclick=\"window.external.notify('test')\" >Click Here!</button></body></html>";
-            WebViewContent.NavigateToString(newstring);
-            WebViewContent.NavigationStarting -= WebViewContent_NavigationStarting;
+            CurrentWebView().NavigateToString(newstring);
+            CurrentWebView().NavigationStarting -= WebViewContent_NavigationStarting;
 
         }
 
@@ -286,25 +349,15 @@ namespace Client81
                 }
                 else
                 {
-                    if (WebViewContent.Visibility == Visibility.Visible)
-                    {
-                        WebViewContent.Navigate(new Uri(cusDep.stringURL));
-                    }
-
-                    else
-                    {
-                        WebViewContent_Copy.Navigate(new Uri(cusDep.stringURL));
-                    }
-                    
+                    CurrentWebView().Navigate(new Uri(cusDep.stringURL));
                 }
                 
             }
             catch (Exception e)
             {
-                if (WebViewContent.Visibility == Visibility.Visible)
-                    WebViewContent.NavigateToString(e.ToString());
-                else WebViewContent_Copy.NavigateToString(e.ToString());
+                CurrentWebView().NavigateToString(e.ToString());
             }
+
             
         }
 
@@ -323,13 +376,13 @@ namespace Client81
             }
             catch (Exception e)
             {
-                WebViewContent.NavigateToString(e.ToString());
+                CurrentWebView().NavigateToString(e.ToString());
             }
         }
 
         private void AppBarButtonStop_Click(object sender, RoutedEventArgs e)
         {
-            WebViewContent.Stop();
+            CurrentWebView().Stop();
             ProgressStop();
         }
 
@@ -345,11 +398,7 @@ namespace Client81
             ProgressRingBrowse.Foreground = new SolidColorBrush(Windows.UI.Colors.White);
             ProgressStart();
 
-            if (WebViewContent.Visibility == Visibility.Visible)
-            {
-                TextBoxUrl.Text = WebViewContent.Source.AbsoluteUri;
-            }
-            else TextBoxUrl.Text = WebViewContent_Copy.Source.AbsoluteUri;
+            //TextBoxUrl.Text = CurrentWebView().Source.AbsoluteUri;
             //cusDep.browseStatus = "Getting Page";
             //TextBlockStatus.Text = cusDep.browseStatus;
         }
@@ -368,30 +417,58 @@ namespace Client81
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            //WebViewContent.Refresh();
+            //CurrentWebView().Refresh();
             Browse();
         }
 
         private void AppBarNewTab_Click(object sender, RoutedEventArgs e)
         {
             WebViewContent.Visibility = Visibility.Collapsed;
-            WebViewContent_Copy.Visibility = Visibility.Visible;
+            WebViewContentSecond.Visibility = Visibility.Visible;
             try
             {
-                TextBoxUrl.Text = WebViewContent_Copy.Source.AbsoluteUri;
+                TextBoxUrl.Text = CurrentWebView().Source.AbsoluteUri;
             }
             catch { }
         }
 
         private void AppBarOldTab_Click(object sender, RoutedEventArgs e)
         {
-            WebViewContent_Copy.Visibility = Visibility.Collapsed;
+            WebViewContentSecond.Visibility = Visibility.Collapsed;
             WebViewContent.Visibility = Visibility.Visible;
             try
             {
-                TextBoxUrl.Text = WebViewContent.Source.AbsoluteUri;
+                TextBoxUrl.Text = CurrentWebView().Source.AbsoluteUri;
             }
             catch { }
+        }
+
+        private void WebViewContent_ContentLoading(WebView sender, WebViewContentLoadingEventArgs args)
+        {
+            try
+            {
+                TextBoxUrl.Text = CurrentWebView().Source.AbsoluteUri;
+            }
+            catch{
+                try
+                {
+                    TextBoxUrl.Text = cusDep.stringURL;
+                }
+                catch
+                {
+                    TextBoxUrl.Text = "Command Not available now";
+                }
+            }
+            
+            //Add to history list
+            history.Add(TextBoxUrl.Text);
+
+            WriteOnTile("Current URL:\n" + TextBoxUrl.Text);
+        }
+
+        private void AppBarButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

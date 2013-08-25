@@ -34,6 +34,7 @@ namespace Client81
         {
             this.InitializeComponent();
             this.bookmarkList.ItemsSource = MainPage.bookmarks;
+            ListBoxHistory.ItemsSource = MainPage.history;
         }
 
         private void ButtonBackToMain_Click(object sender, RoutedEventArgs e)
@@ -57,6 +58,19 @@ namespace Client81
         private void bookmarkList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
+        }
+
+        private void ListBoxHistory_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
+        {
+
+            if (ListBoxHistory.SelectedIndex==-1)
+            {
+                this.Frame.Navigate(typeof(MainPage));
+            }
+            else
+            {
+                this.Frame.Navigate(typeof(MainPage), ListBoxHistory.SelectedItem.ToString());
+            }
         }
     }
 

@@ -34,6 +34,8 @@
         </ListView>
         <TextBlock HorizontalAlignment="Left" Margin="92,5,0,0" TextWrapping="Wrap" Text="Bookmarks" VerticalAlignment="Top" FontSize="48" Grid.Column="1" Height="58" Width="234" Grid.Row="1"/>
         <AppBarButton x:Name="ButtonBackToMain1" Height="79" Label="" Width="87" Icon="Back" Grid.Column="1" Margin="-2,-4,0,0" Grid.Row="1" Click="ButtonBackToMain_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="710,10,0,0" TextWrapping="Wrap" Text="History" VerticalAlignment="Top" FontSize="48" Grid.Column="1" Height="58" Width="234" Grid.Row="1"/>
+        <ListBox x:Name="ListBoxHistory" Grid.Column="1" HorizontalAlignment="Left" Height="527" Margin="710,93,0,0" Grid.Row="1" VerticalAlignment="Top" Width="485" DoubleTapped="ListBoxHistory_DoubleTapped"/>
 
     </Grid>
 </Page>
