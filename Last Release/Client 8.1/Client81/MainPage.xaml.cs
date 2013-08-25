@@ -114,6 +114,9 @@ namespace Client81
             // create a tile notification
             TileNotification tile = new TileNotification(tileDOM);
 
+            // Enter expiry time
+            tile.ExpirationTime = DateTimeOffset.UtcNow.AddSeconds(10);
+
             // send the notification to the app's application tile
             TileUpdateManager.CreateTileUpdaterForApplication().Update(tile);
         }
@@ -463,7 +466,7 @@ namespace Client81
             //Add to history list
             history.Add(TextBoxUrl.Text);
 
-            WriteOnTile("Current URL:\n" + TextBoxUrl.Text);
+            WriteOnTile("Current URL: " + TextBoxUrl.Text);
         }
 
         private void AppBarButtonSave_Click(object sender, RoutedEventArgs e)

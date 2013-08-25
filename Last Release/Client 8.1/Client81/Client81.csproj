@@ -137,6 +137,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="ClassDiagramGeneral.cd" />
     <None Include="Client81_TemporaryKey.pfx" />
     <None Include="Properties\ServiceReferences.Designer.ClientConfig" />
     <None Include="Service References\ServiceReferenceAzureLocal\ServiceSurferLite.wsdl" />

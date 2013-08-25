@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="Client81.App" Collapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client81.CallerDepartment">
+    <Position X="11.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAIAAAAGAAAACAAAAAAAAAAAAABEAAAAA=</HashCode>
+      <FileName>CallerDepartment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="client" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Client81.CompressionDepartment">
+    <Position X="5.25" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>CompressionDepartment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client81.CustomerDepartment">
+    <Position X="8.5" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAEAAAAQIACIACAARAAAAIAA=</HashCode>
+      <FileName>CustomerDepartment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="CallerDepartment" />
+      <Field Name="CompressionDepartment" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Client81.MainPage">
+    <Position X="3.75" Y="8.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Client81.MainPage.Settings">
+        <TypeIdentifier>
+          <NewMemberFileName>MainPage.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ABAcEAAEAAAAAAFAYABAAAUIEgQEAAAAAQAgAQEDExI=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="cusDep" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Client81.PageBookmarks" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAEAAAAAAAAACAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>PageBookmarks.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client81.BookmarkItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAMAAAAAAACAAgAAAgAAABAQAAAAAAAA=</HashCode>
+      <FileName>PageBookmarks.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Client81.SettingsFlyoutGeneral" Collapsed="true">
+    <Position X="17.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAASAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SettingsFlyoutGeneral.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client81.ServiceReferenceAzure.CompositeType" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAACAAAAAAAAAgAAAAAAgAAAAAAAQAAI=</HashCode>
+      <FileName>Service References\ServiceReferenceAzure\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Client81.ServiceReferenceAzure.ServiceSurferliteClient" BaseTypeListCollapsed="true">
+    <Position X="14" Y="3.25" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Client81.ServiceReferenceAzure.ServiceSurferliteClient.EndpointConfiguration">
+        <TypeIdentifier>
+          <NewMemberFileName>Service References\ServiceReferenceAzure\Reference.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAgAAABAAAQAAAAAAAJAAQAAAAQAACAAEAAQEAAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceAzure\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Client81.ServiceReferenceAzureLocal.CompositeType" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAACAAAAAAAAAgAAAAAAgAAAAAAAQAAI=</HashCode>
+      <FileName>Service References\ServiceReferenceAzureLocal\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Client81.ServiceReferenceAzureLocal.ServiceSurferliteClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.25" Y="1.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Client81.ServiceReferenceAzureLocal.ServiceSurferliteClient.EndpointConfiguration" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Service References\ServiceReferenceAzureLocal\Reference.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAgAAABAAAQAAAAAAAJAAQAAAAAAACAAEAAQEAAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceAzureLocal\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Client81.ServiceReferenceAzure.IServiceSurferlite" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceAzure\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Client81.ServiceReferenceAzure.IServiceSurferliteChannel" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceAzure\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Client81.ServiceReferenceAzureLocal.IServiceSurferlite" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceAzureLocal\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Client81.ServiceReferenceAzureLocal.IServiceSurferliteChannel" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceAzureLocal\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
