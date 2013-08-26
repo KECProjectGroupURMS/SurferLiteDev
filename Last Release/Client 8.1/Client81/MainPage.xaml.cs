@@ -47,15 +47,15 @@ namespace Client81
         }
 
         public static class Settings {
-            public static bool ToggleSwitchCompression=false;
-            public static bool ToggleSwitchImage = false;
-            public static bool ToggleSwitchScript = false;
+            public static bool ToggleSwitchCompression;
+            public static bool ToggleSwitchImage;
+            public static bool ToggleSwitchScript;
         }
 
         public MainPage()
         {
             this.InitializeComponent();
-
+                        
             ////for tile
             //XmlDocument tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileWide310x150BlockAndText01);
 
@@ -85,6 +85,36 @@ namespace Client81
             
         }
 
+        public static void WriteSettings()
+        {
+            var applicationData = Windows.Storage.ApplicationData.Current;
+
+            var roamingSettings = applicationData.RoamingSettings;
+
+            // Create a simple setting
+
+            roamingSettings.Values["serverOnorOff"] = Settings.ToggleSwitchCompression;
+            roamingSettings.Values["Image"] = Settings.ToggleSwitchImage;
+            roamingSettings.Values["Script"] = Settings.ToggleSwitchScript;
+
+            
+        }
+
+        private static void ReadSettings()
+        {
+            var applicationData = Windows.Storage.ApplicationData.Current;
+
+            var roamingSettings = applicationData.RoamingSettings;
+            // Read data from a simple setting
+
+            if (roamingSettings.Values.Count == 3)
+            {
+                Settings.ToggleSwitchCompression = (bool)roamingSettings.Values["serverOnorOff"];
+                Settings.ToggleSwitchImage = (bool)roamingSettings.Values["Image"];
+                Settings.ToggleSwitchScript = (bool)roamingSettings.Values["Script"];
+            }
+        }
+
         private void WriteOnTile(string p)
         {
             // create a string with the tile template xml
@@ -101,7 +131,6 @@ namespace Client81
                               + "</binding>"
                               + "<binding template='TileWide310x150BlockAndText01'>"
                               + "<text id='1'>" + p + "</text>"
-                              + "<text id='2'>" + p + "</text>"
                               + "</binding>"
                               + "</visual>"
                               + "</tile>";
@@ -111,14 +140,21 @@ namespace Client81
             // load the xml string into the DOM, catching any invalid xml characters 
             tileDOM.LoadXml(tileXmlString);
 
-            // create a tile notification
-            TileNotification tile = new TileNotification(tileDOM);
+            try
+            {
+                // create a tile notification
+                TileNotification tile = new TileNotification(tileDOM);
 
-            // Enter expiry time
-            tile.ExpirationTime = DateTimeOffset.UtcNow.AddSeconds(10);
+                // Enter expiry time
+                tile.ExpirationTime = DateTimeOffset.UtcNow.AddSeconds(10);
 
-            // send the notification to the app's application tile
-            TileUpdateManager.CreateTileUpdaterForApplication().Update(tile);
+                // send the notification to the app's application tile
+                TileUpdateManager.CreateTileUpdaterForApplication().Update(tile);
+            }
+            catch (System.Exception ex)
+            {
+                
+            }
         }
 
         private WebView CurrentWebView()
@@ -159,6 +195,14 @@ namespace Client81
             catch
             {
 
+            }
+            try
+            {
+                MainPage.ReadSettings();
+            }
+            catch
+            {
+                TextBoxUrl.Text = "Error in Reading Settings.";
             }
         }
 

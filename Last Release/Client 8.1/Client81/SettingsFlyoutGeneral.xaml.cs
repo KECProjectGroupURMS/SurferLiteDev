@@ -32,6 +32,8 @@ namespace Client81
             ToggleSwitch t = sender as ToggleSwitch;
             if (t.IsOn) MainPage.Settings.ToggleSwitchCompression = true;
             else MainPage.Settings.ToggleSwitchCompression = false;
+
+            MainPage.WriteSettings();
         }
 
         private void ToggleSwitchImage_Toggled(object sender, RoutedEventArgs e)
@@ -39,6 +41,8 @@ namespace Client81
             ToggleSwitch t = sender as ToggleSwitch;
             if (t.IsOn) MainPage.Settings.ToggleSwitchImage = true;
             else MainPage.Settings.ToggleSwitchImage = false;
+
+            MainPage.WriteSettings();
         }
 
         private void ToggleSwitchScripts_Toggled(object sender, RoutedEventArgs e)
@@ -46,6 +50,8 @@ namespace Client81
             ToggleSwitch t = sender as ToggleSwitch;
             if (t.IsOn) MainPage.Settings.ToggleSwitchScript = true;
             else MainPage.Settings.ToggleSwitchScript = false;
+
+            MainPage.WriteSettings();
         }
     }
 }

@@ -27,16 +27,7 @@ namespace WCFServiceSurferlite
             }
         }
 
-        public CompressorDepartment CompressorDepartment
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public CompressorDepartment CompressorDepartment;
 
         public void RemoveImage() { }
         public void RemoveHrefs(byte[] receivedBytes) {

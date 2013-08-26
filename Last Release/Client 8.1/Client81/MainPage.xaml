@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Page.TopAppBar>
-        <AppBar Background="#E5232F57" BorderBrush="#E51A166E">
+        <AppBar x:Name="topAppBar"  Background="#E5232F57" BorderBrush="#E51A166E">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1005*"/>
