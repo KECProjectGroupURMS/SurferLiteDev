@@ -8,6 +8,7 @@ using System.Text;
 
 // For Streams
 using System.IO;
+using System.Net;
 
 namespace WCFServiceSurferlite
 {
@@ -118,6 +119,30 @@ namespace WCFServiceSurferlite
             {
                 return e.ToString()+" Unsucess";
             }
+        }
+
+        public string DownloadAFile(string url)
+        {
+            try
+            {
+                LogDepartment.Log("Request For Download: " + url.ToString());
+            }
+            catch
+            {
+            }
+
+            internetContact = new InternetContactDepartment();
+            internetContact.SendReceiveRequest(new Uri(url));
+
+            string filePath = System.Web.Hosting.HostingEnvironment.MapPath("~/Related_Files/newFile.txt");
+
+            if (filePath != null)
+            {
+                File.WriteAllBytes(filePath, internetContact.NewReceivedByteArray);
+            }
+
+            SaveDataToCloud("newFile");
+            return "completed download of: " + url.ToString();
         }
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)

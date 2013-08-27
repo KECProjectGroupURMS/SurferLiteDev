@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="NameAndType">
   <Class Name="Client81.App" Collapsed="true">
     <Position X="17.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -8,7 +8,12 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Client81.CallerDepartment">
-    <Position X="11.5" Y="5" Width="1.75" />
+    <Position X="9.25" Y="5" Width="2" />
+    <AssociationLine Name="client" Type="Client81.ServiceReferenceAzure.ServiceSurferliteClient">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.742" Y="0.298" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAAIAAAAGAAAACAAAAAAAAAAAAABEAAAAA=</HashCode>
       <FileName>CallerDepartment.cs</FileName>
@@ -18,14 +23,30 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Client81.CompressionDepartment">
-    <Position X="5.25" Y="5.25" Width="2" />
+    <Position X="3.5" Y="5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>CompressionDepartment.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Client81.CustomerDepartment">
-    <Position X="8.5" Y="5.25" Width="1.75" />
+    <Position X="6.75" Y="5" Width="2.25" />
+    <AssociationLine Name="CallerDepartment" Type="Client81.CallerDepartment" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.92" Y="5" />
+        <Point X="8.92" Y="4.625" />
+        <Point X="10.25" Y="4.625" />
+        <Point X="10.25" Y="5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="CompressionDepartment" Type="Client81.CompressionDepartment" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.875" Y="5" />
+        <Point X="7.875" Y="4.625" />
+        <Point X="5.609" Y="4.625" />
+        <Point X="5.609" Y="5" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAQAAAAAACAAAAAAAAAAAEAAAAQIACIACAARAAAAIAA=</HashCode>
       <FileName>CustomerDepartment.cs</FileName>
@@ -36,8 +57,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Client81.MainPage">
-    <Position X="3.75" Y="8.5" Width="3" />
+    <Position X="3.5" Y="7" Width="3" />
     <Compartments>
+      <Compartment Name="Private" Collapsed="true" />
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
@@ -47,8 +69,15 @@
         </TypeIdentifier>
       </Class>
     </NestedTypes>
+    <AssociationLine Name="cusDep" Type="Client81.CustomerDepartment" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="7" />
+        <Point X="6" Y="6" />
+        <Point X="6.75" Y="6" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>ABAcEAAEAAAAAAFAYABAAAUIEgQEAAAAAQAgAQEDExI=</HashCode>
+      <HashCode>AhAcEAAGAAAAAAFAYABAAAUIEgQEAAAAAQAgAQEDExI=</HashCode>
       <FileName>MainPage.xaml.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -86,7 +115,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Client81.ServiceReferenceAzure.ServiceSurferliteClient" BaseTypeListCollapsed="true">
-    <Position X="14" Y="3.25" Width="2.75" />
+    <Position X="7.25" Y="8.25" Width="4" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -113,13 +142,6 @@
   </Class>
   <Class Name="Client81.ServiceReferenceAzureLocal.ServiceSurferliteClient" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="21.25" Y="1.5" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="Client81.ServiceReferenceAzureLocal.ServiceSurferliteClient.EndpointConfiguration" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Service References\ServiceReferenceAzureLocal\Reference.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAgAAABAAAQAAAAAAAJAAQAAAAAAACAAEAAQEAAAAA=</HashCode>
       <FileName>Service References\ServiceReferenceAzureLocal\Reference.cs</FileName>

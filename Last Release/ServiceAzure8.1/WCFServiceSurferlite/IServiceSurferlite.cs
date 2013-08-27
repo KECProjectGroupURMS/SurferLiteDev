@@ -27,6 +27,9 @@ namespace WCFServiceSurferlite
         string SaveDataToCloud(string filename);
 
         [OperationContract]
+        string DownloadAFile(string uri);
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
